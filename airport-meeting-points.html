@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Meeting Points | Infinite Car Service</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Find exact meeting points at JFK, LGA, EWR, and ISP airports for your Infinite Car Service pickup. Professional meet and greet service.">
+    <meta name="keywords" content="airport meeting points, JFK pickup, LGA meeting, EWR airport service, ISP transportation, chauffeur meet and greet">
+    <meta name="author" content="Infinite Car Service">
+    
+    <!-- DaisyUI and Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Fresh Button and Scrollbar Styling -->
+    <style>
+        /* DaisyUI Button Styling with Proper Hover States */
+        .btn-primary {
+            background-color: #2563EB !important;
+            border-color: #2563EB !important;
+            color: white !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+            outline: 2px solid transparent !important;
+            outline-offset: 2px !important;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1E40AF !important;
+            border-color: #1E40AF !important;
+            color: white !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.25), 0 0 0 3px rgba(30, 64, 175, 0.3) !important;
+            outline: none !important;
+        }
+        
+        .btn-primary:focus,
+        .btn-primary:focus-visible {
+            background-color: #1E40AF !important;
+            border-color: #1E40AF !important;
+            color: white !important;
+            outline: 2px solid #1E40AF !important;
+            outline-offset: 2px !important;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2) !important;
+        }
+        
+        .btn-primary:active {
+            background-color: #1D4ED8 !important;
+            border-color: #1D4ED8 !important;
+            transform: translateY(0) !important;
+            box-shadow: 0 2px 8px rgba(29, 78, 216, 0.2) !important;
+        }
+        
+        /* Active Navigation State */
+        .navbar .btn-active {
+            background-color: #1E40AF !important;
+            border-color: #1E40AF !important;
+            color: white !important;
+            font-weight: 700 !important;
+        }
+        
+        /* Navigation Link Hover States */
+        .navbar a:hover,
+        .menu a:hover {
+            background-color: rgba(30, 64, 175, 0.1) !important;
+            color: #1E40AF !important;
+            border-radius: 0.375rem !important;
+        }
+        
+        /* Override DaisyUI menu hover colors */
+        .menu li a:hover {
+            background-color: rgba(30, 64, 175, 0.1) !important;
+            color: #1E40AF !important;
+        }
+        
+        /* Ensure active links don't get overridden on hover */
+        .menu li a.active:hover {
+            background-color: rgba(30, 64, 175, 0.1) !important;
+            color: #1E40AF !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Force Scrollbar Styling */
+        html {
+            scrollbar-width: thin !important;
+            scrollbar-color: #2563EB #F9FAFB !important;
+        }
+        
+        body::-webkit-scrollbar,
+        html::-webkit-scrollbar,
+        *::-webkit-scrollbar {
+            width: 14px !important;
+            height: 14px !important;
+        }
+        
+        body::-webkit-scrollbar-track,
+        html::-webkit-scrollbar-track,
+        *::-webkit-scrollbar-track {
+            background: #F9FAFB !important;
+            border-radius: 8px !important;
+        }
+        
+        body::-webkit-scrollbar-thumb,
+        html::-webkit-scrollbar-thumb,
+        *::-webkit-scrollbar-thumb {
+            background: #2563EB !important;
+            border-radius: 8px !important;
+            border: 2px solid #F9FAFB !important;
+        }
+        
+        body::-webkit-scrollbar-thumb:hover,
+        html::-webkit-scrollbar-thumb:hover,
+        *::-webkit-scrollbar-thumb:hover {
+            background: #1E40AF !important;
+        }
+        
+        body::-webkit-scrollbar-thumb:active,
+        html::-webkit-scrollbar-thumb:active,
+        *::-webkit-scrollbar-thumb:active {
+            background: #1D4ED8 !important;
+        }
+        
+        /* Remove any yellow or default scrollbar colors */
+        body::-webkit-scrollbar-corner,
+        html::-webkit-scrollbar-corner {
+            background: #F9FAFB !important;
+        }
+        
+        /* Get Quote CTA Button Styling */
+        .cta-section {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .cta-button {
+            background: #2563EB !important;
+            color: white !important;
+            border: none !important;
+            padding: 1rem 2.5rem !important;
+            font-size: 1.125rem !important;
+            font-weight: 600 !important;
+            border-radius: 8px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3) !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+        }
+        
+        .cta-button:hover {
+            background: #1E40AF !important;
+            color: white !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.4) !important;
+        }
+        
+                    /* Universal Card Hover Effects */
+            .card {
+                transition: all 0.3s ease !important;
+            }
+            
+            .card:hover {
+                transform: translateY(-5px) !important;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            /* Clickable Cards Only */
+            .card.clickable {
+                cursor: pointer !important;
+            }
+        
+        /* Universal Button Hover Effects */
+        .btn {
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        /* Specific button type hover effects */
+        .btn-outline:hover {
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3) !important;
+        }
+        
+        .btn-ghost:hover {
+            background-color: rgba(37, 99, 235, 0.1) !important;
+            transform: translateY(-1px) !important;
+        }
+        
+        /* Terminal cards hover effects */
+        .card.bg-white {
+            transition: all 0.3s ease !important;
+        }
+        
+        .card.bg-white:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+            border: 1px solid rgba(37, 99, 235, 0.2) !important;
+        }
+        
+        /* Icon containers hover effects */
+        .bg-blue-600 {
+            transition: all 0.3s ease !important;
+        }
+        
+        .card:hover .bg-blue-600 {
+            background-color: #1E40AF !important;
+            transform: scale(1.1) rotate(5deg) !important;
+        }
+        
+        /* Premium service card hover effects */
+        .card.bg-gradient-to-r {
+            transition: all 0.3s ease !important;
+        }
+        
+        .card.bg-gradient-to-r:hover {
+            transform: translateY(-8px) scale(1.02) !important;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3) !important;
+        }
+        
+        /* Premium Service Button - Separate Independent Hover Effect */
+        .card.bg-gradient-to-r .btn {
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            z-index: 10 !important;
+        }
+        
+        .card.bg-gradient-to-r .btn:hover {
+            transform: translateY(-3px) scale(1.05) !important;
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.2) !important;
+            background-color: #F9FAFB !important;
+            color: #2563EB !important;
+        }
+        
+        /* Alert boxes hover effects */
+        .alert {
+            transition: all 0.3s ease !important;
+        }
+        
+        .alert:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        /* JFK Construction Notice Button - Separate Independent Hover Effect */
+        .alert .btn {
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            z-index: 10 !important;
+        }
+        
+        .alert .btn:hover {
+            transform: translateY(-3px) scale(1.05) !important;
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4), 0 0 0 4px rgba(37, 99, 235, 0.2) !important;
+            background-color: #1E40AF !important;
+            border-color: #1E40AF !important;
+        }
+        
+        /* Navigation hover effects */
+        .navbar .btn:hover {
+            transform: translateY(-1px) !important;
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3) !important;
+        }
+        
+        /* Social links hover effects */
+        .social-links a {
+            transition: all 0.3s ease !important;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-2px) scale(1.1) !important;
+            color: #2563EB !important;
+        }
+        
+        /* Logo hover effect */
+        .navbar-start > a {
+            transition: all 0.3s ease !important;
+        }
+        
+        .navbar-start > a:hover {
+            transform: scale(1.05) !important;
+        }
+        
+        /* Gentle Welcome Animations */
+        @keyframes gentleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes gentleSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Airport Page Animations */
+        .page-intro {
+            animation: gentleFadeIn 1s ease-out;
+        }
+        
+        .meet-greet-section {
+            animation: gentleSlideUp 1s ease-out 0.2s both;
+        }
+        
+        .premium-service {
+            animation: gentleFadeIn 1s ease-out 0.4s both;
+        }
+        
+        .airport-sections {
+            animation: gentleSlideUp 1s ease-out 0.6s both;
+        }
+        
+        .how-it-works {
+            animation: gentleFadeIn 1s ease-out 0.8s both;
+        }
+    </style>
+</head>
+<body class="font-inter">
+    <!-- Navigation -->
+    <div class="navbar fixed top-0 left-0 right-0 z-50" style="background: rgba(255, 255, 255, 0.95) !important; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(29, 78, 216, 0.1); box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1); padding: 1rem 2rem; min-height: 80px;">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="font-medium" style="color: #1D4ED8 !important;">Home</a></li>
+                    <li><a href="services.html" class="font-medium" style="color: #1D4ED8 !important;">Services</a></li>
+                    <li><a href="fleet.html" class="font-medium" style="color: #1D4ED8 !important;">Fleet</a></li>
+                    <li><a href="about.html" class="font-medium" style="color: #1D4ED8 !important;">About</a></li>
+                    <li><a href="airport-meeting-points.html" class="font-medium active" style="color: #1E40AF !important; background-color: rgba(30, 64, 175, 0.1) !important; font-weight: 600 !important;">Airport Meeting Points</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="navbar-brand text-xl font-bold" style="color: #1D4ED8 !important; font-weight: 700; font-size: 1.5rem;">
+                Infinite Car Service
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-medium" style="color: #1D4ED8 !important; padding: 0.5rem 1rem; border-radius: 0.375rem; transition: all 0.3s ease;">Home</a></li>
+                <li><a href="services.html" class="font-medium" style="color: #1D4ED8 !important; padding: 0.5rem 1rem; border-radius: 0.375rem; transition: all 0.3s ease;">Services</a></li>
+                <li><a href="fleet.html" class="font-medium" style="color: #1D4ED8 !important; padding: 0.5rem 1rem; border-radius: 0.375rem; transition: all 0.3s ease;">Fleet</a></li>
+                <li><a href="about.html" class="font-medium" style="color: #1D4ED8 !important; padding: 0.5rem 1rem; border-radius: 0.375rem; transition: all 0.3s ease;">About</a></li>
+                <li><a href="airport-meeting-points.html" class="font-medium active" style="color: #1E40AF !important; background-color: rgba(30, 64, 175, 0.1) !important; font-weight: 600 !important; padding: 0.5rem 1rem; border-radius: 0.375rem; transition: all 0.3s ease;">Airport Meeting Points</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end">
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary">
+                Get Quote
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Meet & Greet Service Info -->
+    <section class="pt-32 pb-20 bg-gray-50 border-b border-gray-100 page-intro">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">Professional Meet & Greet Service</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Your professional chauffeur will be waiting for you at the designated meeting point with a personalized sign. 
+                    No need to search or wait - we'll find you!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-tie text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Professional Chauffeur</h3>
+                        <p class="text-gray-700">Uniformed, professional driver with your name on a sign</p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Flight Tracking</h3>
+                        <p class="text-gray-700">We monitor your flight and adjust pickup time accordingly</p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-luggage-cart text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Luggage Assistance</h3>
+                        <p class="text-gray-700">Full assistance with luggage and escort to your vehicle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Inside Terminal Service -->
+    <section class="py-20 bg-white border-b border-gray-100 premium-service">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">Premium Inside Terminal Meet & Greet</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+                    Upgrade your experience with our premium inside terminal service available at JFK (T4, T5, T8), LGA, and ISP
+                </p>
+                
+                <!-- Premium Service Card -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="card bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-xl">
+                        <div class="card-body p-8">
+                            <div class="flex items-center justify-center mb-6">
+                                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-concierge-bell text-3xl text-white"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="text-2xl font-bold mb-2">Inside Terminal Service</h3>
+                                    <p class="text-blue-100 text-lg">Available at JFK (T4, T5, T8), LGA & ISP</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                                <div>
+                                    <h4 class="text-xl font-bold mb-4 text-white">What's Included:</h4>
+                                    <ul class="space-y-3 text-blue-100">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
+                                            <span>Chauffeur meets you inside the terminal</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
+                                            <span>Full assistance with luggage handling</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
+                                            <span>Easier meet up - no searching required</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
+                                            <span>Chauffeur displays your name on their phone</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="text-center md:text-left">
+                                    <div class="bg-white/10 rounded-lg p-6 mb-6">
+                                        <h4 class="text-xl font-bold mb-2 text-white">Premium Service Fee</h4>
+                                        <div class="text-4xl font-bold text-white mb-2">$50</div>
+                                        <p class="text-blue-100">Per pickup service</p>
+                                    </div>
+                                    
+                                    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-lg bg-white text-blue-600 hover:bg-gray-100 px-8">
+                                        Request Premium Service
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 p-4 bg-white/10 rounded-lg text-center">
+                                <p class="text-blue-100">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    Perfect for first-time visitors, business travelers, or when you want the ultimate convenience
+                                </p>
+                            </div>
+                            
+                            <!-- JFK Special Notice -->
+                            <div class="mt-6 p-4 bg-yellow-400/20 border border-yellow-300/30 rounded-lg">
+                                <div class="flex items-start text-left">
+                                    <i class="fas fa-construction text-yellow-300 text-lg mr-3 mt-1"></i>
+                                    <div>
+                                                                <h5 class="text-yellow-100 font-bold mb-2">Essential for JFK Airport</h5>
+                        <p class="text-yellow-100 text-sm">
+                            ALL JFK terminals now require shuttle AirTrain to remote lots. 
+                            Our inside terminal service eliminates this hassle completely! (Available at T4, T5 & T8 only)
+                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Quote CTA Section -->
+    <section class="cta-section">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Skip the AirTrain Hassle</h3>
+                <p class="text-gray-600 mb-6">Get premium inside terminal service</p>
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="cta-button">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JFK Airport Meeting Points -->
+    <section class="py-20 bg-white border-b border-gray-100 airport-sections">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">JFK International Airport</h2>
+                <p class="text-xl text-gray-700">John F. Kennedy International Airport Meeting Points</p>
+            </div>
+            
+            <!-- JFK Construction Notice -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="alert alert-warning bg-yellow-50 border-l-4 border-yellow-400 p-6 shadow-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl mr-4"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-yellow-800 mb-2">
+                                <i class="fas fa-construction mr-2"></i>
+                                Important JFK Construction Notice
+                            </h3>
+                            <p class="text-yellow-700 mb-3">
+                                <strong>Current Update:</strong> ALL JFK terminals are now requiring passengers to take the shuttle AirTrain to remote parking lots for pickup due to ongoing construction projects.
+                            </p>
+                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                <h4 class="text-blue-800 font-bold mb-2">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    Avoid the Shuttle with Our Premium Service
+                                </h4>
+                                <p class="text-blue-700 mb-3">
+                                    Request our <strong>Inside Terminal Meet & Greet Service</strong> to bypass the shuttle completely:
+                                </p>
+                                <ul class="text-blue-700 space-y-1 ml-4">
+                                    <li>• Your chauffeur meets you inside the terminal</li>
+                                    <li>• Display your name on their phone for easy identification</li>
+                                    <li>• Full assistance with luggage</li>
+                                    <li>• No shuttle AirTrain required</li>
+                                </ul>
+                                <div class="mt-4">
+                                    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-sm bg-blue-600 text-white hover:bg-blue-700 px-6">
+                                        Request Inside Terminal Service - $50
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">T1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 1</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
+                                <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
+                            </ul>
+                            
+                            <!-- Curbside Only Notice -->
+                            <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                                <p class="text-red-800 text-sm font-medium">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    <strong>AirTrain Required:</strong> Terminal 1 does not allow inside terminal meet & greet service. All passengers must take the AirTrain to Howard Beach Lot.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">T4</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 4</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
+                                <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
+                            </ul>
+                            
+                            <!-- AirTrain Avoidance Notice -->
+                            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                                <p class="text-green-800 text-sm font-medium">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <strong>Skip the AirTrain:</strong> Available with inside terminal meet & greet service ($50)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">T5</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 5</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
+                                <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
+                            </ul>
+                            
+                            <!-- AirTrain Avoidance Notice -->
+                            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                                <p class="text-green-800 text-sm font-medium">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <strong>Skip the AirTrain:</strong> Available with inside terminal meet & greet service ($50)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">T7</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 7</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
+                                <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
+                            </ul>
+                            
+                            <!-- Curbside Only Notice -->
+                            <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                                <p class="text-red-800 text-sm font-medium">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    <strong>AirTrain Required:</strong> Terminal 7 does not allow inside terminal meet & greet service. All passengers must take the AirTrain to Howard Beach Lot.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">T8</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 8</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
+                                <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
+                            </ul>
+                            
+                            <!-- AirTrain Avoidance Notice -->
+                            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                                <p class="text-green-800 text-sm font-medium">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <strong>Skip the AirTrain:</strong> Available with inside terminal meet & greet service ($50)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LGA Airport Meeting Points -->
+    <section class="py-20 bg-gray-50 border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">LaGuardia Airport</h2>
+                <p class="text-xl text-gray-700">LaGuardia Airport Meeting Points</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">A</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal A</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Instructions:</strong> Once outside, let us know what sign you see</li>
+                                <li>• <strong>Position:</strong> Not too crowded location preferred</li>
+                                <li>• <strong>Wait Time:</strong> 45 minutes included</li>
+                            </ul>
+                            
+                            <!-- Meet & Greet Available Notice -->
+                            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                <p class="text-blue-800 text-sm font-medium">
+                                    <i class="fas fa-concierge-bell mr-2"></i>
+                                    <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">B</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal B</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Location:</strong> Level 2 of Terminal B Parking Garage</li>
+                                <li>• <strong>Follow:</strong> "Car Services" signs</li>
+                                <li>• <strong>Meeting Point:</strong> Uber & Car Service pickup area K1</li>
+                                <li>• <strong>Direction:</strong> Toward the west side</li>
+                                <li>• <strong>Wait Time:</strong> 45 minutes included</li>
+                            </ul>
+                            
+                            <!-- Meet & Greet Available Notice -->
+                            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                <p class="text-blue-800 text-sm font-medium">
+                                    <i class="fas fa-concierge-bell mr-2"></i>
+                                    <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold">C</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal C</h3>
+                        <div class="text-left">
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>Meeting Point:</strong> Between 11A and 11B</li>
+                                <li>• <strong>Position:</strong> Less crowded area preferred</li>
+                                <li>• <strong>Wait Time:</strong> 45 minutes included</li>
+                            </ul>
+                            
+                            <!-- Meet & Greet Available Notice -->
+                            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                <p class="text-blue-800 text-sm font-medium">
+                                    <i class="fas fa-concierge-bell mr-2"></i>
+                                    <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ISP Airport Meeting Points -->
+    <section class="py-20 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">Long Island MacArthur Airport</h2>
+                <p class="text-xl text-gray-700">ISP - Your Local Airport, Our Specialty</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-plane text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-600 mb-4">Main Terminal</h3>
+                        <div class="text-left max-w-md mx-auto">
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• <strong>Meeting Point:</strong> Arrivals Area, Ground Level</li>
+                                <li>• <strong>Location:</strong> Main Exit Door</li>
+                                <li>• <strong>Near:</strong> Baggage Claim Carousel</li>
+                                <li>• <strong>Landmark:</strong> Ground Transportation Desk</li>
+                                <li>• <strong>Wait Time:</strong> 30 minutes included</li>
+                                <li>• <strong>Special:</strong> Smaller airport - easy to find</li>
+                                <li>• <strong>Advantage:</strong> Quick exit and loading</li>
+                            </ul>
+                            
+                            <!-- Meet & Greet Available Notice -->
+                            <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                                <p class="text-blue-800 text-sm font-medium">
+                                    <i class="fas fa-concierge-bell mr-2"></i>
+                                    <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Quote CTA Section -->
+    <section class="cta-section">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Need Airport Transportation?</h3>
+                <p class="text-gray-600 mb-6">Professional service to all NYC airports</p>
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="cta-button">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructions Section -->
+    <section class="py-20 bg-white border-b border-gray-100 how-it-works">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">How It Works</h2>
+                <p class="text-xl text-gray-700 max-w-2xl mx-auto">Simple steps for a seamless pickup experience</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Get Connected</h3>
+                        <p class="text-gray-700">Receive a group text chat from our operations team with your chauffeur included</p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Share Details</h3>
+                        <p class="text-gray-700">Get meeting point instructions, car details & license plate. Describe your outfit for easy identification</p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Collect & Notify</h3>
+                        <p class="text-gray-700">If you checked bags, let us know when they start dropping on the carousel, then collect them</p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">4</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">Meet & Relax</h3>
+                        <p class="text-gray-700">Meet at the designated spot or wherever is less crowded, then enjoy your luxury ride</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Ready for Stress-Free Airport Pickup?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Book your airport transfer now and experience our professional meet and greet service.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-lg bg-white text-blue-600 hover:bg-gray-100 px-8">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: #0F172A !important; color: #94A3B8; border-top: 1px solid rgba(148, 163, 184, 0.1);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car-luxury text-2xl mr-3" style="color: #C99C33 !important;"></i>
+                        <span class="text-xl font-bold" style="color: #ffffff !important;">Infinite Car Service</span>
+                    </div>
+                    <p class="max-w-xs" style="color: #94A3B8 !important;">
+                        Premium black car service on Long Island.<br/>
+                        Reliable. Elegant. On-Time.
+                    </p>
+                    <div class="social-links flex gap-4 mt-6">
+                        <a href="https://www.facebook.com/people/Infinite-Car-Service-LI/61556980469676/" target="_blank" class="hover:text-white" style="color: #94A3B8 !important; font-size: 1.5rem; transition: color 0.3s ease;" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/infinitecarservice/" target="_blank" class="hover:text-white" style="color: #94A3B8 !important; font-size: 1.5rem; transition: color 0.3s ease;" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/infinite-car-service" target="_blank" class="hover:text-white" style="color: #94A3B8 !important; font-size: 1.5rem; transition: color 0.3s ease;" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h6 class="footer-title" style="color: #ffffff !important; font-weight: 600; font-size: 1.125rem; margin-bottom: 1rem;">Services</h6>
+                    <div class="flex flex-col space-y-2">
+                        <a href="services.html#airport-cruise-transfers" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">Airport & Cruise Transfers</a>
+                        <a href="services.html#hourly-wine-tours" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">Hourly Service & Wine Tours</a>
+                        <a href="services.html#corporate-executive" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">Corporate & Executive Travel</a>
+                        <a href="services.html#events-celebrations" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">Events & Celebrations</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h6 class="footer-title" style="color: #ffffff !important; font-weight: 600; font-size: 1.125rem; margin-bottom: 1rem;">Company</h6>
+                    <div class="flex flex-col space-y-2">
+                        <a href="fleet.html" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">Fleet & Amenities</a>
+                        <a href="about.html" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">About Us</a>
+                        <a href="airport-meeting-points.html" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">Airport Meeting Points</a>
+                        <a href="index.html#service-areas" class="link link-hover" style="color: #94A3B8 !important; text-decoration: none; transition: color 0.3s ease;">Service Areas</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h6 class="footer-title" style="color: #ffffff !important; font-weight: 600; font-size: 1.125rem; margin-bottom: 1rem;">Contact</h6>
+                    <div class="flex flex-col space-y-2">
+                        <p style="color: #94A3B8 !important;"><i class="fas fa-phone mr-2"></i>Existing Clients: <a href="tel:6315160006" class="hover:text-white" style="color: #94A3B8 !important;">(631) 516-0006</a></p>
+                        <p style="color: #94A3B8 !important;"><i class="fas fa-phone mr-2"></i>New Clients: <a href="tel:6318606700" class="hover:text-white" style="color: #94A3B8 !important;">(631) 860-6700</a></p>
+                        <p style="color: #94A3B8 !important;"><i class="fas fa-envelope mr-2"></i>info@infinitecarserviceli.com</p>
+                        <p style="color: #94A3B8 !important;"><i class="fas fa-map-marker-alt mr-2"></i>Dix Hills, NY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html> 

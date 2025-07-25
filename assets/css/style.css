@@ -1,0 +1,645 @@
+/* Infinite Car Service - Custom CSS */
+
+/* CSS Variables for Theme Colors */
+:root {
+    --primary-color: #2563EB;
+    --accent-color: #C99C33;
+    --background-color: #F9FAFB;
+    --text-dark: #111827;
+    --blue-600: #2563EB;
+    --blue-800: #1E40AF;
+    --gray-50: #F9FAFB;
+    --gray-900: #111827;
+    --gold: #C99C33;
+    --gold-dark: #BFA046;
+}
+
+/* DaisyUI Theme Overrides */
+[data-theme="luxury"] {
+    --p: 219 84% 60%; /* #2563EB */
+    --a: 43 60% 49%; /* #C99C33 */
+    --b2: 210 20% 98%; /* #F9FAFB */
+    --bc: 220 9% 7%; /* #111827 */
+}
+
+/* Body Adjustments */
+body {
+    background: #F9FAFB;
+    color: #111827;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #2563EB !important;
+}
+
+/* Navigation Enhancements */
+.navbar.navbar.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(29, 78, 216, 0.1);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1rem 2rem !important;
+    min-height: 80px !important;
+}
+
+.navbar.navbar.navbar .navbar-start {
+    flex: 1 !important;
+    justify-content: flex-start !important;
+}
+
+.navbar.navbar.navbar .navbar-center {
+    flex: 2 !important;
+    justify-content: center !important;
+}
+
+.navbar.navbar.navbar .navbar-end {
+    flex: 1 !important;
+    justify-content: flex-end !important;
+}
+
+.navbar.navbar.navbar a {
+    color: #1D4ED8 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.375rem !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
+
+.navbar.navbar.navbar a:hover {
+    color: #BFA046 !important;
+    background-color: transparent !important;
+    transform: scale(1.05);
+}
+
+.navbar.navbar.navbar .navbar-brand {
+    color: #1D4ED8 !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+}
+
+.navbar.navbar.navbar .navbar-brand:hover {
+    color: #BFA046 !important;
+}
+
+/* Button Enhancements */
+.btn {
+    border-radius: 0.5rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563EB, #1D4ED8) !important;
+    border: 1px solid #2563EB !important;
+    color: white !important;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1) !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1E40AF, #1740B0) !important;
+    border-color: #1E40AF !important;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3) !important;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #C99C33, #BFA046) !important;
+    border: 1px solid #C99C33 !important;
+    color: #111827 !important;
+    box-shadow: 0 2px 4px rgba(201, 156, 51, 0.1) !important;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, #BFA046, #A68B38) !important;
+    border-color: #BFA046 !important;
+    color: #111827 !important;
+}
+
+.btn-outline {
+    border: 1px solid #2563EB !important;
+    color: #2563EB !important;
+    background: transparent !important;
+}
+
+.btn-outline:hover {
+    background: #2563EB !important;
+    color: white !important;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Card Hover Effects - Enhanced */
+.card {
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    border-radius: 1rem !important;
+}
+
+.card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Service Area Cards */
+.card.bg-gray-50:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.12) !important;
+    background-color: #ffffff !important;
+}
+
+/* Why Choose Cards */
+.card.bg-white:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 25px 50px rgba(37, 99, 235, 0.15) !important;
+    border: 1px solid rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Service Cards - Specific Class */
+.service-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Review Cards */
+.review-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* All Card Elements - General Override */
+.card-body {
+    transition: all 0.3s ease !important;
+}
+
+/* Enhanced Shadow Effects for All Cards */
+section .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+section .card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Specific enhancements for different card types */
+.shadow-lg:hover {
+    box-shadow: 0 25px 50px rgba(37, 99, 235, 0.2) !important;
+}
+
+.shadow-xl:hover {
+    box-shadow: 0 30px 60px rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Statistics Section Hover */
+.stats-item {
+    transition: all 0.3s ease;
+}
+
+.stats-item:hover {
+    transform: translateY(-3px);
+}
+
+.stats-item:hover .bg-white\/20 {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Company Introduction Cards */
+.bg-gray-50:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Feature Cards in Company Introduction */
+.feature-card {
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    background-color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+}
+
+/* Navigation Hover Effects */
+.navbar a:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Footer Styling */
+.footer.footer.footer {
+    background: #0F172A !important;
+    color: #94A3B8 !important;
+    border-top: 1px solid rgba(148, 163, 184, 0.1) !important;
+    padding: 3rem 0 2rem 0 !important;
+}
+
+.footer.footer.footer .footer-title {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1.125rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.footer.footer.footer a {
+    color: #94A3B8 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer.footer.footer a:hover {
+    color: #C99C33 !important;
+    transform: translateX(3px);
+}
+
+.footer.footer.footer p {
+    color: #94A3B8 !important;
+}
+
+.footer.footer.footer .text-xl {
+    color: #ffffff !important;
+}
+
+.footer.footer.footer .social-links a {
+    color: #94A3B8 !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer.footer.footer .social-links a:hover {
+    color: #ffffff !important;
+}
+
+.footer.footer.footer aside i {
+    color: #C99C33 !important;
+}
+
+/* Hero Section Enhancements */
+.hero {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.hero:hover {
+    transform: scale(1.02);
+}
+
+.hero-content h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.1;
+}
+
+.hero-content p {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Responsive Hero Text */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem !important;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    
+    .hero-content p {
+        font-size: 1.25rem !important;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1.125rem !important;
+    }
+}
+
+/* Hero Buttons */
+.hero .btn {
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Reviews Carousel Fixes */
+.review-card {
+    transition: opacity 0.3s ease;
+}
+
+.review-card.hidden {
+    display: none !important;
+}
+
+#reviewsCarousel {
+    min-height: 400px;
+}
+
+#reviewsCarousel .review-card {
+    display: block;
+}
+
+/* Ensure grid layout works properly */
+@media (min-width: 768px) {
+    #reviewsCarousel {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2rem !important;
+    }
+    
+    #reviewsCarousel .review-card:not(.hidden) {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #reviewsCarousel {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    
+    #reviewsCarousel .review-card:not(.hidden) {
+        display: block !important;
+        width: 100% !important;
+    }
+}
+
+/* Arrow button improvements */
+#prevBtn, #nextBtn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Reviews Button Styling */
+.btn-outline.text-blue-600 {
+    color: #2563EB !important;
+    border-color: #2563EB !important;
+}
+
+.btn-outline.text-blue-600:hover {
+    background-color: #2563EB !important;
+    color: white !important;
+    border-color: #2563EB !important;
+}
+
+/* Testimonials Arrows Positioning */
+.testimonials-carousel {
+    padding: 0 4rem;
+}
+
+@media (max-width: 768px) {
+    .testimonials-carousel {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-carousel {
+        padding: 0 2.5rem;
+    }
+}
+
+/* Modal Styling */
+.modal .modal-box {
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    color: #111827;
+}
+
+.modal .modal-backdrop {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+/* Utility Classes */
+.text-gray-600 { color: #6B7280 !important; }
+.text-gray-700 { color: #374151 !important; }
+.text-gray-900 { color: #111827 !important; }
+.text-blue-900 { color: #1E3A8A !important; }
+.bg-blue-50 { background-color: #EFF6FF !important; }
+.bg-blue-600 { background-color: #2563EB !important; }
+.hover:text-blue-600:hover { color: #2563EB !important; }
+.hover:text-blue-900:hover { color: #1E3A8A !important; }
+
+/* Base Content Colors */
+.text-base-content { color: #111827 !important; }
+.text-base-content\/70 { color: rgba(17, 24, 39, 0.7) !important; }
+.text-base-content\/80 { color: rgba(17, 24, 39, 0.8) !important; }
+
+/* Background Colors */
+.bg-base-200 { background-color: #F9FAFB !important; }
+.bg-base-300 { background-color: #F3F4F6 !important; }
+
+/* Accent/Primary Colors */
+.text-accent { color: #C99C33 !important; }
+.bg-accent { background-color: #C99C33 !important; }
+.text-primary { color: #2563EB !important; }
+.bg-primary { background-color: #2563EB !important; }
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F9FAFB;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C99C33;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
+/* Form Styling */
+input, textarea, select {
+    border-color: #E5E7EB !important;
+    color: #111827 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #2563EB !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Link Hover Effects */
+.link:hover {
+    color: #C99C33 !important;
+}
+
+/* Remove Purple Colors - Force Override */
+.text-purple-600, .text-purple-500 { color: #2563EB !important; }
+.bg-purple-600, .bg-purple-500 { background-color: #2563EB !important; }
+.border-purple-600, .border-purple-500 { border-color: #2563EB !important; }
+
+/* Default Link Colors */
+a {
+    color: #2563EB !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C99C33 !important;
+}
+
+/* Focus States */
+*:focus {
+    outline: 2px solid #2563EB !important;
+    outline-offset: 2px;
+}
+
+/* Alert and Badge Styling */
+.alert-info {
+    background-color: rgba(37, 99, 235, 0.1) !important;
+    border-color: #2563EB !important;
+    color: #2563EB !important;
+}
+
+.badge-info {
+    background-color: #2563EB !important;
+    color: white !important;
+}
+
+/* Dropdown and Menu Styling */
+.dropdown-content {
+    background-color: white !important;
+    border: 1px solid rgba(37, 99, 235, 0.1) !important;
+}
+
+.menu li > *:focus {
+    background-color: rgba(37, 99, 235, 0.1) !important;
+    color: #2563EB !important;
+}
+
+/* Hero Content White Text */
+.hero-content h1,
+.hero-content h2,
+.hero-content h3,
+.hero-content h4,
+.hero-content h5,
+.hero-content h6,
+.hero-content p {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Blue Section White Text */
+.bg-blue-600 h1,
+.bg-blue-600 h2,
+.bg-blue-600 h3,
+.bg-blue-600 h4,
+.bg-blue-600 h5,
+.bg-blue-600 h6,
+.bg-blue-600 p {
+    color: white !important;
+}
+
+/* Responsive Design */
+/* Section Padding */
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 2rem 0 !important;
+    }
+}
+
+/* Card Body Padding */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-body {
+        padding: 1rem !important;
+    }
+}
+
+/* Typography Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem !important; line-height: 1.2 !important; margin-bottom: 1rem !important; }
+    h2 { font-size: 1.75rem !important; line-height: 1.3 !important; margin-bottom: 0.75rem !important; }
+    h3 { font-size: 1.5rem !important; line-height: 1.4 !important; margin-bottom: 0.5rem !important; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.75rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.25rem !important; }
+}
+
+/* Button Responsive */
+@media (max-width: 768px) {
+    .btn {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    .btn-lg {
+        padding: 1rem 2rem !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* Grid Responsive */
+@media (max-width: 768px) {
+    .grid {
+        gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        gap: 1rem !important;
+    }
+}
+
+/* Container Responsive */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100% !important;
+        padding: 0 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem !important;
+    }
+} 
