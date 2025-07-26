@@ -14,12 +14,129 @@
     --gold-dark: #BFA046;
 }
 
-/* DaisyUI Theme Overrides */
+/* DaisyUI Theme Overrides - Force Light Backgrounds */
+[data-theme="light"],
 [data-theme="luxury"] {
-    --p: 219 84% 60%; /* #2563EB */
-    --a: 43 60% 49%; /* #C99C33 */
-    --b2: 210 20% 98%; /* #F9FAFB */
-    --bc: 220 9% 7%; /* #111827 */
+    --p: 219 84% 60%; /* #2563EB - Primary */
+    --a: 43 60% 49%; /* #C99C33 - Accent */
+    --bc: 220 9% 7%; /* #111827 - Base Content */
+    
+    /* Force all backgrounds to light */
+    --b1: 210 20% 98%; /* #F9FAFB - Base 100 */
+    --b2: 210 20% 98%; /* #F9FAFB - Base 200 */
+    --b3: 210 20% 95%; /* #F3F4F6 - Base 300 */
+    
+    /* Neutral backgrounds */
+    --n: 210 20% 98%; /* #F9FAFB - Neutral */
+    --nf: 210 20% 98%; /* #F9FAFB - Neutral Focus */
+    --nc: 220 9% 7%; /* #111827 - Neutral Content */
+    
+    /* Success, Warning, Error backgrounds */
+    --su: 158 64% 52%; /* Success */
+    --wa: 43 96% 56%; /* Warning */
+    --er: 0 91% 71%; /* Error */
+    
+    /* Info */
+    --in: 219 84% 60%; /* Info (Blue) */
+}
+
+/* Aggressive DaisyUI Background Overrides */
+* {
+    --tw-bg-opacity: 1 !important;
+}
+
+.bg-base-100,
+.bg-base-200,
+.bg-base-300,
+[data-theme="light"] .bg-base-100,
+[data-theme="light"] .bg-base-200,
+[data-theme="light"] .bg-base-300,
+[data-theme="luxury"] .bg-base-100,
+[data-theme="luxury"] .bg-base-200,
+[data-theme="luxury"] .bg-base-300 {
+    background-color: #F9FAFB !important;
+}
+
+/* Override any section backgrounds */
+section {
+    background-color: inherit !important;
+}
+
+section.bg-white {
+    background-color: #ffffff !important;
+}
+
+section.bg-gray-50 {
+    background-color: #F9FAFB !important;
+}
+
+/* Force all containers and main layout elements to light backgrounds */
+.container,
+.max-w-7xl,
+.max-w-6xl,
+.max-w-5xl,
+.max-w-4xl,
+.max-w-3xl,
+.max-w-2xl,
+.max-w-xl {
+    background-color: transparent !important;
+}
+
+/* Force section containers to inherit proper backgrounds */
+.px-4, .px-6, .px-8,
+.sm\\:px-6, .lg\\:px-8,
+.mx-auto {
+    background-color: transparent !important;
+}
+
+/* Ensure page wrapper has light background */
+.page-wrapper,
+.main-content,
+main {
+    background-color: #F9FAFB !important;
+}
+
+/* Override any potential Tailwind dark backgrounds */
+.bg-gray-900,
+.bg-gray-800,
+.bg-black,
+.bg-slate-900,
+.bg-slate-800 {
+    background-color: #F9FAFB !important;
+}
+
+/* DaisyUI component overrides */
+.hero,
+.hero-content,
+.card:not(.bg-blue-600):not(.bg-blue-700),
+.modal,
+.drawer-content {
+    background-color: inherit !important;
+}
+
+/* Ultimate background safety net */
+body > *,
+#root,
+.app,
+.page {
+    background-color: #F9FAFB !important;
+}
+
+/* Browser default overrides */
+html:not([data-theme]),
+html[data-theme="light"],
+html[data-theme="luxury"],
+html[data-theme="dark"] {
+    background-color: #F9FAFB !important;
+    color-scheme: light !important;
+}
+
+/* Prevent any dark theme activation */
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #F9FAFB !important;
+        color: #111827 !important;
+    }
 }
 
 /* Global Background Fix - Prevent Dark Flash */
