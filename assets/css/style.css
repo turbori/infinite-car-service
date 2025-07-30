@@ -571,9 +571,13 @@ html, body {
 }
 
 /* Perfect Navbar CTA Button - Blue background with white text */
-.navbar-end .btn-primary {
+.navbar-end .btn-primary,
+.navbar-end .btn.btn-primary,
+div.navbar-end a.btn.btn-primary {
     background: #2563EB !important;
+    background-color: #2563EB !important;
     border: 1px solid #2563EB !important;
+    border-color: #2563EB !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
     font-size: 0.95rem !important;
@@ -585,8 +589,11 @@ html, body {
     letter-spacing: 0.01em !important;
 }
 
-.navbar-end .btn-primary:hover {
+.navbar-end .btn-primary:hover,
+.navbar-end .btn.btn-primary:hover,
+div.navbar-end a.btn.btn-primary:hover {
     background: #1E40AF !important;
+    background-color: #1E40AF !important;
     border-color: #1E40AF !important;
     color: #FFFFFF !important;
     transform: translateY(-2px) !important;
@@ -596,8 +603,13 @@ html, body {
 }
 
 .navbar-end .btn-primary:focus,
-.navbar-end .btn-primary:active {
+.navbar-end .btn-primary:active,
+.navbar-end .btn.btn-primary:focus,
+.navbar-end .btn.btn-primary:active,
+div.navbar-end a.btn.btn-primary:focus,
+div.navbar-end a.btn.btn-primary:active {
     background: #1E40AF !important;
+    background-color: #1E40AF !important;
     border-color: #1E40AF !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
