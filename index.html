@@ -30,6 +30,18 @@
     <!-- DaisyUI and Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configure TailwindCSS for full utility coverage
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
