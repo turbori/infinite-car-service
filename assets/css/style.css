@@ -23,9 +23,12 @@
 }
 
 /* Body Adjustments */
-body {
+html, body {
     background: #F9FAFB;
     color: #111827;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* Typography */
@@ -259,6 +262,52 @@ section .card:hover {
     color: #94A3B8 !important;
     border-top: 1px solid rgba(148, 163, 184, 0.1) !important;
     padding: 3rem 0 2rem 0 !important;
+    margin-top: auto !important;
+}
+
+/* Ensure main content takes full height */
+#main-content {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Prevent extra white space below footer */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push footer to bottom */
+main {
+    flex: 1;
+}
+
+/* Remove any default margins that could cause white space */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure page fills viewport completely */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Prevent modals and absolute elements from creating space */
+.modal, .modal-backdrop {
+    position: fixed !important;
+    z-index: 999 !important;
+}
+
+/* Global container max-height fix */
+.container, .max-w-7xl {
+    margin-bottom: 0 !important;
 }
 
 .footer.footer.footer .footer-title {
@@ -509,7 +558,7 @@ a[href*="moovs"] {
 .text-primary { color: #2563EB !important; }
 .bg-primary { background-color: #2563EB !important; }
 
-/* Scrollbar Customization */
+/* Scrollbar Customization - Neutral Design */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -520,12 +569,12 @@ a[href*="moovs"] {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #C99C33;
+    background: #CBD5E1;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #D4AF37;
+    background: #94A3B8;
 }
 
 /* Form Styling */
