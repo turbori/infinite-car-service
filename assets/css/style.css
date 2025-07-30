@@ -506,6 +506,38 @@ html, body {
     letter-spacing: 0.025em !important;
 }
 
+/* Perfect Navbar CTA Button - Matching the ideal design */
+.navbar-end .btn-primary {
+    background: #4F46E5 !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 0.5rem !important;
+    text-shadow: none !important;
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2) !important;
+    transition: all 0.3s ease !important;
+    letter-spacing: 0.01em !important;
+}
+
+.navbar-end .btn-primary:hover {
+    background: #4338CA !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+    font-weight: 600 !important;
+}
+
+.navbar-end .btn-primary:focus,
+.navbar-end .btn-primary:active {
+    background: #4338CA !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+}
+
 /* Ensure all Get Quote buttons have perfect readability */
 a[href*="moovs"] {
     color: #FFFFFF !important;
