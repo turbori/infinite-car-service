@@ -645,6 +645,15 @@ a[href*="moovs"] {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* Ensure proper card contrast based on section background */
+section.bg-white .card {
+    background: #F9FAFB !important; /* Light gray cards on white sections */
+}
+
+section.bg-gray-50 .card {
+    background: #FFFFFF !important; /* White cards on gray sections */
+}
+
 /* Specific styling for CTA buttons with white background and blue text */
 #blue-cta-section .btn.bg-white,
 section.bg-blue-600 .btn.bg-white,
