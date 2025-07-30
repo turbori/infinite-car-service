@@ -31,6 +31,34 @@ html, body {
     padding: 0;
 }
 
+/* Account for fixed navbar height */
+body {
+    padding-top: 80px !important;
+}
+
+/* Mobile navbar spacing adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 90px !important;
+    }
+    
+    .navbar.navbar.navbar {
+        padding: 0.75rem 1rem !important;
+        min-height: 70px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 85px !important;
+    }
+    
+    .navbar.navbar.navbar {
+        padding: 0.5rem 1rem !important;
+        min-height: 65px !important;
+    }
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     color: #2563EB !important;
@@ -373,6 +401,23 @@ html, body {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
+    margin-top: -80px !important;
+    padding-top: 80px !important;
+}
+
+/* Mobile hero adjustments */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: -90px !important;
+        padding-top: 90px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        margin-top: -85px !important;
+        padding-top: 85px !important;
+    }
 }
 
 .hero:hover {
