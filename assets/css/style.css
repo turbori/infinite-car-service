@@ -645,6 +645,25 @@ a[href*="moovs"] {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* Specific styling for CTA buttons with white background and blue text */
+#blue-cta-section .btn.bg-white,
+section.bg-blue-600 .btn.bg-white,
+.bg-blue-600 .btn.bg-white {
+    background: #FFFFFF !important;
+    color: #2563EB !important;
+    border: 1px solid #FFFFFF !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+#blue-cta-section .btn.bg-white:hover,
+section.bg-blue-600 .btn.bg-white:hover,
+.bg-blue-600 .btn.bg-white:hover {
+    background: #F3F4F6 !important;
+    color: #1E40AF !important;
+    border-color: #F3F4F6 !important;
+}
+
 /* Utility Classes */
 .text-gray-600 { color: #6B7280 !important; }
 .text-gray-700 { color: #374151 !important; }
