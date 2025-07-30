@@ -63,17 +63,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar.navbar.navbar a {
     color: #1D4ED8 !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 0.375rem !important;
+    padding: 0.5rem 1.25rem !important;
+    margin: 0 0.25rem !important;
+    border-radius: 0.5rem !important;
     transition: all 0.3s ease !important;
     text-decoration: none !important;
     background-color: transparent !important;
+    border: 2px solid transparent !important;
 }
 
 .navbar.navbar.navbar a:hover {
-    color: #BFA046 !important;
-    background-color: transparent !important;
-    transform: scale(1.05);
+    color: #1E40AF !important;
+    background-color: rgba(30, 64, 175, 0.1) !important;
+    border-color: rgba(30, 64, 175, 0.2) !important;
+    transform: translateY(-1px) !important;
+}
+
+.navbar.navbar.navbar a.active {
+    color: #1E40AF !important;
+    background-color: rgba(30, 64, 175, 0.1) !important;
+    border-color: rgba(30, 64, 175, 0.2) !important;
+    font-weight: 600 !important;
+}
+
+.navbar.navbar.navbar a.active:hover {
+    color: #1E40AF !important;
+    background-color: rgba(30, 64, 175, 0.15) !important;
+    border-color: rgba(30, 64, 175, 0.3) !important;
 }
 
 .navbar.navbar.navbar .navbar-brand {
@@ -250,10 +266,13 @@ section .card:hover {
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
 }
 
-/* Navigation Hover Effects */
-.navbar a:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+/* Enhanced Navigation Spacing */
+.navbar .menu-horizontal {
+    gap: 0.5rem !important;
+}
+
+.navbar .menu-horizontal li {
+    margin: 0 0.125rem !important;
 }
 
 /* Footer Styling */
