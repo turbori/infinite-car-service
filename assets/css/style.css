@@ -506,36 +506,40 @@ html, body {
     letter-spacing: 0.025em !important;
 }
 
-/* Perfect Navbar CTA Button - Matching the ideal design */
+/* Perfect Navbar CTA Button - Blue background with white text */
 .navbar-end .btn-primary {
-    background: #4F46E5 !important;
-    border: none !important;
+    background: #2563EB !important;
+    border: 1px solid #2563EB !important;
     color: #FFFFFF !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     font-size: 0.95rem !important;
     padding: 0.75rem 1.5rem !important;
     border-radius: 0.5rem !important;
-    text-shadow: none !important;
-    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25) !important;
     transition: all 0.3s ease !important;
     letter-spacing: 0.01em !important;
 }
 
 .navbar-end .btn-primary:hover {
-    background: #4338CA !important;
+    background: #1E40AF !important;
+    border-color: #1E40AF !important;
     color: #FFFFFF !important;
-    transform: translateY(-1px) !important;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
-    font-weight: 600 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 .navbar-end .btn-primary:focus,
 .navbar-end .btn-primary:active {
-    background: #4338CA !important;
+    background: #1E40AF !important;
+    border-color: #1E40AF !important;
     color: #FFFFFF !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     outline: none !important;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Ensure all Get Quote buttons have perfect readability */
