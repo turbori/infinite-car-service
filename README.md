@@ -144,7 +144,7 @@ This is a proprietary website for Infinite Car Service. For updates or modificat
 
 ## 📄 License
 
-© 2024 Infinite Car Service. All rights reserved.
+© 2025 Infinite Car Service. All rights reserved.
 
 ---
 

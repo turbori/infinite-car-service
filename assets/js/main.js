@@ -232,6 +232,54 @@ function addScrollToTop() {
 // Initialize scroll-to-top when DOM is ready
 document.addEventListener('DOMContentLoaded', addScrollToTop);
 
+// Floating Get Quote Button functionality
+function addFloatingQuoteButton() {
+    const floatingBtn = document.createElement('a');
+    floatingBtn.href = 'https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info';
+    floatingBtn.target = '_blank';
+    floatingBtn.innerHTML = '<i class="fas fa-arrow-right mr-2"></i>Get a quote';
+    floatingBtn.className = 'floating-quote-btn fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 font-semibold flex items-center';
+    floatingBtn.style.cssText = `
+        background: linear-gradient(135deg, #6366f1, #4f46e5) !important;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4) !important;
+        transform: translateY(0px);
+        transition: all 0.3s ease !important;
+    `;
+    
+    // Hover effects
+    floatingBtn.addEventListener('mouseenter', () => {
+        floatingBtn.style.transform = 'translateY(-2px)';
+        floatingBtn.style.boxShadow = '0 8px 25px rgba(99, 102, 241, 0.6) !important';
+    });
+    
+    floatingBtn.addEventListener('mouseleave', () => {
+        floatingBtn.style.transform = 'translateY(0px)';
+        floatingBtn.style.boxShadow = '0 4px 15px rgba(99, 102, 241, 0.4) !important';
+    });
+    
+    // Track clicks
+    floatingBtn.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'floating_quote_click', {
+                'event_category': 'conversion',
+                'event_label': 'floating_button'
+            });
+        }
+        
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_name: 'Floating Quote Button',
+                content_category: 'CTA'
+            });
+        }
+    });
+    
+    document.body.appendChild(floatingBtn);
+}
+
+// Initialize floating quote button when DOM is ready
+document.addEventListener('DOMContentLoaded', addFloatingQuoteButton);
+
 // Performance optimization: Lazy load images
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[data-src]');
