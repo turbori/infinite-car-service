@@ -208,8 +208,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Card Hover Effects - Enhanced */
 .card {
     transition: all 0.3s ease !important;
-    cursor: pointer !important;
     border-radius: 1rem !important;
+}
+
+/* Clickable Cards Only */
+.card.clickable {
+    cursor: pointer !important;
 }
 
 .card:hover {
