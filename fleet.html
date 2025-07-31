@@ -365,7 +365,7 @@
     </div>
 
     <!-- Fleet Hero Section -->
-    <section class="pt-32 pb-20 bg-white border-b border-gray-100">
+    <section class="pt-40 pb-20 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 page-title">
                 <h1 class="text-4xl lg:text-5xl font-bold text-blue-600 mb-6">Fleet & Amenities</h1>
@@ -385,13 +385,12 @@
                 <p class="text-xl text-gray-700 max-w-2xl mx-auto">Choose from our selection of luxury vehicles, each equipped with premium amenities for your comfort</p>
             </div>
             
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Luxury Sedan -->
                 <div class="card bg-white shadow-lg fleet-card">
                     <div class="card-body">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-car text-2xl text-white"></i>
-                        </div>
+                        <img src="assets/images/Luxury Sedan .png" alt="Cadillac CT6 luxury sedan" class="w-full h-48 object-cover rounded-lg mb-4">
                         <h3 class="card-title justify-center text-blue-600 mb-4">Luxury Sedan</h3>
                         <div class="text-center mb-4">
                             <p class="font-semibold text-gray-800 mb-2">Capacity: 2 Passengers</p>
@@ -419,9 +418,7 @@
                 <!-- Luxury Midsize SUV -->
                 <div class="card bg-white shadow-lg fleet-card">
                     <div class="card-body">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-car-side text-2xl text-white"></i>
-                        </div>
+                        <img src="assets/images/Luxury Midsize SUV .png" alt="Cadillac XT6 midsize luxury SUV" class="w-full h-48 object-cover rounded-lg mb-4">
                         <h3 class="card-title justify-center text-blue-600 mb-4">Luxury Midsize SUV</h3>
                         <div class="text-center mb-4">
                             <p class="font-semibold text-gray-800 mb-2">Capacity: 3 Passengers</p>
@@ -450,9 +447,7 @@
                 <!-- Luxury Large SUV -->
                 <div class="card bg-white shadow-lg fleet-card">
                     <div class="card-body">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-car-side text-2xl text-white"></i>
-                        </div>
+                        <img src="assets/images/Luxury Large SUV .png" alt="Cadillac Escalade luxury SUV" class="w-full h-48 object-cover rounded-lg mb-4">
                         <h3 class="card-title justify-center text-blue-600 mb-4">Luxury Large SUV</h3>
                         <div class="text-center mb-4">
                             <p class="font-semibold text-gray-800 mb-2">Capacity: 6 Passengers</p>
@@ -624,51 +619,92 @@
     </section>
 
     <!-- Standard Features Section -->
-    <section class="py-20 bg-white border-b border-gray-100 standard-features">
+    <section class="py-20 bg-gray-50 border-b border-gray-100 standard-features">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">What to Expect in Every Vehicle</h2>
                 <p class="text-xl text-gray-700 max-w-3xl mx-auto">When you ride with Infinite Car Service, you're choosing Long Island's #1 trusted luxury car service.</p>
             </div>
             
+            <!-- Hero Badge -->
+            <div class="text-center mb-12">
+                <div class="badge badge-lg p-4 font-bold text-lg shadow-lg" style="background: #1E40AF !important; color: #FFFFFF !important; border: 2px solid #1E40AF !important;">
+                    <i class="fas fa-star mr-2" style="color: #FFFFFF !important;"></i>
+                    Standard Luxury Features Include
+                </div>
+            </div>
+            
+            <!-- Amenities Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <!-- Water & Mints -->
+                <div class="card bg-white shadow-md hover:shadow-lg transition-shadow">
+                    <div class="card-body p-6 text-center">
+                        <img src="assets/images/suburban interior shot captain chairs.png" alt="Complimentary water and mints" class="w-16 h-16 object-cover rounded-full mx-auto mb-3">
+                        <h4 class="font-semibold text-gray-800 text-sm mb-1">WATER & MINTS</h4>
+                        <p class="text-xs text-gray-500">Complimentary</p>
+                    </div>
+                </div>
+                
+                <!-- USB Charging -->
+                <div class="card bg-white shadow-md hover:shadow-lg transition-shadow">
+                    <div class="card-body p-6 text-center">
+                        <img src="assets/images/suburban interior shot captain chairs.png" alt="USB charging ports available" class="w-16 h-16 object-cover rounded-full mx-auto mb-3">
+                        <h4 class="font-semibold text-gray-800 text-sm mb-1">USB CHARGING</h4>
+                        <p class="text-xs text-gray-500">Every seat</p>
+                    </div>
+                </div>
+                
+                <!-- Leather Interior -->
+                <div class="card bg-white shadow-md hover:shadow-lg transition-shadow">
+                    <div class="card-body p-6 text-center">
+                        <img src="assets/images/suburban interior shot captain chairs.png" alt="Premium leather interior" class="w-16 h-16 object-cover rounded-full mx-auto mb-3">
+                        <h4 class="font-semibold text-gray-800 text-sm mb-1">LEATHER INTERIOR</h4>
+                        <p class="text-xs text-gray-500">Premium quality</p>
+                    </div>
+                </div>
+                
+                <!-- Chauffeur -->
+                <div class="card bg-white shadow-md hover:shadow-lg transition-shadow">
+                    <div class="card-body p-6 text-center">
+                        <img src="assets/images/hero-chauffeur-escalade.jpg" alt="Professional chauffeur service" class="w-16 h-16 object-cover rounded-full mx-auto mb-3">
+                        <h4 class="font-semibold text-gray-800 text-sm mb-1">CHAUFFEUR</h4>
+                        <p class="text-xs text-gray-500">Professional</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features List -->
             <div class="max-w-4xl mx-auto">
-                <div class="card bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-xl">
-                    <div class="card-body p-8">
-                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-star text-3xl text-white"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Left Column Features -->
+                    <div class="space-y-6">
+                        <div class="alert alert-info shadow-sm">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Spotless, smoke-free interiors</span>
                         </div>
-                        
-                        <h3 class="text-2xl font-bold mb-8 text-center text-white">Standard Luxury Features Include</h3>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
-                                    <span class="text-white">Spotless, smoke-free interiors</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
-                                    <span class="text-white">Complimentary bottled water and mints</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
-                                    <span class="text-white">USB charging ports</span>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
-                                    <span class="text-white">Real-time flight tracking for all airport pickups</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
-                                    <span class="text-white">Tinted windows for privacy</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-check-circle text-white mr-3 mt-1"></i>
-                                    <span class="text-white">Smooth, quiet cabin for a premium experience</span>
-                                </div>
-                            </div>
+                        <div class="alert alert-info shadow-sm">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Complimentary bottled water and mints</span>
+                        </div>
+                        <div class="alert alert-info shadow-sm">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">USB charging ports</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column Features -->
+                    <div class="space-y-6">
+                        <div class="alert alert-info shadow-sm">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Real-time flight tracking for all airport pickups</span>
+                        </div>
+                        <div class="alert alert-info shadow-sm">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Tinted windows for privacy</span>
+                        </div>
+                        <div class="alert alert-info shadow-sm">
+                            <i class="fas fa-check-circle text-blue-600"></i>
+                            <span class="text-gray-800 font-medium">Smooth, quiet cabin for a premium experience</span>
                         </div>
                     </div>
                 </div>
