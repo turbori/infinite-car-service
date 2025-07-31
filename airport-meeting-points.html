@@ -6,8 +6,8 @@
     <title>Airport Meeting Points | Infinite Car Service</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Find exact meeting points at JFK, LGA, EWR, and ISP airports for your Infinite Car Service pickup. Professional meet and greet service.">
-    <meta name="keywords" content="airport meeting points, JFK pickup, LGA meeting, EWR airport service, ISP transportation, chauffeur meet and greet">
+    <meta name="description" content="Find exact meeting points at JFK and LGA airports for your Infinite Car Service pickup. Professional meet and greet service with DaisyUI collapse components.">
+    <meta name="keywords" content="airport meeting points, JFK pickup, LGA meeting, airport service, chauffeur meet and greet">
     <meta name="author" content="Infinite Car Service">
     
     <!-- DaisyUI and Tailwind CSS -->
@@ -449,7 +449,7 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">Premium Inside Terminal Meet & Greet</h2>
                 <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-                    Upgrade your experience with our premium inside terminal service available at JFK (T4, T5, T8), LGA, and ISP
+                    Upgrade your experience with our premium inside terminal service available at JFK (T4, T5, T8) and LGA
                 </p>
                 
                 <!-- Premium Service Card -->
@@ -462,7 +462,7 @@
                                 </div>
                                 <div class="text-left">
                                     <h3 class="text-2xl font-bold mb-2" style="color: #FFFFFF !important;">Inside Terminal Service</h3>
-                                    <p class="text-lg" style="color: #FFFFFF !important;">Available at JFK (T4, T5, T8), LGA & ISP</p>
+                                    <p class="text-lg" style="color: #FFFFFF !important;">Available at JFK (T4, T5, T8) & LGA</p>
                                 </div>
                             </div>
                             
@@ -590,21 +590,24 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">T1</span>
+            <!-- JFK Terminal Collapse Components -->
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <!-- Terminal 1 -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">T1</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 1</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal 1
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
                                 <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
                             </ul>
-                            
-                            <!-- Curbside Only Notice -->
-                            <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                            <div class="p-3 bg-red-50 border border-red-200 rounded-lg">
                                 <p class="text-red-800 text-sm font-medium">
                                     <i class="fas fa-exclamation-triangle mr-2"></i>
                                     <strong>AirTrain Required:</strong> Terminal 1 does not allow inside terminal meet & greet service. All passengers must take the AirTrain to Howard Beach Lot.
@@ -613,21 +616,22 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">T4</span>
+
+                <!-- Terminal 4 -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">T4</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 4</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal 4
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
                                 <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
                             </ul>
-                            
-                            <!-- AirTrain Avoidance Notice -->
-                            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                            <div class="p-3 bg-green-50 border border-green-200 rounded-lg">
                                 <p class="text-green-800 text-sm font-medium">
                                     <i class="fas fa-check-circle mr-2"></i>
                                     <strong>Skip the AirTrain:</strong> Available with inside terminal meet & greet service ($50)
@@ -636,21 +640,22 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">T5</span>
+
+                <!-- Terminal 5 -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">T5</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 5</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal 5
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
                                 <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
                             </ul>
-                            
-                            <!-- AirTrain Avoidance Notice -->
-                            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                            <div class="p-3 bg-green-50 border border-green-200 rounded-lg">
                                 <p class="text-green-800 text-sm font-medium">
                                     <i class="fas fa-check-circle mr-2"></i>
                                     <strong>Skip the AirTrain:</strong> Available with inside terminal meet & greet service ($50)
@@ -659,21 +664,22 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">T7</span>
+
+                <!-- Terminal 7 -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">T7</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 7</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal 7
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
                                 <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
                             </ul>
-                            
-                            <!-- Curbside Only Notice -->
-                            <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                            <div class="p-3 bg-red-50 border border-red-200 rounded-lg">
                                 <p class="text-red-800 text-sm font-medium">
                                     <i class="fas fa-exclamation-triangle mr-2"></i>
                                     <strong>AirTrain Required:</strong> Terminal 7 does not allow inside terminal meet & greet service. All passengers must take the AirTrain to Howard Beach Lot.
@@ -682,21 +688,22 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">T8</span>
+
+                <!-- Terminal 8 -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">T8</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal 8</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal 8
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Meeting Location:</strong> Take AirTrain to Howard Beach Lot</li>
                                 <li>• <strong>Instructions:</strong> Follow AirTrain signs to Howard Beach Station</li>
                             </ul>
-                            
-                            <!-- AirTrain Avoidance Notice -->
-                            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                            <div class="p-3 bg-green-50 border border-green-200 rounded-lg">
                                 <p class="text-green-800 text-sm font-medium">
                                     <i class="fas fa-check-circle mr-2"></i>
                                     <strong>Skip the AirTrain:</strong> Available with inside terminal meet & greet service ($50)
@@ -705,34 +712,38 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- LGA Airport Meeting Points -->
-    <section class="py-20 bg-gray-50 border-b border-gray-100">
+    <section class="py-20 bg-white border-b border-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">LaGuardia Airport</h2>
                 <p class="text-xl text-gray-700">LaGuardia Airport Meeting Points</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">A</span>
+            <!-- LGA Terminal Collapse Components -->
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <!-- Terminal A -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">A</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal A</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal A
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Instructions:</strong> Once outside, let us know what sign you see</li>
                                 <li>• <strong>Position:</strong> Not too crowded location preferred</li>
                                 <li>• <strong>Wait Time:</strong> 45 minutes included</li>
                             </ul>
-                            
-                            <!-- Meet & Greet Available Notice -->
-                            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                 <p class="text-blue-800 text-sm font-medium">
                                     <i class="fas fa-concierge-bell mr-2"></i>
                                     <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
@@ -741,20 +752,21 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">B</span>
+
+                <!-- Terminal B -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">B</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal B</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal B
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Location:</strong> Level 2 of Terminal B parking garage between sign K1 and K2</li>
                             </ul>
-                            
-                            <!-- Meet & Greet Available Notice -->
-                            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                 <p class="text-blue-800 text-sm font-medium">
                                     <i class="fas fa-concierge-bell mr-2"></i>
                                     <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
@@ -763,22 +775,23 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-white font-bold">C</span>
+
+                <!-- Terminal C -->
+                <div tabindex="0" class="collapse collapse-arrow bg-white border border-gray-200 shadow-lg">
+                    <div class="collapse-title text-lg font-semibold text-blue-600 flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">C</span>
                         </div>
-                        <h3 class="text-lg font-bold text-blue-600 mb-4 text-center">Terminal C</h3>
-                        <div class="text-left">
-                            <ul class="text-gray-700 space-y-2 text-sm">
+                        Terminal C
+                    </div>
+                    <div class="collapse-content">
+                        <div class="pt-2">
+                            <ul class="text-gray-700 space-y-2 text-sm mb-4">
                                 <li>• <strong>Meeting Point:</strong> Between 11A and 11B</li>
                                 <li>• <strong>Position:</strong> Less crowded area preferred</li>
                                 <li>• <strong>Wait Time:</strong> 45 minutes included</li>
                             </ul>
-                            
-                            <!-- Meet & Greet Available Notice -->
-                            <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                 <p class="text-blue-800 text-sm font-medium">
                                     <i class="fas fa-concierge-bell mr-2"></i>
                                     <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
@@ -787,45 +800,14 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
 
 
-    <!-- ISP Airport Meeting Points -->
-    <section class="py-20 bg-white border-b border-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-blue-600 mb-4">Long Island MacArthur Airport</h2>
-            </div>
-            
-            <div class="max-w-2xl mx-auto">
-                <div class="card bg-white shadow-lg">
-                    <div class="card-body text-center">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-plane text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-blue-600 mb-4">Main Terminal</h3>
-                        <div class="text-left max-w-md mx-auto">
-                            <ul class="text-gray-700 space-y-2">
-                                <li>• <strong>Meeting Point:</strong> Arrivals Area, Ground Level</li>
-                            </ul>
-                            
-                            <!-- Meet & Greet Available Notice -->
-                            <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                                <p class="text-blue-800 text-sm font-medium">
-                                    <i class="fas fa-concierge-bell mr-2"></i>
-                                    <strong>Meet & Greet Available:</strong> Inside terminal service with luggage assistance ($50)
-                                </p>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Get Quote CTA Section -->
     <section class="cta-section">
