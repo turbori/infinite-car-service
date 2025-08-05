@@ -14,6 +14,22 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Google Ads Conversion Tracking -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16458132086/Hu6ZCKPXoIAbEPbU7Kc9',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
     <style>
         :root {
             --primary-color: #2563EB;
@@ -129,7 +145,7 @@
         </div>
         
         <div class="navbar-end">
-            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom">Get Quote</a>
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">Get Quote</a>
         </div>
     </nav>
 
@@ -726,7 +742,7 @@
             </p>
             
             <div class="text-center">
-                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">
                     <i class="fas fa-calendar-check mr-3"></i>
                     Get Quote
                 </a>
@@ -802,7 +818,7 @@
     </footer>
 
     <!-- Floating Get Quote Button -->
-    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn">
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" onclick="return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">
         <i class="fas fa-calendar-check"></i>
         <span>Get Quote</span>
     </a>
