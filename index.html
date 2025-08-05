@@ -132,6 +132,32 @@
             .carousel-item .grid .card:nth-child(3) {
                 display: none;
             }
+            
+            /* Fix image cropping on mobile - show full images */
+            img.object-cover {
+                object-fit: contain !important;
+                height: auto !important;
+                max-height: 200px;
+                background-color: #f8f9fa;
+            }
+            
+            /* Adjust specific image heights for mobile */
+            .h-48, .h-56, .h-32, .h-96 {
+                height: auto !important;
+                max-height: 180px;
+            }
+            
+            /* Service and fleet card images */
+            .card figure img,
+            .fleet-card img,
+            .service-card img {
+                object-fit: contain !important;
+                height: auto !important;
+                max-height: 160px;
+                width: 100%;
+                background-color: #f8f9fa;
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
