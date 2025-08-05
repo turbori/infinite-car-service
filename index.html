@@ -126,6 +126,12 @@
                 padding: 12px 20px;
                 font-size: 14px;
             }
+            
+            /* Hide 2nd and 3rd review cards on mobile for better spacing */
+            .carousel-item .grid .card:nth-child(2),
+            .carousel-item .grid .card:nth-child(3) {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -302,7 +308,7 @@
                 <div class="carousel w-full" id="reviewsCarousel">
                     <!-- Slide 1 (Reviews 1-3) -->
                     <div id="slide1" class="carousel-item w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                        <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
                             <div class="card bg-white shadow-lg">
                                 <div class="card-body">
                                     <div class="flex text-yellow-400 mb-2">
@@ -335,7 +341,7 @@
 
                     <!-- Slide 2 (Reviews 4-6) -->
                     <div id="slide2" class="carousel-item w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                        <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
 
                             <div class="card bg-white shadow-lg">
                                 <div class="card-body">
@@ -369,7 +375,7 @@
 
                     <!-- Slide 3 (Reviews 7-9) -->
                     <div id="slide3" class="carousel-item w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                        <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
 
                             <div class="card bg-white shadow-lg">
                                 <div class="card-body">
@@ -403,7 +409,7 @@
 
                     <!-- Slide 4 (Reviews 10-12) -->
                     <div id="slide4" class="carousel-item w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                        <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
                             <div class="card bg-white shadow-lg">
                                 <div class="card-body">
                                     <div class="flex text-yellow-400 mb-2">
@@ -436,7 +442,7 @@
 
                     <!-- Slide 5 (Reviews 13-15) -->
                     <div id="slide5" class="carousel-item w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                        <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
                             <div class="card bg-white shadow-lg">
                                 <div class="card-body">
                                     <div class="flex text-yellow-400 mb-2">
@@ -469,7 +475,7 @@
 
                     <!-- Slide 6 (Reviews 16-18) -->
                     <div id="slide6" class="carousel-item w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                        <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
                             <div class="card bg-white shadow-lg">
                                 <div class="card-body">
                                     <div class="flex text-yellow-400 mb-2">
@@ -502,7 +508,7 @@
 
                     <!-- Slide 7 (Reviews 19-20) -->
                     <div id="slide7" class="carousel-item w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                        <div class="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
                             <div class="card bg-white shadow-lg">
                                 <div class="card-body">
                                     <div class="flex text-yellow-400 mb-2">
@@ -551,18 +557,12 @@
                 </div>
             </div>
 
-            <!-- CTA and Reviews Button -->
-            <div class="text-center space-y-4">
-                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-lg px-8">
-                    <i class="fas fa-calendar-check mr-2"></i>
-                    Get Quote
+            <!-- Reviews Button -->
+            <div class="text-center">
+                <a href="https://maps.app.goo.gl/bjFaK2sjtYXzEUrD6?g_st=com.google.maps.preview.copy" target="_blank" class="btn btn-outline btn-lg">
+                    <i class="fab fa-google mr-2"></i>
+                    View All Google Reviews
                 </a>
-                <div>
-                    <a href="https://maps.app.goo.gl/bjFaK2sjtYXzEUrD6?g_st=com.google.maps.preview.copy" target="_blank" class="btn btn-outline btn-lg">
-                        <i class="fab fa-google mr-2"></i>
-                        View All Google Reviews
-                    </a>
-                </div>
             </div>
         </div>
     </section>
