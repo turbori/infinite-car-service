@@ -81,6 +81,21 @@
             text-decoration: none;
         }
         
+        /* Friendly rounded corners for ALL images at ALL screen sizes */
+        img {
+            border-radius: 16px !important;
+        }
+        
+        img.object-cover {
+            border-radius: 16px !important;
+        }
+        
+        .card figure img,
+        .fleet-card img,
+        .service-card img {
+            border-radius: 16px !important;
+        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .floating-quote-btn {
@@ -88,6 +103,31 @@
                 right: 15px;
                 padding: 12px 20px;
                 font-size: 14px;
+            }
+            
+            /* Fix image cropping on mobile - show full images */
+            img.object-cover {
+                object-fit: contain !important;
+                height: auto !important;
+                max-height: 200px;
+                border-radius: 16px !important;
+            }
+            
+            /* Adjust specific image heights for mobile */
+            .h-48, .h-56, .h-32, .h-96 {
+                height: auto !important;
+                max-height: 180px;
+            }
+            
+            /* Service and fleet card images */
+            .card figure img,
+            .fleet-card img,
+            .service-card img {
+                object-fit: contain !important;
+                height: auto !important;
+                max-height: 160px;
+                width: 100%;
+                border-radius: 16px !important;
             }
         }
     </style>
@@ -490,8 +530,8 @@
     <!-- Footer -->
     <footer class="py-12 px-4 text-white" style="background-color: var(--footer-bg);">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2 lg:col-span-2">
                     <h3 class="text-xl font-bold mb-4">
                         <i class="fas fa-car-side mr-2" style="color: var(--primary-color);"></i>
                         Infinite Car Service
@@ -524,6 +564,9 @@
                         </a>
                         <a href="https://www.google.com/search?q=infinite+car+service&sourceid=chrome&ie=UTF-8#" target="_blank" class="text-gray-300 hover:text-white transition-colors">
                             <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/bjFaK2sjtYXzEUrD6?g_st=com.google.maps.preview.copy" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-google text-xl"></i>
                         </a>
                     </div>
                 </div>
