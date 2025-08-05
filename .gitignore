@@ -46,3 +46,34 @@ temp/
 
 # Cache
 .cache/
+
+# System and Personal Files (exclude everything in user directory except website files)
+.CFUserTextEncoding
+.bash_history
+.config/
+.cups/
+.cursor/
+.gem/
+.gitconfig
+.lesshst
+.npm/
+.nvm/
+.ssh/
+.swiftpm/
+.viminfo
+.zcompdump
+.zsh_history
+.zsh_sessions/
+.zshrc
+.Trash/
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+Projects/
+infinite-car-service/
