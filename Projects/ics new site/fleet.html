@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Fleet – Premium Vehicles | Infinite Car Service</title>
+    <meta name="description" content="Explore our luxury fleet of sedans, SUVs, and premium vehicles. Professional chauffeur-driven transportation with the latest luxury amenities.">
+    <meta name="keywords" content="luxury fleet, premium vehicles, luxury sedans, luxury SUVs, Long Island, NYC">
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --primary-blue-dark: #1E40AF;
+            --primary-blue-darker: #1D4ED8;
+            --accent-color: #64748B;
+            --slate-dark: #475569;
+            --slate-darker: #334155;
+            --background-color: #F9FAFB;
+            --background-medium: #F3F4F6;
+            --text-dark: #111827;
+            --text-medium: #374151;
+            --text-light: #6B7280;
+            --text-lighter: #94A3B8;
+            --footer-bg: #0F172A;
+            --blue-light: #EFF6FF;
+            --blue-dark: #1E3A8A;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--primary-blue-dark);
+            border-color: var(--primary-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        
+        .fleet-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        /* Floating Get Quote Button */
+        .floating-quote-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .floating-quote-btn:hover {
+            background-color: var(--primary-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .floating-quote-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen" style="background-color: var(--background-color);">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="font-medium">Home</a></li>
+                    <li><a href="services.html" class="font-medium">Services</a></li>
+                    <li><a href="fleet.html" class="font-medium text-blue-600">Fleet</a></li>
+                    <li><a href="about.html" class="font-medium">About</a></li>
+                    <li><a href="airport-meeting-points.html" class="font-medium">Airport Meeting Points</a></li>
+                    <li><a href="top-places-nyc.html" class="font-medium">Top Places to Visit in NYC</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl font-bold" style="color: var(--text-dark);">
+                Infinite Car Service
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Home</a></li>
+                <li><a href="services.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Services</a></li>
+                <li><a href="fleet.html" class="font-medium text-blue-600">Fleet</a></li>
+                <li><a href="about.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">About</a></li>
+                <li><a href="airport-meeting-points.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Airport Meeting Points</a></li>
+                <li><a href="top-places-nyc.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Top Places to Visit in NYC</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end">
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-16 px-4" style="background: linear-gradient(135deg, var(--blue-light) 0%, white 100%);">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--text-dark);">Our Luxury Fleet</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto" style="color: var(--accent-color);">
+                Experience comfort and elegance with our meticulously maintained premium vehicles
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Fleet Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Luxury Sedan -->
+                <div class="card bg-base-100 shadow-xl fleet-card">
+                    <figure class="px-6 pt-6">
+                        <img src="./assets/images/Luxury Sedan .png" alt="Luxury Sedan" class="rounded-lg h-56 w-full object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-xl" style="color: var(--text-dark);">
+                            <i class="fas fa-car mr-2" style="color: var(--primary-color);"></i>
+                            Luxury Sedan
+                        </h2>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Perfect for business travel, airport transfers, and executive transportation. Featuring premium leather seating and professional amenities.
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center" style="color: var(--text-medium);">
+                                    <i class="fas fa-users mr-2" style="color: var(--primary-color);"></i>
+                                    Capacity
+                                </span>
+                                <span class="font-semibold" style="color: var(--text-dark);">Up to 2 passengers</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center" style="color: var(--text-medium);">
+                                    <i class="fas fa-suitcase mr-2" style="color: var(--primary-color);"></i>
+                                    Luggage
+                                </span>
+                                <span class="font-semibold" style="color: var(--text-dark);">
+                                    <div class="text-sm">
+                                        <div>2 × 50lb bags</div>
+                                        <div class="text-xs" style="color: var(--accent-color);">OR 1 × 50lb + 2 carry-on</div>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="divider"></div>
+                        
+                        <h4 class="font-semibold mb-2" style="color: var(--text-dark);">Features:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Premium leather seating
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Climate control
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Phone charging ports
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Complimentary water
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Luxury Midsize SUV -->
+                <div class="card bg-base-100 shadow-xl fleet-card">
+                    <figure class="px-6 pt-6">
+                        <img src="./assets/images/Luxury Midsize SUV .png" alt="Luxury Midsize SUV" class="rounded-lg h-56 w-full object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-xl" style="color: var(--text-dark);">
+                            <i class="fas fa-truck mr-2" style="color: var(--primary-color);"></i>
+                            Luxury Midsize SUV
+                        </h2>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Ideal for small groups and families. Combines luxury with practicality, offering comfort and space for longer journeys.
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center" style="color: var(--text-medium);">
+                                    <i class="fas fa-users mr-2" style="color: var(--primary-color);"></i>
+                                    Capacity
+                                </span>
+                                <span class="font-semibold" style="color: var(--text-dark);">Up to 4 passengers</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center" style="color: var(--text-medium);">
+                                    <i class="fas fa-suitcase mr-2" style="color: var(--primary-color);"></i>
+                                    Luggage
+                                </span>
+                                <span class="font-semibold" style="color: var(--text-dark);">
+                                    <div class="text-sm">
+                                        <div>3 × 50lb bags</div>
+                                        <div class="text-xs" style="color: var(--accent-color);">OR 2 × 50lb + 2 carry-on</div>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="divider"></div>
+                        
+                        <h4 class="font-semibold mb-2" style="color: var(--text-dark);">Features:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Captain's chairs
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Panoramic sunroof
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Premium sound system
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                WiFi available
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Luxury Large SUV -->
+                <div class="card bg-base-100 shadow-xl fleet-card">
+                    <figure class="px-6 pt-6">
+                        <img src="./assets/images/Luxury Large SUV .png" alt="Luxury Large SUV" class="rounded-lg h-56 w-full object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-xl" style="color: var(--text-dark);">
+                            <i class="fas fa-truck-monster mr-2" style="color: var(--primary-color);"></i>
+                            Luxury Large SUV
+                        </h2>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Maximum comfort for larger groups. Premium amenities and spacious interior design perfect for corporate groups and family trips.
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center" style="color: var(--text-medium);">
+                                    <i class="fas fa-users mr-2" style="color: var(--primary-color);"></i>
+                                    Capacity
+                                </span>
+                                <span class="font-semibold" style="color: var(--text-dark);">Up to 6 passengers</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center" style="color: var(--text-medium);">
+                                    <i class="fas fa-suitcase mr-2" style="color: var(--primary-color);"></i>
+                                    Luggage
+                                </span>
+                                <span class="font-semibold" style="color: var(--text-dark);">
+                                    <div class="text-sm">
+                                        <div>5 × 50lb bags</div>
+                                        <div class="text-xs" style="color: var(--accent-color);">OR 3 × 50lb + 3 carry-on</div>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="divider"></div>
+                        
+                        <h4 class="font-semibold mb-2" style="color: var(--text-dark);">Features:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Executive seating
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Entertainment system
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Power outlets
+                            </li>
+                            <li class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Refreshment center
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Features Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Why Choose Our Fleet</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Every vehicle in our fleet meets the highest standards of luxury and safety</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Safety First</h3>
+                        <p style="color: var(--accent-color);">All vehicles undergo regular safety inspections and maintenance</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tools text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Well-Maintained</h3>
+                        <p style="color: var(--accent-color);">Professional maintenance ensures reliability and peak performance</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-gem text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Immaculate</h3>
+                        <p style="color: var(--accent-color);">Each vehicle is thoroughly cleaned and detailed before every trip</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-calendar-alt text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Latest Models</h3>
+                        <p style="color: var(--accent-color);">Our fleet features the newest luxury vehicles with modern amenities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Fleet Images -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                    <img src="./assets/images/suburban interior shot captain chairs.png" alt="Interior Captain Chairs" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold">Executive Interior</p>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                    <img src="./assets/images/suburban with luggages in the trunk.png" alt="Luggage Space" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold">Ample Luggage Space</p>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                    <img src="./assets/images/fleet driving on the highway.png" alt="Fleet on Highway" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold">Professional Service</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Experience Our Luxury Fleet</h2>
+            <p class="text-lg mb-8" style="color: var(--accent-color);">Book your next trip and experience the comfort and elegance of our premium vehicles.</p>
+            
+            <div class="text-center">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4">
+                    <i class="fas fa-calendar-check mr-3"></i>
+                    Get Quote
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 text-white" style="background-color: var(--footer-bg);">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-car-side mr-2" style="color: var(--primary-color);"></i>
+                        Infinite Car Service
+                    </h3>
+                    <p class="text-gray-300 mb-4">Premier luxury car service serving NYC, Long Island, and the Hamptons, providing exceptional transportation experiences since 2005.</p>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-start">
+                            <i class="fas fa-phone mr-3 mt-1" style="color: var(--primary-color);"></i>
+                            <div class="text-gray-300">
+                                <div class="flex items-center mb-1">
+                                    <span class="text-sm text-gray-400 w-24">New Clients:</span>
+                                    <a href="tel:+16318606700" class="text-gray-300 hover:text-white transition-colors">(631) 860-6700</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-400 w-24">Existing:</span>
+                                    <a href="tel:+16315160006" class="text-gray-300 hover:text-white transition-colors">(631) 516-0006</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3" style="color: var(--primary-color);"></i>
+                            <a href="mailto:info@infinitecarserviceli.com" class="text-gray-300 hover:text-white transition-colors">info@infinitecarserviceli.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61556980469676" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.google.com/search?q=infinite+car+service&sourceid=chrome&ie=UTF-8#" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-left">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-home mr-2 w-4"></i>Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-concierge-bell mr-2 w-4"></i>Services</a></li>
+                        <li><a href="fleet.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-car mr-2 w-4"></i>Fleet</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-info-circle mr-2 w-4"></i>About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="text-left">
+                    <h4 class="text-lg font-semibold mb-4">More Info</h4>
+                    <ul class="space-y-3">
+                        <li><a href="airport-meeting-points.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-plane mr-2 w-4"></i>Airport Meeting Points</a></li>
+                        <li><a href="top-places-nyc.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-map-marker-alt mr-2 w-4"></i>Top Places to Visit in NYC</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Infinite Car Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Get Quote Button -->
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn">
+        <i class="fas fa-calendar-check"></i>
+        <span>Get Quote</span>
+    </a>
+
+</body>
+</html>

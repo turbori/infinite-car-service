@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – Family-Owned Luxury Car Service | Infinite Car Service</title>
+    <meta name="description" content="Learn about Infinite Car Service, Long Island's premier family-owned luxury transportation company serving clients since 2005 with exceptional service and reliability.">
+    <meta name="keywords" content="about infinite car service, family owned, luxury transportation, Long Island, NYC, professional chauffeurs">
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --primary-blue-dark: #1E40AF;
+            --primary-blue-darker: #1D4ED8;
+            --accent-color: #64748B;
+            --slate-dark: #475569;
+            --slate-darker: #334155;
+            --background-color: #F9FAFB;
+            --background-medium: #F3F4F6;
+            --text-dark: #111827;
+            --text-medium: #374151;
+            --text-light: #6B7280;
+            --text-lighter: #94A3B8;
+            --footer-bg: #0F172A;
+            --blue-light: #EFF6FF;
+            --blue-dark: #1E3A8A;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--primary-blue-dark);
+            border-color: var(--primary-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-3px);
+            transition: all 0.3s ease;
+        }
+        
+        /* Floating Get Quote Button */
+        .floating-quote-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .floating-quote-btn:hover {
+            background-color: var(--primary-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .floating-quote-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen" style="background-color: var(--background-color);">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="font-medium">Home</a></li>
+                    <li><a href="services.html" class="font-medium">Services</a></li>
+                    <li><a href="fleet.html" class="font-medium">Fleet</a></li>
+                    <li><a href="about.html" class="font-medium text-blue-600">About</a></li>
+                    <li><a href="airport-meeting-points.html" class="font-medium">Airport Meeting Points</a></li>
+                    <li><a href="top-places-nyc.html" class="font-medium">Top Places to Visit in NYC</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl font-bold" style="color: var(--text-dark);">
+                Infinite Car Service
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Home</a></li>
+                <li><a href="services.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Services</a></li>
+                <li><a href="fleet.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Fleet</a></li>
+                <li><a href="about.html" class="font-medium text-blue-600">About</a></li>
+                <li><a href="airport-meeting-points.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Airport Meeting Points</a></li>
+                <li><a href="top-places-nyc.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Top Places to Visit in NYC</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end">
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-16 px-4" style="background: linear-gradient(135deg, var(--blue-light) 0%, white 100%);">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--text-dark);">About Infinite Car Service</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto" style="color: var(--accent-color);">
+                Family-owned and operated since 2005, delivering luxury transportation with personal touch
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-dark);">Our Story</h2>
+                    <div class="space-y-4" style="color: var(--accent-color);">
+                        <p class="text-lg leading-relaxed">
+                            Family-owned and operated since 2005, we pride ourselves on providing a luxury experience tailored to every client. Every ride is smooth, punctual, and professional.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            What started as a small family business has grown into Long Island's most trusted luxury car service. Our commitment to excellence has earned us the loyalty of executives, families, and travelers who demand the highest standards of comfort and reliability.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            We understand that luxury transportation is more than just getting from point A to point B. It's about creating an experience that allows our clients to travel with confidence, comfort, and style.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="./assets/images/hero-chauffeur-escalade.jpg" alt="Professional Chauffeur Service" class="rounded-lg shadow-lg w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Our Values</h2>
+                <p class="text-lg" style="color: var(--accent-color);">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-white shadow-lg value-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-handshake text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Reliability</h3>
+                        <p style="color: var(--accent-color);">Dependable service you can count on, every time, without exception.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg value-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-crown text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Luxury</h3>
+                        <p style="color: var(--accent-color);">Premium vehicles and amenities that exceed expectations.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg value-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Service</h3>
+                        <p style="color: var(--accent-color);">Professional, courteous service with attention to every detail.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg value-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Safety</h3>
+                        <p style="color: var(--accent-color);">Your safety is our top priority in everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">By the Numbers</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Our track record speaks for itself</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="stats-section">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2" style="color: var(--primary-color);" data-target="18" data-suffix="+">0+</div>
+                    <div class="text-xl font-semibold mb-2" style="color: var(--text-dark);">Years of Service</div>
+                    <p style="color: var(--accent-color);">Serving Long Island and NYC since 2005</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2" style="color: var(--primary-color);" data-target="10000" data-suffix="K+">0K+</div>
+                    <div class="text-xl font-semibold mb-2" style="color: var(--text-dark);">Happy Clients</div>
+                    <p style="color: var(--accent-color);">Satisfied customers who trust our service</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2" style="color: var(--primary-color);" data-target="350" data-suffix="+">0+</div>
+                    <div class="text-xl font-semibold mb-2" style="color: var(--text-dark);">5-Star Google Reviews</div>
+                    <p style="color: var(--accent-color);">Verified reviews from satisfied customers</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2" style="color: var(--primary-color);">24/7</div>
+                    <div class="text-xl font-semibold mb-2" style="color: var(--text-dark);">Available Service</div>
+                    <p style="color: var(--accent-color);">Round-the-clock transportation solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Our Professional Team</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Meet the professionals who make your journey exceptional</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="avatar mb-4">
+                            <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mx-auto" style="line-height: 1; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user-tie text-3xl" style="color: var(--primary-color); display: flex; align-items: center; justify-content: center;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--text-dark);">Professional Chauffeurs</h3>
+                        <p style="color: var(--accent-color);">
+                            Our experienced chauffeurs are professionally trained, background-checked, and committed to providing exceptional service with discretion and professionalism.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="avatar mb-4">
+                            <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mx-auto" style="line-height: 1; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-headset text-3xl" style="color: var(--primary-color); display: flex; align-items: center; justify-content: center;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--text-dark);">Customer Support</h3>
+                        <p style="color: var(--accent-color);">
+                            Our dedicated customer support team is available 24/7 to assist with reservations, changes, and ensure your complete satisfaction.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body text-center">
+                        <div class="avatar mb-4">
+                            <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mx-auto" style="line-height: 1; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-tools text-3xl" style="color: var(--primary-color); display: flex; align-items: center; justify-content: center;"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--text-dark);">Maintenance Team</h3>
+                        <p style="color: var(--accent-color);">
+                            Our skilled maintenance professionals ensure every vehicle in our fleet is meticulously maintained for safety, reliability, and comfort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Our Mission</h2>
+            <div class="card bg-base-100 shadow-lg">
+                <div class="card-body">
+                    <blockquote class="text-xl italic leading-relaxed" style="color: var(--accent-color);">
+                        "To provide unparalleled luxury transportation services that exceed our clients' expectations through reliability, professionalism, and attention to detail. We are committed to making every journey comfortable, safe, and memorable."
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-6" style="color: var(--text-dark);">Why Choose Us?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="text-left">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3" style="color: var(--primary-color);"></i>
+                                <span style="color: var(--accent-color);">Family-owned business with personal attention to detail</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3" style="color: var(--primary-color);"></i>
+                                <span style="color: var(--accent-color);">18+ years of experience in luxury transportation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3" style="color: var(--primary-color);"></i>
+                                <span style="color: var(--accent-color);">Professional, licensed, and insured chauffeurs</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-left">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3" style="color: var(--primary-color);"></i>
+                                <span style="color: var(--accent-color);">Latest luxury vehicles with premium amenities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3" style="color: var(--primary-color);"></i>
+                                <span style="color: var(--accent-color);">24/7 availability for all your transportation needs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3" style="color: var(--primary-color);"></i>
+                                <span style="color: var(--accent-color);">Competitive pricing with transparent rates</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Experience the Infinite Difference</h2>
+            <p class="text-lg mb-8" style="color: var(--accent-color);">Join thousands of satisfied clients who trust Infinite Car Service for their luxury transportation needs.</p>
+            
+            <div class="text-center">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4">
+                    <i class="fas fa-calendar-check mr-3"></i>
+                    Get Quote
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 text-white" style="background-color: var(--footer-bg);">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-car-side mr-2" style="color: var(--primary-color);"></i>
+                        Infinite Car Service
+                    </h3>
+                    <p class="text-gray-300 mb-4">Premier luxury car service serving NYC, Long Island, and the Hamptons, providing exceptional transportation experiences since 2005.</p>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-start">
+                            <i class="fas fa-phone mr-3 mt-1" style="color: var(--primary-color);"></i>
+                            <div class="text-gray-300">
+                                <div class="flex items-center mb-1">
+                                    <span class="text-sm text-gray-400 w-24">New Clients:</span>
+                                    <a href="tel:+16318606700" class="text-gray-300 hover:text-white transition-colors">(631) 860-6700</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-400 w-24">Existing:</span>
+                                    <a href="tel:+16315160006" class="text-gray-300 hover:text-white transition-colors">(631) 516-0006</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3" style="color: var(--primary-color);"></i>
+                            <a href="mailto:info@infinitecarserviceli.com" class="text-gray-300 hover:text-white transition-colors">info@infinitecarserviceli.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61556980469676" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.google.com/search?q=infinite+car+service&sourceid=chrome&ie=UTF-8#" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-left">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-home mr-2 w-4"></i>Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-concierge-bell mr-2 w-4"></i>Services</a></li>
+                        <li><a href="fleet.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-car mr-2 w-4"></i>Fleet</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-info-circle mr-2 w-4"></i>About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="text-left">
+                    <h4 class="text-lg font-semibold mb-4">More Info</h4>
+                    <ul class="space-y-3">
+                        <li><a href="airport-meeting-points.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-plane mr-2 w-4"></i>Airport Meeting Points</a></li>
+                        <li><a href="top-places-nyc.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-map-marker-alt mr-2 w-4"></i>Top Places to Visit in NYC</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Infinite Car Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Statistics Counter Animation -->
+    <script>
+        // Global flag to ensure animation only runs once per page load
+        let statsAnimationCompleted = false;
+
+        function animateCounters() {
+            // Prevent multiple executions
+            if (statsAnimationCompleted) return;
+            
+            const counters = document.querySelectorAll('#stats-section [data-target]');
+            if (counters.length === 0) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !statsAnimationCompleted) {
+                        // Immediately set flag to prevent any duplicate animations
+                        statsAnimationCompleted = true;
+                        
+                        // Disconnect observer immediately
+                        observer.disconnect();
+                        
+                        counters.forEach((counter) => {
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            const suffix = counter.getAttribute('data-suffix');
+                            const duration = 2000; // 2 seconds
+                            const startTime = performance.now();
+                            
+                            function updateCounter(currentTime) {
+                                const elapsed = currentTime - startTime;
+                                const progress = Math.min(elapsed / duration, 1);
+                                
+                                // Use easeOutQuart for smooth deceleration
+                                const easeProgress = 1 - Math.pow(1 - progress, 4);
+                                const currentValue = Math.floor(easeProgress * target);
+                                
+                                // Format the display value based on the suffix
+                                let displayValue;
+                                if (suffix === 'K+') {
+                                    if (currentValue >= 1000) {
+                                        displayValue = Math.floor(currentValue / 1000) + 'K+';
+                                    } else {
+                                        displayValue = currentValue + '+';
+                                    }
+                                } else {
+                                    displayValue = currentValue + suffix;
+                                }
+                                
+                                counter.textContent = displayValue;
+                                
+                                if (progress < 1) {
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    // Ensure final value is correct
+                                    if (suffix === 'K+') {
+                                        counter.textContent = '10K+';
+                                    } else {
+                                        counter.textContent = target + suffix;
+                                    }
+                                }
+                            }
+                            
+                            requestAnimationFrame(updateCounter);
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.5,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            const statsSection = document.getElementById('stats-section');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        }
+
+        // Initialize counter animation when DOM is loaded
+        document.addEventListener('DOMContentLoaded', animateCounters);
+    </script>
+
+    <!-- Floating Get Quote Button -->
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn">
+        <i class="fas fa-calendar-check"></i>
+        <span>Get Quote</span>
+    </a>
+
+</body>
+</html>

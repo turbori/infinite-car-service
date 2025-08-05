@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Places to Visit in NYC – Luxury Transportation Guide | Infinite Car Service</title>
+    <meta name="description" content="Discover NYC's top attractions and destinations with luxury transportation. Professional chauffeur service to Times Square, Central Park, Broadway, and more.">
+    <meta name="keywords" content="NYC attractions, luxury transportation NYC, Times Square, Central Park, Broadway, Manhattan tours, NYC destinations">
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --primary-blue-dark: #1E40AF;
+            --primary-blue-darker: #1D4ED8;
+            --accent-color: #64748B;
+            --slate-dark: #475569;
+            --slate-darker: #334155;
+            --background-color: #F9FAFB;
+            --background-medium: #F3F4F6;
+            --text-dark: #111827;
+            --text-medium: #374151;
+            --text-light: #6B7280;
+            --text-lighter: #94A3B8;
+            --footer-bg: #0F172A;
+            --blue-light: #EFF6FF;
+            --blue-dark: #1E3A8A;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--primary-blue-dark);
+            border-color: var(--primary-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        /* Floating Get Quote Button */
+        .floating-quote-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .floating-quote-btn:hover {
+            background-color: var(--primary-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .floating-quote-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen" style="background-color: var(--background-color);">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="font-medium">Home</a></li>
+                    <li><a href="services.html" class="font-medium">Services</a></li>
+                    <li><a href="fleet.html" class="font-medium">Fleet</a></li>
+                    <li><a href="about.html" class="font-medium">About</a></li>
+                    <li><a href="airport-meeting-points.html" class="font-medium">Airport Meeting Points</a></li>
+                    <li><a href="top-places-nyc.html" class="font-medium text-blue-600">Top Places to Visit in NYC</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl font-bold" style="color: var(--text-dark);">
+                Infinite Car Service
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Home</a></li>
+                <li><a href="services.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Services</a></li>
+                <li><a href="fleet.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Fleet</a></li>
+                <li><a href="about.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">About</a></li>
+                <li><a href="airport-meeting-points.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Airport Meeting Points</a></li>
+                <li><a href="top-places-nyc.html" class="font-medium text-blue-600">Top Places to Visit in NYC</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end">
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-16 px-4" style="background: linear-gradient(135deg, var(--blue-light) 0%, white 100%);">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--text-dark);">Top Places to Visit in NYC</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto" style="color: var(--accent-color);">
+                Explore the best of New York City with our luxury transportation service
+            </p>
+        </div>
+    </section>
+
+    <!-- Team's Favorite Places -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Our Team's Favorite NYC Spots</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Local recommendations from our experienced chauffeurs who know the city inside and out</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sal and Carmine Pizza -->
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-pizza-slice mr-2" style="color: var(--primary-color);"></i>
+                            Sal and Carmine Pizza
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-2">
+                            <strong>Old-school NY Pizza</strong> - Old-school, New York-style pizza in narrow quarters with exposed brick & a few tables.
+                        </p>
+                        <div class="space-y-1">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">2671 Broadway, NY 10025</span>
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-star mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">4.4★ (708 reviews) • $1-10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mama's TOO! Upper West Side -->
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-pizza-slice mr-2" style="color: var(--primary-color);"></i>
+                            Mama's TOO! Upper West Side
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-2">
+                            <strong>Square Slice Specialists</strong> - Upper West Side pizzeria popular for slices with classic and gourmet toppings.
+                        </p>
+                        <div class="space-y-1">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">2750 Broadway, NY 10025</span>
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-star mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">4.1★ (2,390 reviews) • $10-20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Da Nico Ristorante -->
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-wine-glass mr-2" style="color: var(--primary-color);"></i>
+                            Da Nico Ristorante
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-2">
+                            <strong>Little Italy Classic</strong> - Little Italy venue serving traditional Italian plates from the old country & offers an ample garden.
+                        </p>
+                        <div class="space-y-1">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">164 Mulberry St, NY 10013</span>
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-star mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">4.3★ (4,128 reviews) • $20-30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THEP Thai Restaurant -->
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-pepper-hot mr-2" style="color: var(--primary-color);"></i>
+                            THEP Thai Restaurant
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-2">
+                            <strong>Contemporary Thai</strong> - Bright, contemporary-style dining spot serving authentic Thai curries and stir-fries.
+                        </p>
+                        <div class="space-y-1">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">1439 2nd Ave, NY 10021</span>
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-star mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">4.7★ (4,732 reviews) • $20-30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anita La Mamma del Gelato -->
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-ice-cream mr-2" style="color: var(--primary-color);"></i>
+                            Anita La Mamma del Gelato
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-2">
+                            <strong>Artisanal Gelato</strong> - Exceptional gelato and coffee with authentic Italian flavors in a charming Upper East Side location.
+                        </p>
+                        <div class="space-y-1">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">1561 2nd Ave, NY 10028</span>
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-star mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">4.7★ (2,012 reviews) • Ice Cream Shop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saar Indian Cuisine & Bar -->
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-seedling mr-2" style="color: var(--primary-color);"></i>
+                            Saar Indian Cuisine & Bar
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-2">
+                            <strong>Modern Indian</strong> - Updated Indian cuisine & full bar, presented in a modern setting with dramatic, colorful decor.
+                        </p>
+                        <div class="space-y-1">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">241 W 51st St, NY 10019</span>
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-star mr-2" style="color: var(--primary-color);"></i>
+                                <span class="text-sm">4.4★ (1,345 reviews) • $30-50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <div class="card bg-blue-50 shadow-lg max-w-2xl mx-auto">
+                    <div class="card-body">
+                        <h3 class="text-xl font-bold mb-4" style="color: var(--text-dark);">
+                            <i class="fas fa-star mr-2" style="color: var(--primary-color);"></i>
+                            Local Insider Knowledge
+                        </h3>
+                        <p style="color: var(--accent-color);">
+                            Our chauffeurs know the best spots in the city and can provide directions, recommendations, and even make reservations for you. Take advantage of their local expertise during your NYC adventure!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Discover NYC in Luxury</h2>
+            <p class="text-lg mb-8" style="color: var(--accent-color);">
+                New York City offers countless attractions and experiences. Let our professional chauffeurs take you to the most iconic destinations in comfort and style, so you can focus on enjoying your visit.
+            </p>
+        </div>
+    </section>
+
+    <!-- Top Attractions -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Iconic NYC Attractions</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Must-see destinations for every NYC visitor</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Times Square -->
+                <div class="card bg-white shadow-lg destination-card">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-city mr-2" style="color: var(--primary-color);"></i>
+                            Times Square
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            The bustling heart of NYC, featuring bright lights, Broadway theaters, shopping, and dining. Perfect for first-time visitors and tourists.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                                Best visited: Evening for full light experience
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-car mr-2" style="color: var(--primary-color);"></i>
+                                Drop-off: Broadway & 42nd Street area
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Central Park -->
+                <div class="card bg-white shadow-lg destination-card">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-tree mr-2" style="color: var(--primary-color);"></i>
+                            Central Park
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Manhattan's green oasis offering peaceful walks, boat rides, zoo visits, and beautiful landscapes year-round.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                                Best visited: Morning or afternoon
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-car mr-2" style="color: var(--primary-color);"></i>
+                                Multiple entrance points available
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statue of Liberty -->
+                <div class="card bg-white shadow-lg destination-card">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-landmark mr-2" style="color: var(--primary-color);"></i>
+                            Statue of Liberty
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            America's symbol of freedom. We'll take you to Battery Park for ferry departures to Liberty Island and Ellis Island.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                                Plan full day trip with ferry rides
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-car mr-2" style="color: var(--primary-color);"></i>
+                                Drop-off: Battery Park ferry terminal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brooklyn Bridge -->
+                <div class="card bg-white shadow-lg destination-card">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-bridge mr-2" style="color: var(--primary-color);"></i>
+                            Brooklyn Bridge
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Historic bridge offering stunning views of Manhattan skyline. Walk across for unforgettable photo opportunities.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                                Best views: Morning or sunset
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-car mr-2" style="color: var(--primary-color);"></i>
+                                Drop-off: City Hall area or DUMBO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empire State Building -->
+                <div class="card bg-white shadow-lg destination-card">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-building mr-2" style="color: var(--primary-color);"></i>
+                            Empire State Building
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Iconic Art Deco skyscraper with observation decks offering 360-degree views of NYC from the 86th and 102nd floors.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                                Visit at sunset for day-to-night views
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-car mr-2" style="color: var(--primary-color);"></i>
+                                Drop-off: 34th Street entrance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High Line -->
+                <div class="card bg-white shadow-lg destination-card">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">
+                            <i class="fas fa-walking mr-2" style="color: var(--primary-color);"></i>
+                            The High Line
+                        </h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Elevated park built on former railway tracks, featuring gardens, art installations, and unique city views.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                                Best visited: Afternoon for perfect lighting
+                            </div>
+                            <div class="flex items-center" style="color: var(--text-medium);">
+                                <i class="fas fa-car mr-2" style="color: var(--primary-color);"></i>
+                                Multiple access points in Chelsea
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Entertainment & Culture -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Entertainment & Culture</h2>
+                <p class="text-lg" style="color: var(--accent-color);">World-class entertainment and cultural experiences</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-theater-masks text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Broadway Shows</h3>
+                        <p style="color: var(--accent-color);">World-famous theater district with top-tier productions and musicals.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-palette text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Museums</h3>
+                        <p style="color: var(--accent-color);">Metropolitan Museum, MoMA, Guggenheim, and many other world-class institutions.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-music text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Lincoln Center</h3>
+                        <p style="color: var(--accent-color);">Home to Metropolitan Opera, NYC Ballet, and Philharmonic Orchestra.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-camera text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Photo Spots</h3>
+                        <p style="color: var(--accent-color);">Top of the Rock, DUMBO, Vessel, and other Instagram-worthy locations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhoods -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Must-Visit Neighborhoods</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Experience the unique character of NYC's diverse neighborhoods</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">SoHo & Tribeca</h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Upscale shopping, art galleries, cast-iron architecture, and fine dining in these trendy downtown neighborhoods.
+                        </p>
+                        <div class="flex items-center" style="color: var(--text-medium);">
+                            <i class="fas fa-shopping-bag mr-2" style="color: var(--primary-color);"></i>
+                            Perfect for luxury shopping and gallery hopping
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">Greenwich Village</h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Historic neighborhood with charming tree-lined streets, Washington Square Park, and vibrant nightlife.
+                        </p>
+                        <div class="flex items-center" style="color: var(--text-medium);">
+                            <i class="fas fa-coffee mr-2" style="color: var(--primary-color);"></i>
+                            Great for cafes, restaurants, and evening entertainment
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">Chelsea & Meatpacking</h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Trendy area featuring the High Line, Chelsea Market, art galleries, and upscale nightlife venues.
+                        </p>
+                        <div class="flex items-center" style="color: var(--text-medium);">
+                            <i class="fas fa-wine-glass mr-2" style="color: var(--primary-color);"></i>
+                            Ideal for food tours and rooftop bars
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-3" style="color: var(--text-dark);">Upper East Side</h3>
+                        <p style="color: var(--accent-color);" class="mb-4">
+                            Elegant neighborhood home to Museum Mile, Central Park, luxury shopping on Madison Avenue.
+                        </p>
+                        <div class="flex items-center" style="color: var(--text-medium);">
+                            <i class="fas fa-university mr-2" style="color: var(--primary-color);"></i>
+                            Perfect for cultural attractions and upscale dining
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Benefits -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Why Choose Our NYC Tour Service?</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Experience NYC like a VIP with our luxury transportation</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-route text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Local Expertise</h3>
+                        <p style="color: var(--accent-color);">Our chauffeurs know the best routes, avoid traffic, and can recommend hidden gems.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-parking text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">No Parking Stress</h3>
+                        <p style="color: var(--accent-color);">Skip the hassle of finding and paying for parking in busy Manhattan areas.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-clock text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Flexible Schedule</h3>
+                        <p style="color: var(--accent-color);">Customize your itinerary and spend as much time as you want at each location.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Safety & Comfort</h3>
+                        <p style="color: var(--accent-color);">Travel in luxury vehicles with professional chauffeurs for maximum comfort.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shopping-bag text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Shopping Assistance</h3>
+                        <p style="color: var(--accent-color);">Your chauffeur can help carry purchases and keep them secure in the vehicle.</p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="fas fa-camera text-4xl mb-4" style="color: var(--primary-color);"></i>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--text-dark);">Photo Opportunities</h3>
+                        <p style="color: var(--accent-color);">Stop anywhere for photos without worrying about traffic or time constraints.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Itineraries -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Sample NYC Itineraries</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Popular tour routes we can customize for your interests</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-4" style="color: var(--text-dark);">
+                            <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                            Half-Day Classic Tour (4 hours)
+                        </h3>
+                        <ul class="space-y-2" style="color: var(--accent-color);">
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Times Square & Broadway
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Central Park drive-through
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Empire State Building
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                9/11 Memorial area
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Brooklyn Bridge views
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-4" style="color: var(--text-dark);">
+                            <i class="fas fa-clock mr-2" style="color: var(--primary-color);"></i>
+                            Full-Day Comprehensive Tour (8 hours)
+                        </h3>
+                        <ul class="space-y-2" style="color: var(--accent-color);">
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                All half-day tour locations
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Statue of Liberty ferry trip
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                High Line Park walk
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                SoHo shopping district
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Greenwich Village exploration
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-2" style="color: var(--primary-color);"></i>
+                                Museum visit of choice
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Ready to Explore NYC in Style?</h2>
+            <p class="text-lg mb-8" style="color: var(--accent-color);">
+                Let us create a customized NYC experience tailored to your interests and schedule. Contact us to plan your luxury tour today.
+            </p>
+            
+            <div class="text-center">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4">
+                    <i class="fas fa-calendar-check mr-3"></i>
+                    Get Quote
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 text-white" style="background-color: var(--footer-bg);">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-car-side mr-2" style="color: var(--primary-color);"></i>
+                        Infinite Car Service
+                    </h3>
+                    <p class="text-gray-300 mb-4">Premier luxury car service serving NYC, Long Island, and the Hamptons, providing exceptional transportation experiences since 2005.</p>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-start">
+                            <i class="fas fa-phone mr-3 mt-1" style="color: var(--primary-color);"></i>
+                            <div class="text-gray-300">
+                                <div class="flex items-center mb-1">
+                                    <span class="text-sm text-gray-400 w-24">New Clients:</span>
+                                    <a href="tel:+16318606700" class="text-gray-300 hover:text-white transition-colors">(631) 860-6700</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-400 w-24">Existing:</span>
+                                    <a href="tel:+16315160006" class="text-gray-300 hover:text-white transition-colors">(631) 516-0006</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3" style="color: var(--primary-color);"></i>
+                            <a href="mailto:info@infinitecarserviceli.com" class="text-gray-300 hover:text-white transition-colors">info@infinitecarserviceli.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61556980469676" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.google.com/search?q=infinite+car+service&sourceid=chrome&ie=UTF-8#" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-left">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-home mr-2 w-4"></i>Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-concierge-bell mr-2 w-4"></i>Services</a></li>
+                        <li><a href="fleet.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-car mr-2 w-4"></i>Fleet</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-info-circle mr-2 w-4"></i>About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="text-left">
+                    <h4 class="text-lg font-semibold mb-4">More Info</h4>
+                    <ul class="space-y-3">
+                        <li><a href="airport-meeting-points.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-plane mr-2 w-4"></i>Airport Meeting Points</a></li>
+                        <li><a href="top-places-nyc.html" class="text-gray-300 hover:text-white transition-colors flex items-center"><i class="fas fa-map-marker-alt mr-2 w-4"></i>Top Places to Visit in NYC</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Infinite Car Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Get Quote Button -->
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn">
+        <i class="fas fa-calendar-check"></i>
+        <span>Get Quote</span>
+    </a>
+
+</body>
+</html>
