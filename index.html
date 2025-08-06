@@ -297,7 +297,6 @@
         </div>
         
         <div class="navbar-end">
-            <a href="services.html" class="btn btn-ghost mr-2 hidden md:inline-flex" onclick="trackEngagement('navbar_services_clicked')">Services</a>
             <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">Get Quote</a>
         </div>
     </nav>
@@ -332,12 +331,8 @@
                     </div>
                 </div>
                 
-                <!-- Call to Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button onclick="scrollToSection('fleet-section'); trackEngagement('hero_view_fleet_clicked');" class="btn btn-outline btn-lg text-lg px-8 text-white border-white hover:bg-white hover:text-gray-800">
-                        <i class="fas fa-car mr-2"></i>
-                        View Our Fleet
-                    </button>
+                <!-- Call to Action Button -->
+                <div class="flex justify-center">
                     <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-lg px-8" onclick="trackEngagement('hero_get_quote_clicked'); return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">
                         Get Quote
                     </a>
@@ -413,6 +408,14 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Fleet CTA Button -->
+                <div class="text-center mt-12">
+                    <a href="fleet.html" class="btn btn-primary-custom btn-lg px-8" onclick="trackEngagement('fleet_section_cta_clicked')">
+                        <i class="fas fa-car mr-2"></i>
+                        View Full Fleet
+                    </a>
+                </div>
             </div>
             
             <!-- Mobile: Quick Services Preview -->
@@ -487,6 +490,14 @@
                     <div class="text-4xl font-bold" style="color: var(--primary-color);">24/7</div>
                     <div class="text-lg custom-text-dark font-semibold">Available Service</div>
                 </div>
+            </div>
+            
+            <!-- About CTA Button -->
+            <div class="text-center mt-12">
+                <a href="about.html" class="btn btn-outline btn-primary btn-lg px-8" onclick="trackEngagement('about_section_cta_clicked')">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Learn More About Us
+                </a>
             </div>
         </div>
     </section>
@@ -826,6 +837,14 @@
                         <p class="text-sm custom-accent">Seamless transportation to cruise terminals in NYC and Brooklyn with luggage assistance and timing coordination.</p>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Services CTA Button -->
+            <div class="text-center mt-12">
+                <a href="services.html" class="btn btn-primary-custom btn-lg px-8" onclick="trackEngagement('services_section_cta_clicked')">
+                    <i class="fas fa-concierge-bell mr-2"></i>
+                    View All Services
+                </a>
             </div>
         </div>
     </section>
