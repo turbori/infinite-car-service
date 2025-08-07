@@ -106,19 +106,38 @@
             text-decoration: none;
         }
         
-        /* Friendly rounded corners for ALL images at ALL screen sizes */
-        img {
-            border-radius: 16px !important;
-        }
-        
-        img.object-cover {
-            border-radius: 16px !important;
-        }
-        
+        /* FORCE rounded corners for ALL images at ALL screen sizes */
+        img,
+        img.object-cover,
+        img.rounded-xl,
+        img.rounded-lg,
+        img.rounded,
         .card figure img,
         .fleet-card img,
-        .service-card img {
+        .service-card img,
+        .relative img,
+        div img,
+        section img {
             border-radius: 16px !important;
+            overflow: hidden !important;
+        }
+        
+        /* Extra specific targeting for the about page hero image */
+        img[src*="hero-chauffeur-escalade.jpg"] {
+            border-radius: 16px !important;
+            overflow: hidden !important;
+        }
+        
+        /* Force rounded corners on the specific div container */
+        .relative img.rounded-xl {
+            border-radius: 16px !important;
+            overflow: hidden !important;
+        }
+        
+        /* Specific override for about page image */
+        img[alt="Professional Chauffeur Service"] {
+            border-radius: 16px !important;
+            overflow: hidden !important;
         }
 
         /* Mobile responsive */
@@ -138,6 +157,12 @@
                 border-radius: 16px !important;
             }
             
+            /* Ensure rounded corners on main about page image */
+            img.rounded-xl {
+                border-radius: 16px !important;
+                overflow: hidden !important;
+            }
+            
             /* Adjust specific image heights for mobile */
             .h-48, .h-56, .h-32, .h-96 {
                 height: auto !important;
@@ -153,6 +178,17 @@
                 max-height: 160px;
                 width: 100%;
                 border-radius: 16px !important;
+            }
+            
+            /* UNIVERSAL rounded corners for ALL images on mobile */
+            img,
+            img.rounded-xl,
+            img.rounded-lg,
+            img.rounded,
+            .relative img,
+            div img {
+                border-radius: 16px !important;
+                overflow: hidden !important;
             }
         }
     </style>
@@ -228,8 +264,7 @@
                 </div>
                 
                 <div class="relative">
-                    <img src="./assets/images/hero-chauffeur-escalade.jpg" alt="Professional Chauffeur Service" class="rounded-lg shadow-lg w-full h-96 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
+                    <img src="./assets/images/hero-chauffeur-escalade.jpg" alt="Professional Chauffeur Service" class="rounded-xl shadow-lg w-full h-96 object-cover" style="border-radius: 16px !important; overflow: hidden;">
                 </div>
             </div>
         </div>

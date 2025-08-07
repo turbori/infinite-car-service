@@ -106,19 +106,24 @@
             text-decoration: none;
         }
         
-        /* Friendly rounded corners for ALL images at ALL screen sizes */
-        img {
-            border-radius: 16px !important;
-        }
-        
-        img.object-cover {
-            border-radius: 16px !important;
-        }
-        
+        /* UNIVERSAL rounded corners for ALL images at ALL screen sizes */
+        img,
+        img.object-cover,
+        img.rounded-lg,
+        img.rounded,
+        .card img,
         .card figure img,
         .fleet-card img,
-        .service-card img {
+        .service-card img,
+        figure img,
+        div img,
+        section img,
+        .bg-white img,
+        .shadow-lg img,
+        .relative img,
+        [class*="card"] img {
             border-radius: 16px !important;
+            overflow: hidden !important;
         }
 
         /* Mobile responsive */
@@ -128,6 +133,26 @@
                 right: 15px;
                 padding: 12px 20px;
                 font-size: 14px;
+            }
+            
+            /* ENSURE ALL images have rounded corners on mobile */
+            img,
+            img.object-cover,
+            img.rounded-lg,
+            img.rounded,
+            .card img,
+            .card figure img,
+            .fleet-card img,
+            .service-card img,
+            figure img,
+            div img,
+            section img,
+            .bg-white img,
+            .shadow-lg img,
+            .relative img,
+            [class*="card"] img {
+                border-radius: 16px !important;
+                overflow: hidden !important;
             }
             
             /* Fix image cropping on mobile - show full images */
@@ -211,12 +236,12 @@
     <!-- Services Grid -->
     <section class="py-16 px-4" style="background-color: white;">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Airport Transfers -->
-                <div class="card bg-base-100 shadow-lg service-card">
+                <div class="card bg-white shadow-lg service-card">
                     <figure class="px-6 pt-6">
-                        <img src="./assets/images/Airport & Cruise Transfers .png" alt="Airport Transfers" class="rounded-lg h-48 w-full object-cover">
+                        <img src="./assets/images/airport-aircraft-tarmac.jpg" alt="Airport Transfers" class="rounded-lg h-48 w-full object-cover">
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title text-xl" style="color: var(--text-dark);">
@@ -226,33 +251,12 @@
                         <p style="color: var(--accent-color);" class="mb-4">
                             Premium airport service with professional AI-powered flight tracking technology. We arrive 20 minutes before your landing and provide real-time updates on delays, diversions, and luggage carousels.
                         </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                AI-powered flight tracking with pinpoint accuracy
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Arrive 20 minutes before landing (company policy)
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                No extra charges for delays (we track everything)
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Real-time alerts for diversions and luggage carousels
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Professional meet & greet service
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
 
                 <!-- Corporate & Executive Travel -->
-                <div class="card bg-base-100 shadow-lg service-card">
+                <div class="card bg-white shadow-lg service-card">
                     <figure class="px-6 pt-6">
                         <img src="./assets/images/Corporate & Executive Travel.png" alt="Corporate Travel" class="rounded-lg h-48 w-full object-cover">
                     </figure>
@@ -264,29 +268,12 @@
                         <p style="color: var(--accent-color);" class="mb-4">
                             Professional transportation for business meetings, conferences, and executive travel. Maintain productivity with our quiet, comfortable vehicles and professional service.
                         </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Executive-level vehicles
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Professional chauffeurs
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Corporate accounts available
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Flexible scheduling
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
 
                 <!-- Events & Celebrations -->
-                <div class="card bg-base-100 shadow-lg service-card">
+                <div class="card bg-white shadow-lg service-card">
                     <figure class="px-6 pt-6">
                         <img src="./assets/images/Events & Celebrations.png" alt="Events & Celebrations" class="rounded-lg h-48 w-full object-cover">
                     </figure>
@@ -296,33 +283,16 @@
                             Events & Celebrations
                         </h2>
                         <p style="color: var(--accent-color);" class="mb-4">
-                            Make your special occasions memorable with our luxury transportation services. Perfect for weddings, proms, anniversaries, and other milestone celebrations.
+                            Make your special occasions memorable with our luxury transportation services. Perfect for weddings, proms, anniversaries, sporting events, concerts, musicals, plays, and other milestone celebrations.
                         </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Wedding transportation
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Prom and formal events
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Anniversary celebrations
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Special event packages
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
 
                 <!-- Cruise Port Transfers -->
-                <div class="card bg-base-100 shadow-lg service-card">
+                <div class="card bg-white shadow-lg service-card">
                     <figure class="px-6 pt-6">
-                        <img src="./assets/images/Night Out & Entertainment .png" alt="Cruise Port Transfers" class="rounded-lg h-48 w-full object-cover">
+                        <img src="./assets/images/cruise-ship-terminal.jpg" alt="Cruise Port Transfers" class="rounded-lg h-48 w-full object-cover">
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title text-xl" style="color: var(--text-dark);">
@@ -332,28 +302,7 @@
                         <p style="color: var(--accent-color);" class="mb-4">
                             Start your cruise vacation stress-free with our dedicated cruise port transfer service. Professional transportation to all NYC and NJ area cruise terminals with luggage assistance and departure coordination.
                         </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Manhattan Cruise Terminal transfers
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Brooklyn Cruise Terminal service
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                New Jersey cruise terminals
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Full luggage assistance
-                            </li>
-                            <li class="flex items-center" style="color: var(--text-medium);">
-                                <i class="fas fa-check-circle mr-2" style="color: var(--primary-color);"></i>
-                                Departure time coordination
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
 
