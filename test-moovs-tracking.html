@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moovs GTM Tracking Test</title>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PJDC8GX');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Ads Global Site Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16458132086"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16458132086');
+        
+        // Enhanced conversion tracking function with GTM + Google Ads
+        function track_conversion(button_location = 'test') {
+            try {
+                // 1. Fire Google Ads conversion
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
+                        'value': 75.0,
+                        'currency': 'USD'
+                    });
+                    console.log('Google Ads conversion tracked successfully');
+                } else {
+                    console.log('Google Ads gtag not loaded yet');
+                }
+
+                // 2. Fire Moovs GTM custom event
+                if (typeof dataLayer !== 'undefined') {
+                    dataLayer.push({
+                        'event': 'moovs_create_quote',
+                        'category': 'lead_generation',
+                        'button_location': button_location,
+                        'page_path': window.location.pathname,
+                        'page_url': window.location.href
+                    });
+                    console.log('Moovs GTM create_quote event fired:', button_location);
+                } else {
+                    console.log('GTM dataLayer not available');
+                }
+
+            } catch (error) {
+                console.log('Conversion tracking error:', error);
+            }
+        }
+
+        // Test all Moovs events
+        function test_all_events() {
+            const events = [
+                'moovs_create_quote',
+                'moovs_create_reservation',
+                'moovs_page_view_confirm_quote',
+                'moovs_page_view_info',
+                'moovs_page_view_quote_summary',
+                'moovs_page_view_reservation_summary',
+                'moovs_page_view_vehicle'
+            ];
+
+            events.forEach((eventName, index) => {
+                setTimeout(() => {
+                    dataLayer.push({
+                        'event': eventName,
+                        'category': 'test',
+                        'test_sequence': index + 1
+                    });
+                    console.log('Test event fired:', eventName);
+                }, index * 1000);
+            });
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .log {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJDC8GX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <h1>🎯 Moovs GTM Tracking Test Page</h1>
+    
+    <div class="test-section">
+        <h2>📊 Conversion Tracking Test</h2>
+        <p>Click the button below to test the quote conversion tracking:</p>
+        <button onclick="track_conversion('test_page')">🚗 Test Get Quote Conversion</button>
+        <p><strong>Expected Result:</strong> Check browser console (F12) for tracking confirmations.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>🔄 All Moovs Events Test</h2>
+        <p>Test all 7 Moovs custom events in sequence (1 second intervals):</p>
+        <button onclick="test_all_events()">🚀 Fire All Test Events</button>
+        <p><strong>Events:</strong> create_quote, create_reservation, page_view_confirm_quote, page_view_info, page_view_quote_summary, page_view_reservation_summary, page_view_vehicle</p>
+    </div>
+
+    <div class="test-section">
+        <h2>🛠️ Debug Information</h2>
+        <p><strong>GTM Container ID:</strong> GTM-PJDC8GX</p>
+        <p><strong>Google Ads ID:</strong> AW-16458132086</p>
+        <p><strong>Conversion Label:</strong> NeiFCN754IMbEPpU7Kc9</p>
+        <p><strong>GA4 Measurement ID:</strong> G-K7TNY97T0J</p>
+        
+        <div class="log" id="console-log">
+            Console logs will appear here...
+        </div>
+    </div>
+
+    <script>
+        // Capture console logs and display them
+        const originalLog = console.log;
+        const logDiv = document.getElementById('console-log');
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            logDiv.textContent += '[' + new Date().toLocaleTimeString() + '] ' + args.join(' ') + '\n';
+            logDiv.scrollTop = logDiv.scrollHeight;
+        };
+
+        // Initialize
+        console.log('Moovs GTM tracking test page loaded');
+        console.log('GTM Container: GTM-PJDC8GX');
+        console.log('Google Ads: AW-16458132086');
+    </script>
+</body>
+</html>

@@ -14,6 +14,14 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PJDC8GX');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Google Ads Global Site Tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16458132086"></script>
     <script>
@@ -22,9 +30,10 @@
         gtag('js', new Date());
         gtag('config', 'AW-16458132086');
         
-        // Simple conversion tracking function with error handling
-        function track_conversion() {
+        // Enhanced conversion tracking function with GTM + Google Ads
+        function track_conversion(button_location = 'unknown') {
             try {
+                // 1. Fire Google Ads conversion (existing)
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'conversion', {
                         'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
@@ -47,6 +56,21 @@
                         }
                     }, 1000);
                 }
+
+                // 2. Fire Moovs GTM custom event
+                if (typeof dataLayer !== 'undefined') {
+                    dataLayer.push({
+                        'event': 'moovs_create_quote',
+                        'category': 'lead_generation',
+                        'button_location': button_location,
+                        'page_path': window.location.pathname,
+                        'page_url': window.location.href
+                    });
+                    console.log('Moovs GTM create_quote event fired:', button_location);
+                } else {
+                    console.log('GTM dataLayer not available');
+                }
+
             } catch (error) {
                 console.log('Conversion tracking error:', error);
             }
