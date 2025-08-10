@@ -14,6 +14,45 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Google Ads Global Site Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16458132086"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16458132086');
+        
+        // Simple conversion tracking function with error handling
+        function track_conversion() {
+            try {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
+                        'value': 75.0,
+                        'currency': 'USD'
+                    });
+                    console.log('Google Ads conversion tracked successfully');
+                } else {
+                    console.log('Google Ads gtag not loaded yet - trying again in 1 second');
+                    setTimeout(function() {
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
+                                'value': 75.0,
+                                'currency': 'USD'
+                            });
+                            console.log('Google Ads conversion tracked successfully (delayed)');
+                        } else {
+                            console.log('Google Ads still not available after delay');
+                        }
+                    }, 1000);
+                }
+            } catch (error) {
+                console.log('Conversion tracking error:', error);
+            }
+        }
+    </script>
+    
     <!-- Google Ads Conversion Tracking -->
     <script>
     function gtag_report_conversion(url) {
@@ -475,7 +514,7 @@
         </div>
         
         <div class="navbar-end">
-            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">Get Quote</a>
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="track_conversion();">Get Quote</a>
         </div>
     </nav>
 
@@ -1041,7 +1080,7 @@
             <p class="text-lg custom-accent mb-8">Contact us today for a personalized quote and discover why we're Long Island's preferred luxury car service.</p>
             
             <div class="text-center">
-                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="track_conversion();">
                     <i class="fas fa-calendar-check mr-3"></i>
                     Get Quote
                 </a>
@@ -1270,7 +1309,7 @@
     </script>
 
     <!-- Floating Get Quote Button -->
-    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" onclick="return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" onclick="track_conversion();">
         <i class="fas fa-calendar-check"></i>
         <span>Get Quote</span>
     </a>
