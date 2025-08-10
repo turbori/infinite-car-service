@@ -22,33 +22,65 @@
         gtag('js', new Date());
         gtag('config', 'AW-16458132086');
         
-        // Simple conversion tracking function with error handling
-        function track_conversion() {
-            try {
+        // Debug Google Ads loading
+        console.log('🔧 Google Ads gtag configured for:', 'AW-16458132086');
+        
+        // Listen for gtag events (for debugging)
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(function() {
+            console.log('📡 Google Ads gtag ready and operational');
+        });
+        
+        // Test conversion tracking on page load (for debugging)
+        window.addEventListener('load', function() {
+            console.log('📄 Page loaded - checking Google Ads setup...');
+            setTimeout(function() {
+                console.log('🔍 gtag available:', typeof gtag !== 'undefined');
+                console.log('🔍 dataLayer available:', typeof window.dataLayer !== 'undefined');
                 if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                        'value': 75.0,
-                        'currency': 'USD'
-                    });
-                    console.log('Google Ads conversion tracked successfully');
+                    console.log('✅ Google Ads tracking is ready');
                 } else {
-                    console.log('Google Ads gtag not loaded yet - trying again in 1 second');
-                    setTimeout(function() {
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'conversion', {
-                                'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                                'value': 75.0,
-                                'currency': 'USD'
-                            });
-                            console.log('Google Ads conversion tracked successfully (delayed)');
-                        } else {
-                            console.log('Google Ads still not available after delay');
-                        }
-                    }, 1000);
+                    console.error('❌ Google Ads tracking failed to load');
                 }
+            }, 2000);
+        });
+        
+        // Enhanced conversion tracking function with debugging
+        function track_conversion() {
+            console.log('🚀 track_conversion() called');
+            
+            try {
+                // Check if gtag is loaded
+                if (typeof gtag === 'undefined') {
+                    console.error('❌ gtag is not defined - Google Ads script may not be loaded');
+                    return;
+                }
+                
+                // Check if dataLayer exists
+                if (typeof window.dataLayer === 'undefined') {
+                    console.error('❌ dataLayer is not defined');
+                    return;
+                }
+                
+                // Fire the conversion event
+                console.log('📊 Firing Google Ads conversion event...');
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
+                    'value': 75.0,
+                    'currency': 'USD',
+                    'debug_mode': true
+                });
+                
+                console.log('✅ Google Ads conversion event fired successfully');
+                console.log('🔍 Conversion details:', {
+                    conversion_id: 'AW-16458132086',
+                    conversion_label: 'NeiFCN754IMbEPpU7Kc9',
+                    value: 75.0,
+                    currency: 'USD'
+                });
+                
             } catch (error) {
-                console.log('Conversion tracking error:', error);
+                console.error('❌ Conversion tracking error:', error);
             }
         }
     </script>
@@ -62,7 +94,9 @@
         }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-16458132086/Hu6ZCKPXoIAbEPbU7Kc9',
+          'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
+          'value': 75.0,
+          'currency': 'USD',
           'event_callback': callback
       });
       return false;
