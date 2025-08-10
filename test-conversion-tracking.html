@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Google Ads Conversion Tracking</title>
+    
+    <!-- Google Ads Global Site Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16458132086"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16458132086');
+    </script>
+
+    <!-- Conversion Tracking Script -->
+    <script src="js/conversion-tracking.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background-color: #2563EB;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .test-button:hover {
+            background-color: #1E40AF;
+            color: white;
+            text-decoration: none;
+        }
+        .console-output {
+            background-color: #1a1a1a;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            min-height: 200px;
+            margin-top: 20px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .status.success { background-color: #d4edda; color: #155724; }
+        .status.warning { background-color: #fff3cd; color: #856404; }
+        .status.error { background-color: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Google Ads Conversion Tracking Test</h1>
+    
+    <div class="test-section">
+        <h2>Test Different Button Locations</h2>
+        <p>Click the buttons below to test conversion tracking. Check your browser console (F12) to see the tracking events.</p>
+        
+        <a href="#" class="test-button" onclick="track_quote_conversion('navbar_test'); return false;">
+            Test Navbar Button
+        </a>
+        
+        <a href="#" class="test-button" onclick="track_quote_conversion('contact_section_test'); return false;">
+            Test Contact Section Button
+        </a>
+        
+        <a href="#" class="test-button" onclick="track_quote_conversion('floating_button_test'); return false;">
+            Test Floating Button
+        </a>
+        
+        <a href="#" class="test-button" onclick="track_quote_conversion('service_card_test'); return false;">
+            Test Service Card Button
+        </a>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test Actual Quote Button</h2>
+        <p>This button has the same tracking as your real "Get Quote" buttons:</p>
+        
+        <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
+           target="_blank" 
+           class="test-button" 
+           onclick="track_quote_conversion('test_page'); return gtag_report_conversion('https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info');">
+            Get Quote (Real Test)
+        </a>
+    </div>
+    
+    <div class="test-section">
+        <h2>Tracking Status</h2>
+        <div id="status-container">
+            <div class="status warning">🟡 Loading tracking scripts...</div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Console Output</h2>
+        <p>Tracking events will appear below:</p>
+        <div class="console-output" id="console-output">
+            Waiting for tracking events...<br/>
+            Open browser console (F12) for detailed logs.
+        </div>
+    </div>
+
+    <script>
+        // Test if tracking is loaded
+        function checkTrackingStatus() {
+            const statusContainer = document.getElementById('status-container');
+            let status = '';
+            
+            // Check if gtag is loaded
+            if (typeof gtag !== 'undefined') {
+                status += '<div class="status success">✅ Google Ads gtag loaded successfully</div>';
+            } else {
+                status += '<div class="status error">❌ Google Ads gtag not loaded</div>';
+            }
+            
+            // Check if conversion tracking script is loaded
+            if (typeof track_quote_conversion !== 'undefined') {
+                status += '<div class="status success">✅ Conversion tracking script loaded</div>';
+            } else {
+                status += '<div class="status error">❌ Conversion tracking script not loaded</div>';
+            }
+            
+            // Check if conversion function is loaded
+            if (typeof gtag_report_conversion !== 'undefined') {
+                status += '<div class="status success">✅ Conversion reporting function loaded</div>';
+            } else {
+                status += '<div class="status error">❌ Conversion reporting function not loaded</div>';
+            }
+            
+            statusContainer.innerHTML = status;
+        }
+        
+        // Override console.log to capture in our output
+        const originalConsoleLog = console.log;
+        const consoleOutput = document.getElementById('console-output');
+        
+        console.log = function(...args) {
+            originalConsoleLog.apply(console, args);
+            const timestamp = new Date().toLocaleTimeString();
+            const message = args.join(' ');
+            consoleOutput.innerHTML += `[${timestamp}] ${message}<br/>`;
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        };
+        
+        // Check status when page loads
+        setTimeout(checkTrackingStatus, 1000);
+        
+        // Log page load
+        console.log('Test page loaded');
+        console.log('Google Ads Account ID: AW-16458132086');
+        console.log('Conversion ID: AW-16458132086/Hu6ZCKPXoIAbEPbU7Kc9');
+    </script>
+</body>
+</html>
