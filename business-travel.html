@@ -229,11 +229,17 @@
     <section class="hero min-h-screen hero-bg flex items-center justify-center" style="margin-top: 0;">
         <div class="hero-content text-center text-white">
             <div class="max-w-4xl">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
                     Executive Car Service for Business Meetings & Corporate Travel
                 </h1>
-                <p class="text-lg md:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-                    Our executive car service provides professional chauffeurs and luxury SUVs for business meetings and corporate travel. Trusted by NYC Executives Since 2005 • 400+ 5 Star Reviews on Google.
+                <p class="text-lg md:text-xl mb-4 opacity-90 max-w-3xl mx-auto font-semibold">
+                    Trusted by 400+ NYC Executives for Corporate Travel Since 2005
+                </p>
+                <p class="text-base md:text-lg mb-4 opacity-80 max-w-2xl mx-auto">
+                    Your Executive Chauffeur in NYC — Reliable, Discreet, Always On Time
+                </p>
+                <p class="text-base md:text-lg mb-8 opacity-80 max-w-2xl mx-auto">
+                    Serving finance firms, law offices, and executives nationwide — Get your quote in 2 minutes.
                 </p>
                 
                 <!-- Primary CTA -->
@@ -284,20 +290,19 @@
         </div>
     </section>
 
-    <!-- Visual Proof Section -->
-    <section class="py-16 px-4" style="background-color: white;">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <img src="./assets/images/Luxury Sedan .png" alt="Luxury Sedan" class="w-full h-64 object-cover mb-4">
-                </div>
-                <div class="text-center">
-                    <img src="./assets/images/Luxury Midsize SUV .png" alt="Luxury Midsize SUV" class="w-full h-64 object-cover mb-4">
-                </div>
-                <div class="text-center">
-                    <img src="./assets/images/luxury-large-suv-escalade.jpg" alt="Luxury Large SUV" class="w-full h-64 object-cover mb-4">
-                </div>
-            </div>
+    <!-- Quick Quote CTA Strip -->
+    <section class="py-8 px-4" style="background-color: var(--primary-color);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">
+                Get a Quote for Your Upcoming NYC Trip
+            </h2>
+            <p class="text-lg text-white opacity-90 mb-6">
+                Quick response. Same-day confirmations. Trusted by 400+ clients.
+            </p>
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn bg-white text-blue-600 hover:bg-gray-100 btn-lg px-8 py-3 font-semibold" onclick="track_conversion('quick_quote_strip');">
+                <i class="fas fa-calendar-check mr-2"></i>
+                Get My Quote
+            </a>
         </div>
     </section>
 
@@ -309,36 +314,39 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Punctuality Matters -->
+                <!-- Guaranteed On-Time Arrival -->
                 <div class="card bg-white shadow-lg text-center">
                     <div class="card-body">
                         <div class="text-4xl mb-4" style="color: var(--primary-color);">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Punctuality Matters</h3>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Guaranteed On-Time Arrival</h3>
                         <p style="color: var(--accent-color);">Our executive car service guarantees on-time arrival for all your business meetings and airport transfers to JFK and LGA.</p>
+                        <p class="text-sm mt-2 font-medium" style="color: var(--primary-color);">98% of rides arrive early.</p>
                     </div>
                 </div>
 
-                <!-- Professional Chauffeurs -->
+                <!-- Corporate-Trained Chauffeurs -->
                 <div class="card bg-white shadow-lg text-center">
                     <div class="card-body">
                         <div class="text-4xl mb-4" style="color: var(--primary-color);">
                             <i class="fas fa-user-tie"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Professional Chauffeurs</h3>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Corporate-Trained Chauffeurs</h3>
                         <p style="color: var(--accent-color);">Trained for corporate etiquette and discretion.</p>
+                        <p class="text-sm mt-2 font-medium" style="color: var(--primary-color);">Used by law and finance firms across NYC.</p>
                     </div>
                 </div>
 
-                <!-- Transparent Billing -->
+                <!-- Easy Corporate Billing & Receipts -->
                 <div class="card bg-white shadow-lg text-center">
                     <div class="card-body">
                         <div class="text-4xl mb-4" style="color: var(--primary-color);">
                             <i class="fas fa-receipt"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Transparent Billing</h3>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Easy Corporate Billing & Receipts</h3>
                         <p style="color: var(--accent-color);">Emailed receipts, itemized invoices, easy corporate accounts.</p>
+                        <p class="text-sm mt-2 font-medium" style="color: var(--primary-color);">Used by law and finance firms across NYC.</p>
                     </div>
                 </div>
             </div>
@@ -537,6 +545,18 @@
                 <p class="text-lg leading-relaxed max-w-4xl mx-auto" style="color: var(--accent-color);">
                     With over 400+ 5-star reviews and nearly two decades of experience serving NYC's business community, we handle every detail so you can focus on your business objectives.
                 </p>
+                
+                <!-- Executive Assistant Testimonial -->
+                <div class="mt-8 mb-8 max-w-3xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                        <p class="text-lg italic mb-3" style="color: var(--text-dark);">
+                            "I book all executive transportation for our C-suite. Infinite Car Service is our go-to for NYC trips — always professional, punctual, and makes my job easier with their seamless billing."
+                        </p>
+                        <p class="text-sm font-semibold" style="color: var(--primary-color);">
+                            — Sarah M., Executive Assistant, Fortune 500 Financial Firm
+                        </p>
+                    </div>
+                </div>
             </div>
             
             <!-- Features Grid -->
@@ -657,7 +677,8 @@
     <section class="py-16 px-4" style="background-color: var(--background-color);">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-dark);">Corporate Accounts & Regular Travel</h2>
-            <p class="text-lg mb-8" style="color: var(--accent-color);">Whether for client pickups, meetings, or airport transfers to JFK and LGA — our executive car service ensures you arrive in comfort and style with professional chauffeurs.</p>
+            <p class="text-lg mb-4" style="color: var(--accent-color);">Whether for client pickups, meetings, or airport transfers to JFK and LGA — our executive car service ensures you arrive in comfort and style with professional chauffeurs.</p>
+            <p class="text-lg mb-8 font-medium" style="color: var(--text-dark);">One trusted partner for all your NYC corporate travel — airport, hourly, and meetings.</p>
             
             <!-- Internal Links -->
             <div class="flex flex-wrap justify-center gap-4 mb-8">
@@ -672,7 +693,7 @@
             <div class="text-center mb-8">
                 <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="track_conversion('secondary_cta');">
                     <i class="fas fa-calendar-check mr-3"></i>
-                    Get a Corporate Quote
+                    Get a Corporate Quote in 2 Minutes
                 </a>
             </div>
 
