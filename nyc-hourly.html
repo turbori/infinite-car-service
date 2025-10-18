@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire a Private Chauffeur by the Hour in NYC | Infinite Car Service</title>
+    <meta name="description" content="Hire a private chauffeur by the hour in NYC. Luxury SUVs, flexible hourly rates, and professional service. Perfect for corporate events, nights out, and custom itineraries.">
+    <meta name="keywords" content="hourly chauffeur, hire driver NYC, hourly SUV, private chauffeur, NYC transportation, luxury hourly service">
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PM8WJ6W6');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Ads Global Site Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16458132086"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16458132086');
+        
+        // Enhanced conversion tracking function with GTM + Google Ads
+        function track_conversion(button_location = 'unknown') {
+            try {
+                // 1. Fire Google Ads conversion
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
+                        'value': 75.0,
+                        'currency': 'USD'
+                    });
+                    console.log('Google Ads conversion tracked successfully');
+                } else {
+                    console.log('Google Ads gtag not loaded yet - trying again in 1 second');
+                    setTimeout(function() {
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
+                                'value': 75.0,
+                                'currency': 'USD'
+                            });
+                            console.log('Google Ads conversion tracked successfully (delayed)');
+                        }
+                    }, 1000);
+                }
+
+                // 2. Fire Moovs GTM custom event
+                if (typeof dataLayer !== 'undefined') {
+                    dataLayer.push({
+                        'event': 'moovs_create_quote',
+                        'category': 'lead_generation',
+                        'button_location': button_location,
+                        'page_path': window.location.pathname,
+                        'page_url': window.location.href
+                    });
+                    console.log('Moovs GTM create_quote event fired:', button_location);
+                }
+
+            } catch (error) {
+                console.log('Conversion tracking error:', error);
+            }
+        }
+    </script>
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "sq97soo10r");
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --primary-blue-dark: #1E40AF;
+            --primary-blue-darker: #1D4ED8;
+            --accent-color: #64748B;
+            --slate-dark: #475569;
+            --slate-darker: #334155;
+            --background-color: #F9FAFB;
+            --background-medium: #F3F4F6;
+            --text-dark: #111827;
+            --text-medium: #374151;
+            --text-light: #6B7280;
+            --text-lighter: #94A3B8;
+            --footer-bg: #0F172A;
+            --blue-light: #EFF6FF;
+            --blue-dark: #1E3A8A;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--primary-blue-dark);
+            border-color: var(--primary-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('./assets/images/fleet driving on the highway.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* UNIVERSAL rounded corners for ALL images */
+        img {
+            border-radius: 16px !important;
+            overflow: hidden !important;
+        }
+
+        /* Floating Get Quote Button */
+        .floating-quote-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        
+        .floating-quote-btn.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .floating-quote-btn:hover {
+            background-color: var(--primary-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            
+            .floating-quote-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen" style="background-color: var(--background-color);">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM8WJ6W6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="font-medium">Home</a></li>
+                    <li><a href="services.html" class="font-medium">Services</a></li>
+                    <li><a href="fleet.html" class="font-medium">Fleet</a></li>
+                    <li><a href="about.html" class="font-medium">About</a></li>
+                    <li><a href="airport-meeting-points.html" class="font-medium">Airport Meeting Points</a></li>
+                    <li><a href="top-places-nyc.html" class="font-medium">Top Places to Visit in NYC</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl font-bold" style="color: var(--primary-color);">
+                Infinite Car Service
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Home</a></li>
+                <li><a href="services.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Services</a></li>
+                <li><a href="fleet.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Fleet</a></li>
+                <li><a href="about.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">About</a></li>
+                <li><a href="airport-meeting-points.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Airport Meeting Points</a></li>
+                <li><a href="top-places-nyc.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Top Places to Visit in NYC</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end">
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="track_conversion('navbar');">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen hero-bg flex items-center justify-center" style="margin-top: 0;">
+        <div class="hero-content text-center text-white">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Luxury Hourly Car Service in NYC
+                </h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    Experience flexible, on-demand chauffeur service with premium SUVs and professional drivers. 400+ 5 Star Reviews on Google.
+                </p>
+                
+                <!-- Primary CTA -->
+                <div class="mb-8">
+                    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="track_conversion('hero_cta');">
+                        <i class="fas fa-calendar-check mr-3"></i>
+                        Get a Quote in 2 Minutes
+                    </a>
+                </div>
+
+                <!-- Short Line -->
+                <p class="text-lg opacity-80">Ideal for corporate events, nights out, or custom itineraries.</p>
+
+                <!-- Scroll Indicator -->
+                <div class="mt-16 mb-8 animate-bounce">
+                    <button onclick="document.querySelector('.trust-location-strip').scrollIntoView({ behavior: 'smooth', block: 'start' });" class="text-white opacity-70 hover:opacity-100 transition-opacity">
+                        <i class="fas fa-chevron-down text-2xl"></i>
+                        <p class="text-sm mt-2">Scroll down to learn more</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Location Strip -->
+    <section class="py-4 px-4 trust-location-strip" style="background-color: var(--blue-light); border-bottom: 1px solid #E5E7EB;">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base">
+                <div class="flex items-center" style="color: var(--text-dark);">
+                    <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                    <span class="font-medium">Serving Manhattan • Brooklyn • Queens • Long Island</span>
+                </div>
+                <div class="flex items-center" style="color: var(--text-dark);">
+                    <i class="fas fa-shield-alt mr-2" style="color: var(--primary-color);"></i>
+                    <span class="font-medium">Licensed & Insured • Family Operated Since 2005</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Proof Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <img src="./assets/images/Luxury Sedan .png" alt="Luxury Sedan" class="w-full h-64 object-cover mb-4">
+                    <p class="text-sm" style="color: var(--accent-color);">Clean interiors. Always detailed.</p>
+                </div>
+                <div class="text-center">
+                    <img src="./assets/images/Luxury Midsize SUV .png" alt="Luxury Midsize SUV" class="w-full h-64 object-cover mb-4">
+                    <p class="text-sm" style="color: var(--accent-color);">Premium fleet vehicles.</p>
+                </div>
+                <div class="text-center">
+                    <img src="./assets/images/luxury-large-suv-escalade.jpg" alt="Luxury Large SUV" class="w-full h-64 object-cover mb-4">
+                    <p class="text-sm" style="color: var(--accent-color);">Luxury SUV excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Value Props Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Luxury on Your Schedule</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Flexible Quoting -->
+                <div class="card bg-white shadow-lg text-center">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Flexible Quoting</h3>
+                        <p style="color: var(--accent-color);">Our hourly car service NYC allows you to hire for 2, 4, 6, or 8 hours with complete flexibility.</p>
+                    </div>
+                </div>
+
+                <!-- Professional Chauffeurs -->
+                <div class="card bg-white shadow-lg text-center">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Professional Chauffeurs</h3>
+                        <p style="color: var(--accent-color);">Experienced, reliable, discreet.</p>
+                    </div>
+                </div>
+
+                <!-- Premium Fleet -->
+                <div class="card bg-white shadow-lg text-center">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Premium Fleet</h3>
+                        <p style="color: var(--accent-color);">Suburban, Escalade, Cadillac XT6.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">About Infinite Car Service</h2>
+            <div class="prose prose-lg mx-auto" style="color: var(--accent-color);">
+                <p class="text-lg leading-relaxed mb-6">
+                    Family-owned and operated since 2005, we pride ourselves on providing a luxury experience tailored to every client. Every ride is smooth, punctual, and professional.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Our commitment to excellence has made us Long Island's most trusted luxury car service, serving executives, families, and travelers who demand the highest standards of comfort and reliability.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">18+</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">Years of Service</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">10K+</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">Happy Clients</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">400+</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">5-Star Google Reviews</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">24/7</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">Available Service</div>
+                </div>
+            </div>
+            
+            <!-- About CTA Button -->
+            <div class="text-center mt-12">
+                <a href="about.html" class="btn btn-primary-custom btn-lg px-8">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Learn More About Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Hourly Service Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Your Personal NYC Chauffeur Experience</h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto" style="color: var(--accent-color);">
+                    From airport arrivals to exploring Manhattan at your own pace—enjoy the flexibility of hourly car service with the luxury of a private chauffeur and premium SUV.
+                </p>
+            </div>
+            
+            <!-- Two-Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Hourly Service Uses -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--text-dark);">Perfect for Any Occasion</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: var(--blue-light);">
+                                <i class="fas fa-shopping-bag text-sm" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1" style="color: var(--text-dark);">Shopping & Sightseeing</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">Fifth Avenue, Times Square, Brooklyn Bridge—your way</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: var(--blue-light);">
+                                <i class="fas fa-theater-masks text-sm" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1" style="color: var(--text-dark);">Broadway & Dining</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">Night out with no parking or navigation stress</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: var(--blue-light);">
+                                <i class="fas fa-heart text-sm" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1" style="color: var(--text-dark);">Special Events</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">Weddings, anniversaries, VIP experiences</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Airport + Hourly Bundling -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--text-dark);">Bundle Airport + Hourly Service</h3>
+                    <div class="p-6 rounded-lg" style="background-color: var(--blue-light);">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-2xl mr-3" style="color: var(--primary-color);"></i>
+                            <div>
+                                <h4 class="font-semibold" style="color: var(--text-dark);">Flexible Hourly Rates</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">2, 4, 6, or 8-hour packages available</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-sm" style="color: var(--accent-color);">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-xs mr-2" style="color: var(--primary-color);"></i>
+                                Airport pickup included in hourly packages
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-xs mr-2" style="color: var(--primary-color);"></i>
+                                Same chauffeur for your entire experience
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-xs mr-2" style="color: var(--primary-color);"></i>
+                                All-inclusive pricing with no surprises
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="text-center mt-12">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg px-8" onclick="track_conversion('complete_hourly_cta');">
+                    <i class="fas fa-clock mr-2"></i>
+                    Get Your Hourly Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample NYC Itineraries Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Sample NYC Itineraries</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Popular tour routes we can customize for your interests</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Half-Day Classic Tour -->
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background-color: var(--primary-color);">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold" style="color: var(--text-dark);">Half-Day Classic Tour (4 hours)</h3>
+                        </div>
+                        <ul class="space-y-3" style="color: var(--accent-color);">
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                Times Square & Broadway
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                Central Park drive-through
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                Empire State Building
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                9/11 Memorial area
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                Brooklyn Bridge views
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Full-Day Comprehensive Tour -->
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background-color: var(--primary-color);">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold" style="color: var(--text-dark);">Full-Day Comprehensive Tour (8 hours)</h3>
+                        </div>
+                        <ul class="space-y-3" style="color: var(--accent-color);">
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                All half-day tour locations
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                Statue of Liberty ferry trip
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                High Line Park walk
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                SoHo shopping district
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                Greenwich Village exploration
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3" style="color: var(--primary-color);"></i>
+                                Museum visit of choice
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Itinerary Options -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-lg border-2" style="border-color: var(--primary-color); background-color: white;">
+                    <h4 class="text-lg font-bold mb-3" style="color: var(--text-dark);">
+                        <i class="fas fa-utensils mr-2" style="color: var(--primary-color);"></i>
+                        Food Tour Special (6 hours)
+                    </h4>
+                    <p class="text-sm mb-3" style="color: var(--accent-color);">Little Italy → Chinatown → Chelsea Market → Brooklyn food scene</p>
+                    <p class="text-xs" style="color: var(--accent-color);">Perfect for food enthusiasts wanting to taste authentic NYC flavors</p>
+                </div>
+                
+                <div class="p-6 rounded-lg border-2" style="border-color: var(--primary-color); background-color: white;">
+                    <h4 class="text-lg font-bold mb-3" style="color: var(--text-dark);">
+                        <i class="fas fa-shopping-bag mr-2" style="color: var(--primary-color);"></i>
+                        Shopping & Culture (5 hours)
+                    </h4>
+                    <p class="text-sm mb-3" style="color: var(--accent-color);">Fifth Avenue → SoHo → Williamsburg → Museum Mile</p>
+                    <p class="text-xs" style="color: var(--accent-color);">Combine luxury shopping with cultural experiences</p>
+                </div>
+                
+                <div class="p-6 rounded-lg border-2" style="border-color: var(--primary-color); background-color: white;">
+                    <h4 class="text-lg font-bold mb-3" style="color: var(--text-dark);">
+                        <i class="fas fa-camera mr-2" style="color: var(--primary-color);"></i>
+                        Instagram Perfect (4 hours)
+                    </h4>
+                    <p class="text-sm mb-3" style="color: var(--accent-color);">Brooklyn Bridge → DUMBO → High Line → Top of the Rock</p>
+                    <p class="text-xs" style="color: var(--accent-color);">Hit all the most photogenic spots in NYC</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="p-6 rounded-lg" style="background-color: var(--blue-light);">
+                    <h3 class="text-xl font-bold mb-4" style="color: var(--text-dark);">
+                        <i class="fas fa-magic mr-2" style="color: var(--primary-color);"></i>
+                        Custom Itineraries Available
+                    </h3>
+                    <p class="mb-4" style="color: var(--accent-color);">
+                        These are just samples! We can create a completely custom itinerary based on your interests, schedule, and preferences. 
+                        Want to focus on art galleries, rooftop bars, or hidden speakeasies? Just let us know!
+                    </p>
+                    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg" onclick="track_conversion('custom_itinerary_cta');">
+                        <i class="fas fa-route mr-2"></i>
+                        Plan My Custom NYC Tour
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us for Hourly Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-dark);">Why Choose Hourly Car Service NYC</h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto" style="color: var(--accent-color);">
+                    With over 400+ 5-star reviews and nearly two decades of NYC experience, we provide the flexibility and luxury you need to explore the city on your terms.
+                </p>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-6 rounded-lg" style="background-color: white;">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--blue-light);">
+                        <i class="fas fa-clock text-2xl" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Flexible Hourly Rates</h3>
+                    <p class="text-sm" style="color: var(--accent-color);">2, 4, 6, or 8-hour packages with transparent pricing</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg" style="background-color: white;">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--blue-light);">
+                        <i class="fas fa-map-marked-alt text-2xl" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Local NYC Expertise</h3>
+                    <p class="text-sm" style="color: var(--accent-color);">Chauffeurs who know the city inside out—no GPS needed</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg" style="background-color: white;">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--blue-light);">
+                        <i class="fas fa-calculator text-2xl" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">All-Inclusive Pricing</h3>
+                    <p class="text-sm" style="color: var(--accent-color);">Taxes, tolls, and gratuity included—no surge pricing</p>
+                </div>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2" style="color: var(--primary-color);">400+</div>
+                    <p class="text-sm font-semibold" style="color: var(--text-dark);">5-Star Google Reviews</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2" style="color: var(--primary-color);">18+</div>
+                    <p class="text-sm font-semibold" style="color: var(--text-dark);">Years in NYC</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2" style="color: var(--primary-color);">24/7</div>
+                    <p class="text-sm font-semibold" style="color: var(--text-dark);">Available Service</p>
+                </div>
+            </div>
+            
+            <!-- Final CTA -->
+            <div class="text-center">
+                <p class="text-lg mb-6" style="color: var(--accent-color);">
+                    <strong>First time in NYC?</strong> Skip the parking hassles and confusing subway maps. Your personal chauffeur handles the navigation while you enjoy the ride.
+                </p>
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg px-8" onclick="track_conversion('why_choose_hourly_cta');">
+                    <i class="fas fa-clock mr-2"></i>
+                    Get Your Hourly Quote Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Trusted by NYC Professionals</h2>
+                <div class="flex items-center justify-center mt-4">
+                    <div class="flex text-yellow-400 text-2xl mr-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-lg font-semibold" style="color: var(--text-dark);">4.9 / 5.0 on Google</span>
+                </div>
+            </div>
+            
+            <!-- Google Reviews -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: var(--accent-color);" class="text-sm mb-3">"Used for hourly service around the city. Alex was incredibly accommodating and professional. Flexible service and the vehicle was luxurious. Great value!"</p>
+                        <div class="font-semibold" style="color: var(--text-dark);">Michelle V.</div>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: var(--accent-color);" class="text-sm mb-3">"Used for a night out in Manhattan. Safe, reliable, and luxurious. The driver was professional and knew all the best routes."</p>
+                        <div class="font-semibold" style="color: var(--text-dark);">Amanda T.</div>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: var(--accent-color);" class="text-sm mb-3">"Family-owned business that treats you like family. Reliable, professional, and always goes above and beyond expectations."</p>
+                        <div class="font-semibold" style="color: var(--text-dark);">Daniel Q.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Button -->
+            <div class="text-center mt-8">
+                <a href="https://www.google.com/maps/place/Infinite+Car+Service+LLC/@40.922326,-72.6374479,9z/data=!4m18!1m9!3m8!1s0x63f29046b509639f:0x5a435f89231cd365!2sInfinite+Car+Service+LLC!8m2!3d40.922326!4d-72.637448!9m1!1b1!16s%2Fg%2F11kswxqb4b!3m7!1s0x63f29046b509639f:0x5a435f89231cd365!8m2!3d40.922326!4d-72.637448!9m1!1b1!16s%2Fg%2F11kswxqb4b?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline btn-lg">
+                    <i class="fab fa-google mr-2"></i>
+                    View All Google Reviews
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary CTA Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-dark);">Ready for Flexible Luxury Transportation?</h2>
+            <p class="text-lg mb-8" style="color: var(--accent-color);">Get your hourly car service quote with Infinite for seamless travel in NYC and experience the freedom of luxury on your schedule.</p>
+            
+            <!-- Internal Links -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="airport-transfers.html" class="text-blue-600 hover:text-blue-800 underline">
+                    Looking for Airport Transfers? →
+                </a>
+                <a href="business-travel.html" class="text-blue-600 hover:text-blue-800 underline">
+                    Traveling for business? →
+                </a>
+            </div>
+            
+            <div class="text-center mb-8">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="track_conversion('secondary_cta');">
+                    <i class="fas fa-calendar-check mr-3"></i>
+                    Get My Hourly Quote
+                </a>
+            </div>
+
+            <!-- Location Signal -->
+            <p class="text-sm opacity-75" style="color: var(--accent-color);">Serving Manhattan, Brooklyn, Queens, and Long Island since 2005.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 text-white" style="background-color: var(--footer-bg);">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="col-span-1 lg:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-car-side mr-2" style="color: var(--primary-color);"></i>
+                        Infinite Car Service
+                    </h3>
+                    <p class="text-gray-300 mb-4">Family-operated since 2005, providing flexible hourly chauffeur services in NYC with luxury SUVs and professional drivers for any occasion.</p>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3" style="color: var(--primary-color);"></i>
+                            <a href="mailto:info@infinitecarserviceli.com" class="text-gray-300 hover:text-white transition-colors">info@infinitecarserviceli.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61556980469676" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/bjFaK2sjtYXzEUrD6?g_st=com.google.maps.preview.copy" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-google text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="fleet.html" class="text-gray-300 hover:text-white transition-colors">Fleet</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">More Info</h4>
+                    <ul class="space-y-3">
+                        <li><a href="airport-meeting-points.html" class="text-gray-300 hover:text-white transition-colors">Airport Meeting Points</a></li>
+                        <li><a href="top-places-nyc.html" class="text-gray-300 hover:text-white transition-colors">Top Places to Visit in NYC</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Specialized Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="airport-transfers.html" class="text-gray-300 hover:text-white transition-colors">Airport Transfers</a></li>
+                        <li><a href="business-travel.html" class="text-gray-300 hover:text-white transition-colors">Business Travel</a></li>
+                        <li><a href="nyc-hourly.html" class="text-gray-300 hover:text-white transition-colors">NYC Hourly Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Infinite Car Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Get Quote Button -->
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" id="floatingBtn" onclick="track_conversion('floating');">
+        <i class="fas fa-calendar-check"></i>
+        <span>Get Quote</span>
+    </a>
+
+    <!-- Floating Button Script -->
+    <script>
+        // Show floating button after scrolling past hero
+        window.addEventListener('scroll', function() {
+            const floatingBtn = document.getElementById('floatingBtn');
+            const heroHeight = window.innerHeight * 0.8; // Show after 80% of viewport height
+            
+            if (window.scrollY > heroHeight) {
+                floatingBtn.classList.add('show');
+            } else {
+                floatingBtn.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
