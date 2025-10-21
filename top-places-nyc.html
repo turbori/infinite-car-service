@@ -23,58 +23,28 @@
     <!-- End Google Tag Manager -->
 
     <!-- Google Ads Global Site Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtm/js?id=AW-16458132086"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16458132086"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-16458132086');
-        
-        // Simple conversion tracking function with error handling
-        function track_conversion() {
-            try {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                        'value': 75.0,
-                        'currency': 'USD'
-                    });
-                    console.log('Google Ads conversion tracked successfully');
-                } else {
-                    console.log('Google Ads gtag not loaded yet - trying again in 1 second');
-                    setTimeout(function() {
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'conversion', {
-                                'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                                'value': 75.0,
-                                'currency': 'USD'
-                            });
-                            console.log('Google Ads conversion tracked successfully (delayed)');
-                        } else {
-                            console.log('Google Ads still not available after delay');
-                        }
-                    }, 1000);
-                }
-            } catch (error) {
-                console.log('Conversion tracking error:', error);
-            }
-        }
     </script>
     
-    <!-- Google Ads Conversion Tracking -->
+    <!-- Event snippet for Request quote conversion page -->
     <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16458132086/t69vCPibhrEbEPbU7Kc9',
+                'event_callback': callback
+            });
+            return false;
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-16458132086/Hu6ZCKPXoIAbEPbU7Kc9',
-          'event_callback': callback
-      });
-      return false;
-    }
     </script>
     
     <!-- Microsoft Clarity -->
@@ -241,7 +211,7 @@
         </div>
         
         <div class="navbar-end">
-            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="track_conversion();">Get Quote</a>
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="return gtag_report_conversion(this.href);">Get Quote</a>
         </div>
     </nav>
 
@@ -520,7 +490,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg" onclick="track_conversion();">
+                        <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg" onclick="return gtag_report_conversion(this.href);">
                             <i class="fas fa-route mr-2"></i>
                             Plan Your NYC Tour
                         </a>
@@ -1006,7 +976,7 @@
                         <i class="fas fa-info-circle mr-2"></i>
                         Learn More About Hourly Service
                     </a>
-                    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg" onclick="track_conversion();">
+                    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg" onclick="return gtag_report_conversion(this.href);">
                         <i class="fas fa-calendar-check mr-2"></i>
                         Get Quote for NYC Tour
                     </a>
@@ -1024,7 +994,7 @@
             </p>
             
             <div class="text-center">
-                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="track_conversion();">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="return gtag_report_conversion(this.href);">
                     <i class="fas fa-calendar-check mr-3"></i>
                     Get Quote
                 </a>
@@ -1117,7 +1087,7 @@
     </footer>
 
     <!-- Floating Get Quote Button -->
-    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" onclick="track_conversion();">
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" onclick="return gtag_report_conversion(this.href);">
         <i class="fas fa-calendar-check"></i>
         <span>Get Quote</span>
     </a>

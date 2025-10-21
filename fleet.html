@@ -29,68 +29,22 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-16458132086');
-        
-        // Enhanced conversion tracking function with GTM + Google Ads
-        function track_conversion(button_location = 'unknown') {
-            try {
-                // 1. Fire Google Ads conversion (existing)
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                        'value': 75.0,
-                        'currency': 'USD'
-                    });
-                    console.log('Google Ads conversion tracked successfully');
-                } else {
-                    console.log('Google Ads gtag not loaded yet - trying again in 1 second');
-                    setTimeout(function() {
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'conversion', {
-                                'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                                'value': 75.0,
-                                'currency': 'USD'
-                            });
-                            console.log('Google Ads conversion tracked successfully (delayed)');
-                        } else {
-                            console.log('Google Ads still not available after delay');
-                        }
-                    }, 1000);
-                }
-
-                // 2. Fire Moovs GTM custom event
-                if (typeof dataLayer !== 'undefined') {
-                    dataLayer.push({
-                        'event': 'moovs_create_quote',
-                        'category': 'lead_generation',
-                        'button_location': button_location,
-                        'page_path': window.location.pathname,
-                        'page_url': window.location.href
-                    });
-                    console.log('Moovs GTM create_quote event fired:', button_location);
-                } else {
-                    console.log('GTM dataLayer not available');
-                }
-
-            } catch (error) {
-                console.log('Conversion tracking error:', error);
-            }
-        }
     </script>
     
-    <!-- Google Ads Conversion Tracking -->
+    <!-- Event snippet for Request quote conversion page -->
     <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16458132086/t69vCPibhrEbEPbU7Kc9',
+                'event_callback': callback
+            });
+            return false;
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-16458132086/Hu6ZCKPXoIAbEPbU7Kc9',
-          'event_callback': callback
-      });
-      return false;
-    }
     </script>
     
     <!-- Microsoft Clarity -->
@@ -257,7 +211,7 @@
         </div>
         
         <div class="navbar-end">
-            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="track_conversion();">Get Quote</a>
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="return gtag_report_conversion(this.href);">Get Quote</a>
         </div>
     </nav>
 
@@ -538,7 +492,7 @@
             <p class="text-lg mb-8" style="color: var(--accent-color);">Book your next trip and experience the comfort and elegance of our premium vehicles.</p>
             
             <div class="text-center">
-                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="track_conversion();">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="return gtag_report_conversion(this.href);">
                     <i class="fas fa-calendar-check mr-3"></i>
                     Get Quote
                 </a>
@@ -631,7 +585,7 @@
     </footer>
 
     <!-- Floating Get Quote Button -->
-    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" onclick="track_conversion();">
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" onclick="return gtag_report_conversion(this.href);">
         <i class="fas fa-calendar-check"></i>
         <span>Get Quote</span>
     </a>

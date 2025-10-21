@@ -29,47 +29,21 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-16458132086');
-        
-        // Enhanced conversion tracking function with GTM + Google Ads
-        function track_conversion(button_location = 'unknown') {
-            try {
-                // 1. Fire Google Ads conversion
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                        'value': 75.0,
-                        'currency': 'USD'
-                    });
-                    console.log('Google Ads conversion tracked successfully');
-                } else {
-                    console.log('Google Ads gtag not loaded yet - trying again in 1 second');
-                    setTimeout(function() {
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'conversion', {
-                                'send_to': 'AW-16458132086/NeiFCN754IMbEPpU7Kc9',
-                                'value': 75.0,
-                                'currency': 'USD'
-                            });
-                            console.log('Google Ads conversion tracked successfully (delayed)');
-                        }
-                    }, 1000);
+    </script>
+    
+    <!-- Event snippet for Request quote conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
                 }
-
-                // 2. Fire Moovs GTM custom event
-                if (typeof dataLayer !== 'undefined') {
-                    dataLayer.push({
-                        'event': 'moovs_create_quote',
-                        'category': 'lead_generation',
-                        'button_location': button_location,
-                        'page_path': window.location.pathname,
-                        'page_url': window.location.href
-                    });
-                    console.log('Moovs GTM create_quote event fired:', button_location);
-                }
-
-            } catch (error) {
-                console.log('Conversion tracking error:', error);
-            }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16458132086/t69vCPibhrEbEPbU7Kc9',
+                'event_callback': callback
+            });
+            return false;
         }
     </script>
     
