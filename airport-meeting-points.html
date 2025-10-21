@@ -31,7 +31,7 @@
         gtag('config', 'AW-16458132086');
     </script>
     
-    <!-- Event snippet for Request quote conversion page -->
+    <!-- Event snippet for Get Quote Button conversion page -->
     <script>
         function gtag_report_conversion(url) {
             var callback = function () {
@@ -40,7 +40,9 @@
                 }
             };
             gtag('event', 'conversion', {
-                'send_to': 'AW-16458132086/t69vCPibhrEbEPbU7Kc9',
+                'send_to': 'AW-16458132086/GjzbCImHmbEbEPbU7Kc9',
+                'value': 340.0,
+                'currency': 'USD',
                 'event_callback': callback
             });
             return false;
@@ -786,6 +788,14 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Ready to Book Your Airport Transfer?</h2>
             <p class="text-lg mb-8" style="color: var(--accent-color);">Experience stress-free airport pickups with our professional meet & greet service.</p>
+            
+            <div class="text-center">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg text-xl px-12 py-4" onclick="return gtag_report_conversion(this.href);">
+                    <i class="fas fa-calendar-check mr-3"></i>
+                    Get Quote
+                </a>
+
+            </div>
         </div>
     </section>
 
