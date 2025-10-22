@@ -1,0 +1,14 @@
+# Robots.txt for Infinite Car Service
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.infinitecarserviceli.com/sitemap.xml
+
+# Disallow test pages
+Disallow: /test-conversion-simple.html
+Disallow: /test-moovs-tracking.html
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
