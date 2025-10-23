@@ -12,15 +12,15 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: General/Broad  
 **Urgency Message**:
 ```
-⚡ Get Your Quote in Under 2 Minutes — Instant Confirmation
+⚡ Instant Quote — We'll Call You Within 2 Minutes
 ```
 
-**Button Text**: "Get Instant Quote"  
+**Button Text**: "Get Quote"  
 **Floating Button**: "⚡ Instant Quote"
 
 **Psychology**: 
-- Time-based urgency ("Under 2 Minutes")
-- Removes friction ("Instant Confirmation")
+- Time-based urgency ("Within 2 Minutes")
+- Emphasizes fast personal response
 - Appeals to busy travelers who want speed
 
 ---
@@ -29,16 +29,16 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: Airport travelers, business professionals  
 **Urgency Message**:
 ```
-⚡ Instant Quote — Your Chauffeur Assigned Within Minutes
+⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
 ```
 
-**Button Text**: "Get Instant Quote"  
+**Button Text**: "Get Quote"  
 **Floating Button**: "⚡ Instant Quote"
 
 **Psychology**:
-- Emphasizes immediate assignment
-- Reduces anxiety about availability
-- Perfect for last-minute bookings
+- Time-based urgency ("Under 2 Minutes")
+- Emphasizes fast response
+- Perfect for travelers needing quick answers
 
 ---
 
@@ -46,16 +46,16 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: Executive assistants, corporate clients  
 **Urgency Message**:
 ```
-⚡ Fast Response — We'll Call Back Within 30 Seconds
+⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
 ```
 
-**Button Text**: "Get Instant Quote"  
+**Button Text**: "Get Quote"  
 **Floating Button**: "⚡ Instant Quote"
 
 **Psychology**:
 - Highlights speed and professionalism
-- Leverages your actual <30 second response time
-- Appeals to EAs who need things done NOW
+- Emphasizes fast response time
+- Appeals to EAs who need things done quickly
 
 ---
 
@@ -63,15 +63,15 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: Tourists, leisure travelers, groups  
 **Urgency Message**:
 ```
-⚡ Book Your NYC Tour in 60 Seconds — Instant Price Quote
+⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
 ```
 
-**Button Text**: "Get Instant Quote"  
+**Button Text**: "Get Quote"  
 **Floating Button**: "⚡ Instant Quote"
 
 **Psychology**:
-- Makes booking feel effortless ("60 Seconds")
-- Removes price uncertainty ("Instant Price Quote")
+- Time-based urgency ("Under 2 Minutes")
+- Removes price uncertainty (instant quote)
 - Perfect for tourists comparing options
 
 ---
@@ -102,23 +102,23 @@ font-size: 0.875rem;
 
 ### **Time-Based Urgency**
 ✅ "Under 2 Minutes"  
-✅ "Within 30 Seconds"  
-✅ "In 60 Seconds"
+✅ "Within 2 Minutes"  
+✅ "Fast"
 
 **Why it works**: Specific time frames feel more credible than vague promises. Brain prefers concrete numbers.
 
 ### **Service Guarantee Urgency**
-✅ "We'll Call Back Within 30 Seconds"  
-✅ "Your Chauffeur Assigned Within Minutes"
+✅ "We'll Call You Within 2 Minutes"  
+✅ "We'll Call You Fast"
 
-**Why it works**: Removes uncertainty. Buyer knows exactly what to expect next.
+**Why it works**: Removes uncertainty. Buyer knows exactly what to expect next - a real person will call them quickly.
 
 ### **Instant/Fast Words**
 ✅ "Instant Quote"  
-✅ "Instant Confirmation"  
+✅ "Get Your Quote"  
 ✅ "Fast Response"
 
-**Why it works**: Appeals to loss aversion - they don't want to waste time with slow competitors.
+**Why it works**: Appeals to loss aversion - they don't want to waste time with slow competitors. Emphasizes speed without overpromising.
 
 ---
 
@@ -139,7 +139,7 @@ Your buyers (EAs, business travelers, tourists) all share one thing:
 When someone searches "JFK car service" they want:
 1. ✅ Fast answer
 2. ✅ Clear pricing
-3. ✅ Immediate confirmation
+3. ✅ Quick response from a real person
 
 Your urgency messaging gives their brain an easy path forward.
 
@@ -155,17 +155,17 @@ The messaging is **helpful**, not aggressive.
 
 ### **2. Credible & Specific**
 ❌ "Fast service"  
-✅ "We'll Call Back Within 30 Seconds"
+✅ "We'll Call You Within 2 Minutes"
 
-Specific numbers build trust.
+Specific, achievable numbers build trust.
 
 ### **3. Matches Your Brand**
 The urgency feels premium and professional, not like a discount airline or cheap Uber competitor.
 
 ### **4. Customized by Audience**
 - Corporate clients care about **response speed**
-- Tourists care about **booking speed**
-- Airport travelers care about **assignment speed**
+- Tourists care about **quick pricing**
+- Airport travelers care about **fast quotes**
 
 Each page speaks directly to its audience's urgency trigger.
 
@@ -174,13 +174,13 @@ Each page speaks directly to its audience's urgency trigger.
 ## 🚀 Button Text Changes
 
 ### **Before**:
-- "Get Quote" (passive, unclear)
+- Various buttons like "Book Now", "Request Quote"
 
 ### **After**:
-- "Get Instant Quote" (active, clear)
+- "Get Quote" (clear, direct)
 - "⚡ Instant Quote" (floating button)
 
-**Impact**: The word "Instant" reinforces the urgency message above it. Icon changed from calendar to lightning bolt.
+**Impact**: Consistent messaging across all CTAs. Floating button emphasizes speed with lightning bolt icon.
 
 ---
 
@@ -190,17 +190,17 @@ Once deployed, test these variations:
 
 ### **Variation 1 (Current)**:
 ```
-⚡ Get Your Quote in Under 2 Minutes — Instant Confirmation
+⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
 ```
 
 ### **Variation 2 (More Direct)**:
 ```
-⚡ Instant Quote — Confirmed in Seconds
+⚡ Instant Quote — We'll Call Within 2 Minutes
 ```
 
 ### **Variation 3 (Callback Focus)**:
 ```
-⚡ We'll Call You in 30 Seconds — Instant Price Quote
+⚡ Fast Quote — Real Person Calls in 2 Minutes
 ```
 
 Monitor which drives highest conversion for each page type.

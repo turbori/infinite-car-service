@@ -11,7 +11,7 @@
 - ✅ Since 2005
 
 **CTA Section Badges:**
-- ⚡ Instant Confirmation
+- ⚡ Instant Quote
 - ⭐ Rated 5.0 by 10,000+ Travelers
 - 📞 24/7 NYC Support
 
@@ -24,7 +24,7 @@
 - 👔 Professional Chauffeurs
 
 **CTA Section Badges:**
-- ⚡ Instant Confirmation
+- ⚡ Instant Quote
 - ✈️ Real-Time Flight Tracking
 - 🚗 2023-2025 Fleet
 
@@ -37,7 +37,7 @@
 - 🛡️ Licensed & Insured
 
 **CTA Section Badges:**
-- ⚡ Instant Confirmation
+- ⚡ Instant Quote
 - 🏢 Trusted by 500+ Companies
 - 📞 Dedicated Account Manager
 
@@ -50,7 +50,7 @@
 - 📍 Local Experts
 
 **CTA Section Badges:**
-- ⚡ Instant Confirmation
+- ⚡ Instant Quote
 - ⏱️ Wait Time Included
 - 👥 Perfect for Groups
 
