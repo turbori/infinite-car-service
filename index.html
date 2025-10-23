@@ -433,6 +433,64 @@
             overflow: hidden !important;
         }
 
+        /* Trust Badges */
+        .trust-badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 900px;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .trust-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .trust-badge i {
+            font-size: 1.25rem;
+            color: #FCD34D;
+        }
+        
+        .trust-badge-text {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: white;
+            line-height: 1.3;
+        }
+        
+        /* Trust badges for light backgrounds */
+        .trust-badge-light {
+            background: rgba(37, 99, 235, 0.05);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+        }
+        
+        .trust-badge-light:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+        
+        .trust-badge-light i {
+            color: var(--primary-color);
+        }
+        
+        .trust-badge-light .trust-badge-text {
+            color: var(--text-dark);
+        }
+        
         /* Mobile responsive */
         @media (max-width: 768px) {
             .floating-quote-btn {
@@ -440,6 +498,26 @@
                 right: 15px;
                 padding: 12px 20px;
                 font-size: 14px;
+            }
+            
+            .trust-badges-container {
+                gap: 0.75rem;
+                flex-direction: column;
+            }
+            
+            .trust-badge {
+                padding: 0.6rem 0.875rem;
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .trust-badge-text {
+                font-size: 0.8rem;
+            }
+            
+            .trust-badge i {
+                font-size: 1.1rem;
             }
             
             /* Hide 2nd and 3rd review cards on mobile for better spacing */
@@ -691,6 +769,30 @@
                     <p class="text-base md:text-lg opacity-75">
                         Our chauffeurs deliver a seamless, high-touch experience — every vehicle spotless, every detail prepared, every ride on point.
                     </p>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges-container">
+                    <div class="trust-badge">
+                        <i class="fas fa-star"></i>
+                        <span class="trust-badge-text">400+ 5-Star Reviews</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="trust-badge-text">Licensed & Insured</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-clock"></i>
+                        <span class="trust-badge-text">24/7 Support</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-lock"></i>
+                        <span class="trust-badge-text">Secure Payment</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-user-check"></i>
+                        <span class="trust-badge-text">Since 2005</span>
+                    </div>
                 </div>
 
                 <!-- Scroll Indicator -->
@@ -1356,7 +1458,22 @@
                     <i class="fas fa-calendar-check mr-3"></i>
                     Get Quote
                 </a>
-
+                
+                <!-- Trust Badges Below CTA -->
+                <div class="trust-badges-container mt-8">
+                    <div class="trust-badge trust-badge-light">
+                        <i class="fas fa-bolt"></i>
+                        <span class="trust-badge-text">Instant Confirmation</span>
+                    </div>
+                    <div class="trust-badge trust-badge-light">
+                        <i class="fas fa-star"></i>
+                        <span class="trust-badge-text">Rated 5.0 by 10,000+ Travelers</span>
+                    </div>
+                    <div class="trust-badge trust-badge-light">
+                        <i class="fas fa-headset"></i>
+                        <span class="trust-badge-text">24/7 NYC Support</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
