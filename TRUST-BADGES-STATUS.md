@@ -32,7 +32,6 @@
 **Hero Section Badges - Corporate Focused:**
 - 💼 Corporate Accounts
 - 👔 Professional Chauffeurs
-- 📄 Invoicing Available
 - ⭐ 400+ 5-Star Reviews
 - 🛡️ Licensed & Insured
 
