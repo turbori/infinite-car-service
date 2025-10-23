@@ -12,7 +12,7 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: General/Broad  
 **Urgency Message**:
 ```
-⚡ Instant Quote — We'll Call You Within 2 Minutes
+⚡ Receive Your Quote Within 2 Minutes — Fast Response Guaranteed
 ```
 
 **Button Text**: "Get Quote"  
@@ -20,7 +20,7 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 
 **Psychology**: 
 - Time-based urgency ("Within 2 Minutes")
-- Emphasizes fast personal response
+- Guaranteed response (call, text, or email)
 - Appeals to busy travelers who want speed
 
 ---
@@ -29,15 +29,15 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: Airport travelers, business professionals  
 **Urgency Message**:
 ```
-⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
+⚡ Receive Your Quote Within 2 Minutes — Fast Response Guaranteed
 ```
 
 **Button Text**: "Get Quote"  
 **Floating Button**: "⚡ Instant Quote"
 
 **Psychology**:
-- Time-based urgency ("Under 2 Minutes")
-- Emphasizes fast response
+- Time-based urgency ("Within 2 Minutes")
+- Guaranteed response via call, text, or email
 - Perfect for travelers needing quick answers
 
 ---
@@ -46,7 +46,7 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: Executive assistants, corporate clients  
 **Urgency Message**:
 ```
-⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
+⚡ Receive Your Quote Within 2 Minutes — Fast Response Guaranteed
 ```
 
 **Button Text**: "Get Quote"  
@@ -54,7 +54,7 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 
 **Psychology**:
 - Highlights speed and professionalism
-- Emphasizes fast response time
+- Guaranteed response (multiple communication options)
 - Appeals to EAs who need things done quickly
 
 ---
@@ -63,15 +63,15 @@ We've added **professional urgency messaging** to all 4 high-priority landing pa
 **Audience**: Tourists, leisure travelers, groups  
 **Urgency Message**:
 ```
-⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
+⚡ Receive Your Quote Within 2 Minutes — Fast Response Guaranteed
 ```
 
 **Button Text**: "Get Quote"  
 **Floating Button**: "⚡ Instant Quote"
 
 **Psychology**:
-- Time-based urgency ("Under 2 Minutes")
-- Removes price uncertainty (instant quote)
+- Time-based urgency ("Within 2 Minutes")
+- Guaranteed response removes uncertainty
 - Perfect for tourists comparing options
 
 ---
@@ -101,17 +101,17 @@ font-size: 0.875rem;
 ## 🧠 Psychology Behind Each Element
 
 ### **Time-Based Urgency**
-✅ "Under 2 Minutes"  
 ✅ "Within 2 Minutes"  
-✅ "Fast"
+✅ "Receive Your Quote"  
+✅ "Fast Response Guaranteed"
 
 **Why it works**: Specific time frames feel more credible than vague promises. Brain prefers concrete numbers.
 
 ### **Service Guarantee Urgency**
-✅ "We'll Call You Within 2 Minutes"  
-✅ "We'll Call You Fast"
+✅ "Receive Your Quote Within 2 Minutes"  
+✅ "Fast Response Guaranteed"
 
-**Why it works**: Removes uncertainty. Buyer knows exactly what to expect next - a real person will call them quickly.
+**Why it works**: Removes uncertainty. Buyer knows they'll get a response (call, text, or email) quickly, without overpromising a specific method.
 
 ### **Instant/Fast Words**
 ✅ "Instant Quote"  
@@ -155,9 +155,9 @@ The messaging is **helpful**, not aggressive.
 
 ### **2. Credible & Specific**
 ❌ "Fast service"  
-✅ "We'll Call You Within 2 Minutes"
+✅ "Receive Your Quote Within 2 Minutes"
 
-Specific, achievable numbers build trust.
+Specific, achievable numbers build trust. "Receive" covers all communication methods.
 
 ### **3. Matches Your Brand**
 The urgency feels premium and professional, not like a discount airline or cheap Uber competitor.
@@ -190,17 +190,17 @@ Once deployed, test these variations:
 
 ### **Variation 1 (Current)**:
 ```
-⚡ Get Your Quote in Under 2 Minutes — We'll Call You Fast
+⚡ Receive Your Quote Within 2 Minutes — Fast Response Guaranteed
 ```
 
 ### **Variation 2 (More Direct)**:
 ```
-⚡ Instant Quote — We'll Call Within 2 Minutes
+⚡ Instant Quote — Response Within 2 Minutes
 ```
 
-### **Variation 3 (Callback Focus)**:
+### **Variation 3 (Simpler)**:
 ```
-⚡ Fast Quote — Real Person Calls in 2 Minutes
+⚡ Get Your Quote in Under 2 Minutes
 ```
 
 Monitor which drives highest conversion for each page type.
