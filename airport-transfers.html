@@ -745,8 +745,143 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    <!-- Travel Time & Traffic Insights Section -->
     <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">How Long Does It Take to Reach Manhattan?</h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto" style="color: var(--accent-color);">
+                    Average travel times from New York airports to Times Square — based on real chauffeur experience.
+                </p>
+            </div>
+
+            <!-- Airport Travel Time Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- JFK Card -->
+                <div class="card shadow-xl" style="background-color: white;">
+                    <div class="card-body">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-plane-departure text-4xl mb-3" style="color: var(--primary-color);"></i>
+                            <h3 class="text-2xl font-bold" style="color: var(--text-dark);">JFK Airport</h3>
+                            <p class="text-sm mt-1" style="color: var(--accent-color);">Jamaica, Queens</p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-lg" style="background-color: var(--blue-light);">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold" style="color: var(--text-dark);">No Rush Hour</span>
+                                    <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+                                </div>
+                                <p class="text-2xl font-bold" style="color: var(--primary-color);">45–60 min</p>
+                            </div>
+                            
+                            <div class="p-4 rounded-lg bg-red-50">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold" style="color: var(--text-dark);">Rush Hour</span>
+                                    <i class="fas fa-traffic-light text-red-500"></i>
+                                </div>
+                                <p class="text-sm mb-1 text-red-600">7–10 AM / 4–7 PM</p>
+                                <p class="text-2xl font-bold text-red-600">70–90 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LGA Card -->
+                <div class="card shadow-xl" style="background-color: white; border: 2px solid var(--primary-color);">
+                    <div class="card-body">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-plane-arrival text-4xl mb-3" style="color: var(--primary-color);"></i>
+                            <h3 class="text-2xl font-bold" style="color: var(--text-dark);">LaGuardia Airport</h3>
+                            <p class="text-sm mt-1" style="color: var(--accent-color);">East Elmhurst</p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-lg" style="background-color: var(--blue-light);">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold" style="color: var(--text-dark);">No Rush Hour</span>
+                                    <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+                                </div>
+                                <p class="text-2xl font-bold" style="color: var(--primary-color);">25–35 min</p>
+                            </div>
+                            
+                            <div class="p-4 rounded-lg bg-red-50">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold" style="color: var(--text-dark);">Rush Hour</span>
+                                    <i class="fas fa-traffic-light text-red-500"></i>
+                                </div>
+                                <p class="text-sm mb-1 text-red-600">7–10 AM / 4–7 PM</p>
+                                <p class="text-2xl font-bold text-red-600">45–60 min</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 text-center">
+                            <span class="badge badge-lg" style="background-color: var(--primary-color); color: white; border: none;">
+                                <i class="fas fa-star mr-1"></i>
+                                Closest to Manhattan
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EWR Card -->
+                <div class="card shadow-xl" style="background-color: white;">
+                    <div class="card-body">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-plane text-4xl mb-3" style="color: var(--primary-color);"></i>
+                            <h3 class="text-2xl font-bold" style="color: var(--text-dark);">Newark Airport</h3>
+                            <p class="text-sm mt-1" style="color: var(--accent-color);">EWR, New Jersey</p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-lg" style="background-color: var(--blue-light);">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold" style="color: var(--text-dark);">No Rush Hour</span>
+                                    <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+                                </div>
+                                <p class="text-2xl font-bold" style="color: var(--primary-color);">50–65 min</p>
+                            </div>
+                            
+                            <div class="p-4 rounded-lg bg-red-50">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold" style="color: var(--text-dark);">Rush Hour</span>
+                                    <i class="fas fa-traffic-light text-red-500"></i>
+                                </div>
+                                <p class="text-sm mb-1 text-red-600">7–10 AM / 4–7 PM</p>
+                                <p class="text-2xl font-bold text-red-600">75–95 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supporting Information -->
+            <div class="card shadow-xl max-w-4xl mx-auto" style="background-color: white; border-left: 4px solid var(--primary-color);">
+                <div class="card-body">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-2xl mr-4 mt-1" style="color: var(--primary-color);"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4" style="color: var(--text-dark);">What Affects Your Travel Time?</h3>
+                            <div class="space-y-3" style="color: var(--accent-color);">
+                                <p>
+                                    <strong style="color: var(--text-dark);">Rush Hours:</strong> Travel times vary based on the day of the week and real-time traffic conditions. Rush hours typically occur Monday through Friday from 7–10 AM and 4–7 PM.
+                                </p>
+                                <p>
+                                    <strong style="color: var(--text-dark);">Weekend Travel:</strong> Weekends are generally lighter, but Sunday evenings can experience delays near Manhattan tunnels.
+                                </p>
+                                <p>
+                                    <strong style="color: var(--text-dark);">Our Advantage:</strong> Our chauffeurs continuously monitor both flight arrivals and NYC traffic in real time — ensuring you arrive safely and on time, even when the city isn't.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 px-4" style="background-color: white;">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-dark);">Why NYC Travelers Choose Infinite Car Service</h2>
