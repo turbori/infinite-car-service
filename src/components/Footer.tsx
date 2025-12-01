@@ -6,11 +6,11 @@ export default function Footer() {
     <footer className="bg-[#020202] border-t border-white/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 md:col-span-1">
             <Link href="/" className="text-2xl font-bold tracking-tighter text-white mb-6 block">
               INFINITE <span className="text-blue-500">CAR SERVICE</span>
             </Link>
-            <p className="text-gray-400 max-w-md mb-8 leading-relaxed">
+            <p className="text-gray-400 max-w-xs mb-8 leading-relaxed text-sm">
               Premier luxury car service serving NYC, Long Island, Westchester, and the Hamptons. 
               Providing exceptional transportation experiences since 2005.
             </p>
@@ -25,8 +25,8 @@ export default function Footer() {
 
           <div>
             <h4 className="text-white font-bold mb-6">Quick Links</h4>
-            <ul className="space-y-4">
-              {['Home', 'Services', 'Fleet', 'About'].map((item) => (
+            <ul className="space-y-3 text-sm">
+              {['Home', 'Services', 'Fleet', 'About', 'Business'].map((item) => (
                 <li key={item}>
                   <Link href={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors">
                     {item}
@@ -37,8 +37,39 @@ export default function Footer() {
           </div>
 
           <div>
+            <h4 className="text-white font-bold mb-6">Specialized Services</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/long-island" className="text-gray-400 hover:text-white transition-colors">
+                  Long Island Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/westchester" className="text-gray-400 hover:text-white transition-colors">
+                  Westchester Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/airport-transfers" className="text-gray-400 hover:text-white transition-colors">
+                  Airport Transfers
+                </Link>
+              </li>
+              <li>
+                <Link href="/business-travel" className="text-gray-400 hover:text-white transition-colors">
+                  Business Travel
+                </Link>
+              </li>
+              <li>
+                <Link href="/nyc-hourly" className="text-gray-400 hover:text-white transition-colors">
+                  NYC Hourly Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h4 className="text-white font-bold mb-6">Contact Us</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3 text-gray-400">
                 <Phone className="w-5 h-5 text-blue-500" />
                 <a href="tel:+16318606700" className="hover:text-white transition-colors">(631) 860-6700</a>
@@ -66,4 +97,3 @@ export default function Footer() {
     </footer>
   );
 }
-
