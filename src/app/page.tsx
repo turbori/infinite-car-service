@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import HolidaySpecial from "@/components/HolidaySpecial";
 import Services from "@/components/Services";
 import AirportShowcase from "@/components/AirportShowcase";
 import HourlyShowcase from "@/components/HourlyShowcase";
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stats />
+      <HolidaySpecial />
       <Services />
       <AirportShowcase />
       <HourlyShowcase />
