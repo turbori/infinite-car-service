@@ -10,31 +10,31 @@ import { Users, Briefcase, Wifi, Droplets } from 'lucide-react';
 
 const fleetItems = [
   {
-    name: 'Cadillac Escalade ESV',
-    category: 'Luxury SUV',
-    description: 'The flagship of our fleet. The Cadillac Escalade ESV offers unmatched presence, comfort, and space. Perfect for executive travel, airport transfers with luggage, and special events.',
-    capacity: '6 Passengers',
-    luggage: '6 Bags',
-    features: ['Leather Interior', 'Panoramic Sunroof', 'Rear Climate Control', 'Privacy Tint'],
-    image: '/assets/images/luxury-large-suv-escalade.jpg'
-  },
-  {
-    name: 'Chevy Suburban LT',
-    category: 'Executive SUV',
-    description: 'The industry standard for secure, comfortable, and reliable transportation. The Suburban offers generous legroom and massive cargo capacity for families and groups.',
-    capacity: '7 Passengers',
-    luggage: '7 Bags',
-    features: ['Spacious Cabin', 'Third Row Seating', 'Smooth Ride', 'Reading Lights'],
-    image: '/assets/images/Luxury Midsize SUV .png'
-  },
-  {
-    name: 'Cadillac XTS / CT6',
-    category: 'Luxury Sedan',
+    name: 'Luxury Sedan',
+    category: 'Executive Sedan',
     description: 'Sophisticated and understated. Our luxury sedans provide a quiet, smooth ride for solo travelers and couples heading to meetings or the airport.',
     capacity: '3 Passengers',
     luggage: '3 Bags',
     features: ['Quiet Cabin', 'Heated Seats', 'USB Charging', 'Work Space'],
     image: '/assets/images/Luxury Sedan .png'
+  },
+  {
+    name: 'Luxury Medium SUV',
+    category: 'Executive SUV',
+    description: 'The industry standard for secure, comfortable, and reliable transportation. Offers generous legroom and ample cargo capacity for families and small groups.',
+    capacity: '6 Passengers',
+    luggage: '4 Bags',
+    features: ['Spacious Cabin', 'Leather Interior', 'Smooth Ride', 'Reading Lights'],
+    image: '/assets/images/Luxury Midsize SUV .png'
+  },
+  {
+    name: 'Luxury Large SUV',
+    category: 'Flagship SUV',
+    description: 'The flagship of our fleet. Offers unmatched presence, comfort, and space. Perfect for executive travel, airport transfers with extra luggage, and special events.',
+    capacity: '6 Passengers',
+    luggage: '5 Bags',
+    features: ['Panoramic Sunroof', 'Rear Climate Control', 'Privacy Tint', 'Premium Sound'],
+    image: '/assets/images/luxury-large-suv-escalade.jpg'
   }
 ];
 
@@ -121,4 +121,3 @@ export default function FleetPage() {
     </main>
   );
 }
-

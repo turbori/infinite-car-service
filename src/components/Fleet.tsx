@@ -7,20 +7,20 @@ import { ArrowRight } from 'lucide-react';
 
 const fleet = [
   {
-    name: 'Cadillac Escalade ESV',
-    type: 'Luxury SUV',
+    name: 'Luxury Large SUV',
+    type: 'Flagship SUV',
     capacity: '6 Passengers',
     image: '/assets/images/luxury-large-suv-escalade.jpg',
   },
   {
-    name: 'Chevy Suburban',
+    name: 'Luxury Medium SUV',
     type: 'Executive SUV',
     capacity: '6 Passengers',
     image: '/assets/images/Luxury Midsize SUV .png',
   },
   {
-    name: 'Cadillac XTS',
-    type: 'Luxury Sedan',
+    name: 'Luxury Sedan',
+    type: 'Executive Sedan',
     capacity: '3 Passengers',
     image: '/assets/images/Luxury Sedan .png',
   },
@@ -42,7 +42,7 @@ export default function Fleet() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Immaculate Fleet</h2>
           <p className="text-gray-400 max-w-2xl text-lg font-light">
             Late-model vehicles, meticulously maintained and detailed daily. 
-            Experience the comfort of our flagship Cadillac Escalades.
+            Experience the comfort of our flagship luxury SUVs.
           </p>
         </motion.div>
 
@@ -89,4 +89,3 @@ export default function Fleet() {
     </section>
   );
 }
-
