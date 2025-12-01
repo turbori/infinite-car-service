@@ -48,7 +48,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Reserve Your Ride
+              Get A Quote
             </motion.a>
             <motion.a
               href="/services"
