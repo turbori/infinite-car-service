@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
+import AboutShowcase from "@/components/AboutShowcase";
 import HolidaySpecial from "@/components/HolidaySpecial";
 import Services from "@/components/Services";
 import AirportShowcase from "@/components/AirportShowcase";
@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white selection:bg-blue-500 selection:text-white">
       <Navbar />
       <Hero />
-      <Stats />
+      <AboutShowcase />
       <HolidaySpecial />
       <Services />
       <AirportShowcase />
