@@ -32,7 +32,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-[#050505] relative">
+    <section className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,9 +40,9 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-blue-500 font-medium tracking-widest uppercase mb-3 text-sm">Process</h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">How It Works</h3>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
+          <h2 className="text-blue-600 font-medium tracking-widest uppercase mb-3 text-sm">Process</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How It Works</h3>
+          <p className="text-slate-600 max-w-2xl mx-auto text-lg font-light">
             Simple, transparent booking process from quote to ride.
           </p>
         </motion.div>
@@ -55,14 +55,14 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative p-8 rounded-2xl bg-white/5 border border-white/10 group hover:bg-white/10 transition-colors"
+              className="relative p-8 rounded-2xl bg-slate-50 border border-slate-200 group hover:bg-white hover:shadow-lg transition-all duration-300"
             >
-              <div className="text-5xl font-bold text-white/5 mb-6">{step.number}</div>
-              <div className="absolute top-8 right-8 p-3 rounded-full bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+              <div className="text-5xl font-bold text-slate-200 mb-6">{step.number}</div>
+              <div className="absolute top-8 right-8 p-3 rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <step.icon className="w-6 h-6" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">{step.title}</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+              <h4 className="text-xl font-bold text-slate-900 mb-4">{step.title}</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
             </motion.div>
           ))}
         </div>
@@ -71,17 +71,17 @@ export default function HowItWorks() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-blue-900/10 border border-blue-500/20 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto"
+          className="bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center justify-center p-4 rounded-full bg-blue-500/20 text-blue-400 mb-6">
+          <div className="inline-flex items-center justify-center p-4 rounded-full bg-blue-100 text-blue-600 mb-6">
             <ShieldCheck className="w-8 h-8" />
           </div>
-          <h4 className="text-2xl font-bold text-white mb-4">Your Peace of Mind</h4>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-6 leading-relaxed">
+          <h4 className="text-2xl font-bold text-slate-900 mb-4">Your Peace of Mind</h4>
+          <p className="text-slate-600 max-w-2xl mx-auto mb-6 leading-relaxed">
             We're here for you every step of the way. Have questions or need changes? 
             Our team is always ready to assist and ensure your perfect transportation experience.
           </p>
-          <p className="text-blue-400 font-medium text-sm uppercase tracking-wider">
+          <p className="text-blue-600 font-medium text-sm uppercase tracking-wider">
             Every booking includes live chauffeur tracking, text updates, and direct communication.
           </p>
         </motion.div>
@@ -89,4 +89,3 @@ export default function HowItWorks() {
     </section>
   );
 }
-

@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#050505]">
+    <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,8 +31,8 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-blue-500 font-medium tracking-widest uppercase mb-3 text-sm">Testimonials</h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Client Stories</h3>
+          <h2 className="text-blue-600 font-medium tracking-widest uppercase mb-3 text-sm">Testimonials</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Client Stories</h3>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -43,17 +43,17 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-8 rounded-2xl bg-white/5 border border-white/10 relative"
+              className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm relative hover:shadow-md transition-shadow"
             >
               <div className="flex gap-1 text-yellow-400 mb-6">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6 italic">"{review.text}"</p>
+              <p className="text-slate-600 text-lg leading-relaxed mb-6 italic">"{review.text}"</p>
               <div>
-                <h4 className="text-white font-bold">{review.name}</h4>
-                <p className="text-blue-400 text-sm">{review.location}</p>
+                <h4 className="text-slate-900 font-bold">{review.name}</h4>
+                <p className="text-blue-600 text-sm">{review.location}</p>
               </div>
             </motion.div>
           ))}
@@ -62,4 +62,3 @@ export default function Testimonials() {
     </section>
   );
 }
-

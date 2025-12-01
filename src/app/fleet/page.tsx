@@ -40,7 +40,7 @@ const fleetItems = [
 
 export default function FleetPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-white text-slate-900">
       <Navbar />
       <PageHero 
         title="Our Fleet" 
@@ -48,7 +48,7 @@ export default function FleetPage() {
         image="/assets/images/fleet driving on the highway.png"
       />
 
-      <section className="py-24 bg-[#050505]">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="space-y-24">
             {fleetItems.map((vehicle, index) => (
@@ -62,7 +62,7 @@ export default function FleetPage() {
               >
                 {/* Image Side */}
                 <div className="w-full md:w-1/2 relative">
-                  <div className="aspect-[16/10] relative rounded-2xl overflow-hidden bg-white/5">
+                  <div className="aspect-[16/10] relative rounded-2xl overflow-hidden bg-white shadow-lg">
                     <Image
                       src={vehicle.image}
                       alt={vehicle.name}
@@ -74,37 +74,37 @@ export default function FleetPage() {
 
                 {/* Content Side */}
                 <div className="w-full md:w-1/2">
-                  <div className="inline-block px-4 py-1 rounded-full bg-blue-900/30 text-blue-400 text-sm font-medium mb-4">
+                  <div className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-600 text-sm font-medium mb-4">
                     {vehicle.category}
                   </div>
-                  <h2 className="text-4xl font-bold text-white mb-6">{vehicle.name}</h2>
-                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                  <h2 className="text-4xl font-bold text-slate-900 mb-6">{vehicle.name}</h2>
+                  <p className="text-slate-600 text-lg leading-relaxed mb-8">
                     {vehicle.description}
                   </p>
 
                   <div className="grid grid-cols-2 gap-6 mb-8">
                     <div className="flex items-center gap-3">
-                      <Users className="w-5 h-5 text-gray-500" />
-                      <span className="text-gray-300">{vehicle.capacity}</span>
+                      <Users className="w-5 h-5 text-slate-500" />
+                      <span className="text-slate-700 font-medium">{vehicle.capacity}</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Briefcase className="w-5 h-5 text-gray-500" />
-                      <span className="text-gray-300">{vehicle.luggage}</span>
+                      <Briefcase className="w-5 h-5 text-slate-500" />
+                      <span className="text-slate-700 font-medium">{vehicle.luggage}</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Wifi className="w-5 h-5 text-gray-500" />
-                      <span className="text-gray-300">Wi-Fi Available</span>
+                      <Wifi className="w-5 h-5 text-slate-500" />
+                      <span className="text-slate-700 font-medium">Wi-Fi Available</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Droplets className="w-5 h-5 text-gray-500" />
-                      <span className="text-gray-300">Bottled Water</span>
+                      <Droplets className="w-5 h-5 text-slate-500" />
+                      <span className="text-slate-700 font-medium">Bottled Water</span>
                     </div>
                   </div>
 
                   <a 
                     href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
                     target="_blank"
-                    className="inline-flex items-center gap-2 text-blue-500 font-semibold hover:text-blue-400 transition-colors group"
+                    className="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-700 transition-colors group"
                   >
                     Book This Vehicle
                     <span className="group-hover:translate-x-1 transition-transform">→</span>

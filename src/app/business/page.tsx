@@ -32,7 +32,7 @@ const benefits = [
 
 export default function BusinessPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-white text-slate-900">
       <Navbar />
       <PageHero 
         title="Corporate Travel" 
@@ -40,7 +40,7 @@ export default function BusinessPage() {
         image="/assets/images/Corporate & Executive Travel.png"
       />
 
-      <section className="py-24 bg-[#050505]">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <motion.div
@@ -48,18 +48,18 @@ export default function BusinessPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-blue-500 font-medium tracking-widest uppercase mb-3 text-sm">Executive Service</h2>
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Business Class Ground Travel</h3>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              <h2 className="text-blue-600 font-medium tracking-widest uppercase mb-3 text-sm">Executive Service</h2>
+              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Business Class Ground Travel</h3>
+              <p className="text-slate-600 text-lg leading-relaxed mb-6">
                 In the fast-paced world of business, reliability is non-negotiable. Infinite Car Service provides seamless corporate transportation solutions tailored to the needs of modern executives.
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              <p className="text-slate-600 text-lg leading-relaxed mb-8">
                 We serve major corporate headquarters in White Plains, Purchase, Armonk, and Greenwich. Whether it's an airport transfer for a visiting client or a road show for your sales team, we represent your brand with excellence.
               </p>
               <a 
                 href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
                 target="_blank"
-                className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors"
+                className="bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition-colors shadow-lg"
               >
                 Open Corporate Account
               </a>
@@ -72,10 +72,10 @@ export default function BusinessPage() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
               {benefits.map((benefit, index) => (
-                <div key={index} className="p-6 rounded-xl bg-white/5 border border-white/10">
-                  <benefit.icon className="w-8 h-8 text-blue-500 mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>
-                  <p className="text-gray-400 text-sm">{benefit.description}</p>
+                <div key={index} className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                  <benefit.icon className="w-8 h-8 text-blue-600 mb-4" />
+                  <h4 className="text-xl font-bold text-slate-900 mb-2">{benefit.title}</h4>
+                  <p className="text-slate-600 text-sm">{benefit.description}</p>
                 </div>
               ))}
             </motion.div>
@@ -88,4 +88,3 @@ export default function BusinessPage() {
     </main>
   );
 }
-

@@ -25,13 +25,13 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-nav py-4' : 'bg-transparent py-6'
+        isScrolled ? 'glass-nav py-4 shadow-sm' : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter text-white z-50">
-          INFINITE <span className="text-blue-500">CAR SERVICE</span>
+        <Link href="/" className={`text-xl md:text-2xl font-bold tracking-tighter z-50 transition-colors ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
+          INFINITE <span className="text-blue-600">CAR SERVICE</span>
         </Link>
 
         {/* Desktop Links */}
@@ -40,7 +40,9 @@ export default function Navbar() {
             <Link
               key={item}
               href={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide uppercase"
+              className={`text-sm font-medium transition-colors tracking-wide uppercase ${
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-gray-200 hover:text-white'
+              }`}
             >
               {item}
             </Link>
@@ -49,13 +51,13 @@ export default function Navbar() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+16318606700" className="text-white hover:text-blue-400 transition-colors">
+          <a href="tel:+16318606700" className={`transition-colors ${isScrolled ? 'text-slate-900 hover:text-blue-600' : 'text-white hover:text-blue-400'}`}>
             <Phone className="w-5 h-5" />
           </a>
           <a
             href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info"
             target="_blank"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-blue-500/30"
           >
             Get Quote
           </a>
@@ -63,7 +65,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white z-50"
+          className={`md:hidden z-50 ${isScrolled ? 'text-slate-900' : 'text-white'}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X /> : <Menu />}
