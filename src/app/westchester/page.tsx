@@ -4,6 +4,10 @@ import PageHero from '@/components/PageHero';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import AboutShowcase from '@/components/AboutShowcase';
+import Fleet from '@/components/Fleet';
+import HowItWorks from '@/components/HowItWorks';
+import Testimonials from '@/components/Testimonials';
 import { motion } from 'framer-motion';
 import { Building2, Plane, Users, Landmark, CheckCircle, HelpCircle, MapPin } from 'lucide-react';
 
@@ -33,6 +37,8 @@ export default function WestchesterPage() {
         subtitle="Executive transportation for White Plains, Yonkers, and the entire Hudson Valley region."
         image="/assets/images/hero-chauffeur-escalade.jpg"
       />
+
+      <AboutShowcase />
 
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -84,7 +90,7 @@ export default function WestchesterPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 bg-white rounded-2xl border border-slate-200 hover:shadow-lg transition-all">
               <Landmark className="w-10 h-10 text-blue-600 mb-4" />
               <h4 className="text-xl font-bold text-slate-900 mb-3">White Plains</h4>
@@ -107,21 +113,27 @@ export default function WestchesterPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* FAQ Section */}
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common Questions</h3>
-            <div className="space-y-6">
-              {faqs.map((faq, i) => (
-                <div key={i} className="bg-white p-6 rounded-xl border border-slate-200">
-                  <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
-                    <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    {faq.q}
-                  </h5>
-                  <p className="text-slate-600 pl-8">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+      <Fleet />
+      <HowItWorks />
+      <Testimonials />
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common Questions</h3>
+          <div className="space-y-6">
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  {faq.q}
+                </h5>
+                <p className="text-slate-600 pl-8">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

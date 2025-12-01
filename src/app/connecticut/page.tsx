@@ -4,6 +4,10 @@ import PageHero from '@/components/PageHero';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import AboutShowcase from '@/components/AboutShowcase';
+import Fleet from '@/components/Fleet';
+import HowItWorks from '@/components/HowItWorks';
+import Testimonials from '@/components/Testimonials';
 import { motion } from 'framer-motion';
 import { Landmark, Plane, Briefcase, MapPin, HelpCircle, CheckCircle } from 'lucide-react';
 
@@ -33,6 +37,8 @@ export default function ConnecticutPage() {
         subtitle="Luxury transportation for Greenwich, Stamford, Westport, and Fairfield County."
         image="/assets/images/Corporate & Executive Travel.png"
       />
+
+      <AboutShowcase />
 
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -95,7 +101,7 @@ export default function ConnecticutPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">Serving All Major Towns</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-24">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {towns.map((town) => (
               <div key={town} className="p-4 rounded-lg bg-white border border-slate-200 text-center hover:border-blue-200 hover:shadow-md transition-all">
                 <MapPin className="w-5 h-5 text-blue-600 mx-auto mb-2" />
@@ -103,21 +109,27 @@ export default function ConnecticutPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* FAQ Section */}
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Connecticut Service FAQs</h3>
-            <div className="space-y-6">
-              {faqs.map((faq, i) => (
-                <div key={i} className="bg-white p-6 rounded-xl border border-slate-200">
-                  <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
-                    <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    {faq.q}
-                  </h5>
-                  <p className="text-slate-600 pl-8">{faq.a}</p>
-                </div>
-              ))}
-            </div>
+      <Fleet />
+      <HowItWorks />
+      <Testimonials />
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Connecticut Service FAQs</h3>
+          <div className="space-y-6">
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  {faq.q}
+                </h5>
+                <p className="text-slate-600 pl-8">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

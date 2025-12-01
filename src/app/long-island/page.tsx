@@ -4,6 +4,10 @@ import PageHero from '@/components/PageHero';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import AboutShowcase from '@/components/AboutShowcase';
+import Fleet from '@/components/Fleet';
+import HowItWorks from '@/components/HowItWorks';
+import Testimonials from '@/components/Testimonials';
 import { motion } from 'framer-motion';
 import { MapPin, Shield, Wine, Navigation, Clock, CheckCircle, HelpCircle } from 'lucide-react';
 
@@ -55,6 +59,8 @@ export default function LongIslandPage() {
         image="/assets/images/hero-chauffeur-escalade.jpg"
       />
 
+      <AboutShowcase />
+
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -71,31 +77,6 @@ export default function LongIslandPage() {
               and the traffic patterns of the LIE and Northern State better than anyone.
             </p>
           </motion.div>
-
-          {/* Why Choose Us Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6" />
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Always On Time</h4>
-              <p className="text-slate-600 text-sm">We track traffic on the LIE/Southern State to ensure punctual arrivals.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-6 h-6" />
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Safety First</h4>
-              <p className="text-slate-600 text-sm">All drivers are background checked and drug tested. Fully licensed & insured.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-6 h-6" />
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Flat Rate Pricing</h4>
-              <p className="text-slate-600 text-sm">No surge pricing during rush hour. Know your rate before you book.</p>
-            </div>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
             {areas.map((area, index) => (
@@ -123,23 +104,36 @@ export default function LongIslandPage() {
             ))}
           </div>
 
-          {/* FAQ Section */}
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h3>
-            <div className="space-y-6">
-              {faqs.map((faq, i) => (
-                <div key={i} className="bg-white p-6 rounded-xl border border-slate-200">
-                  <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
-                    <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                    {faq.q}
-                  </h5>
-                  <p className="text-slate-600 pl-8">{faq.a}</p>
-                </div>
-              ))}
+          {/* Why Choose Us Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Always On Time</h4>
+              <p className="text-slate-600 text-sm">We track traffic on the LIE/Southern State to ensure punctual arrivals.</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Safety First</h4>
+              <p className="text-slate-600 text-sm">All drivers are background checked and drug tested. Fully licensed & insured.</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Flat Rate Pricing</h4>
+              <p className="text-slate-600 text-sm">No surge pricing during rush hour. Know your rate before you book.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <Fleet />
+
+      <HowItWorks />
 
       {/* Special Feature: Wine Tours */}
       <section className="py-24 bg-white relative overflow-hidden">
@@ -174,6 +168,26 @@ export default function LongIslandPage() {
                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <Testimonials />
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h3>
+          <div className="space-y-6">
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  {faq.q}
+                </h5>
+                <p className="text-slate-600 pl-8">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
