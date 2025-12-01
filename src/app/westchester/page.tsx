@@ -5,7 +5,24 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import { motion } from 'framer-motion';
-import { Building2, Plane, Users, Landmark } from 'lucide-react';
+import { Building2, Plane, Users, Landmark, CheckCircle, HelpCircle, MapPin } from 'lucide-react';
+
+const towns = ['White Plains', 'Yonkers', 'New Rochelle', 'Scarsdale', 'Rye', 'Harrison', 'Armonk', 'Purchase', 'Tarrytown', 'Mount Kisco'];
+
+const faqs = [
+  {
+    q: "Do you pick up at Westchester County Airport (HPN)?",
+    a: "Yes, we are experts at HPN pickups. We monitor all incoming flights and can meet you curbside or inside at baggage claim."
+  },
+  {
+    q: "Can you handle corporate accounts for my business?",
+    a: "Absolutely. We work with many Fortune 500 companies in Purchase and Armonk. We offer monthly billing, priority booking, and dedicated account management."
+  },
+  {
+    q: "How long does it take to get to JFK from White Plains?",
+    a: "Without traffic, it takes about 45-50 minutes. During rush hour, it can take 90+ minutes. Our dispatch team monitors traffic to advise the best pickup time."
+  }
+];
 
 export default function WestchesterPage() {
   return (
@@ -56,7 +73,18 @@ export default function WestchesterPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Service Areas Grid */}
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Serving All Major Towns</h3>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-20">
+            {towns.map((town) => (
+              <div key={town} className="p-4 bg-white border border-slate-200 rounded-lg text-center hover:shadow-md transition-all">
+                <MapPin className="w-4 h-4 text-blue-600 mx-auto mb-2" />
+                <span className="text-slate-700 text-sm font-medium">{town}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
             <div className="p-8 bg-white rounded-2xl border border-slate-200 hover:shadow-lg transition-all">
               <Landmark className="w-10 h-10 text-blue-600 mb-4" />
               <h4 className="text-xl font-bold text-slate-900 mb-3">White Plains</h4>
@@ -77,6 +105,22 @@ export default function WestchesterPage() {
               <p className="text-slate-600 text-sm">
                 We are HPN experts. Skip the parking at Westchester County Airport and let us drop you off curbside.
               </p>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Common Questions</h3>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className="bg-white p-6 rounded-xl border border-slate-200">
+                  <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
+                    <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    {faq.q}
+                  </h5>
+                  <p className="text-slate-600 pl-8">{faq.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

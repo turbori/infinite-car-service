@@ -5,7 +5,24 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import { motion } from 'framer-motion';
-import { Landmark, Plane, Briefcase, MapPin } from 'lucide-react';
+import { Landmark, Plane, Briefcase, MapPin, HelpCircle, CheckCircle } from 'lucide-react';
+
+const towns = ['Greenwich', 'Stamford', 'Darien', 'New Canaan', 'Westport', 'Fairfield', 'Norwalk', 'Ridgefield', 'Wilton', 'Trumbull'];
+
+const faqs = [
+  {
+    q: "Do you service Bradley International Airport (BDL)?",
+    a: "Yes, we provide transfers to and from Bradley (BDL) in Hartford, as well as all NYC metro airports."
+  },
+  {
+    q: "Can I book a daily commute to Manhattan?",
+    a: "Yes, we have many clients who use our service for their daily or weekly commute from Fairfield County to Wall Street or Midtown. Ask about our recurring reservation discounts."
+  },
+  {
+    q: "Are your vehicles equipped for winter weather?",
+    a: "All our SUVs are equipped with all-wheel drive and winter tires during the season to ensure safe travel in snow and ice."
+  }
+];
 
 export default function ConnecticutPage() {
   return (
@@ -78,13 +95,29 @@ export default function ConnecticutPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">Serving All Major Towns</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Greenwich', 'Stamford', 'Darien', 'New Canaan', 'Westport', 'Fairfield', 'Norwalk', 'Ridgefield'].map((town) => (
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-24">
+            {towns.map((town) => (
               <div key={town} className="p-4 rounded-lg bg-white border border-slate-200 text-center hover:border-blue-200 hover:shadow-md transition-all">
                 <MapPin className="w-5 h-5 text-blue-600 mx-auto mb-2" />
                 <span className="text-slate-700 font-medium">{town}</span>
               </div>
             ))}
+          </div>
+
+          {/* FAQ Section */}
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Connecticut Service FAQs</h3>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className="bg-white p-6 rounded-xl border border-slate-200">
+                  <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
+                    <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    {faq.q}
+                  </h5>
+                  <p className="text-slate-600 pl-8">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

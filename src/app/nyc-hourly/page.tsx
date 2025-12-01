@@ -5,7 +5,22 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import { motion } from 'framer-motion';
-import { Clock, Map, ShoppingBag, Music } from 'lucide-react';
+import { Clock, Map, ShoppingBag, Music, HelpCircle, Car } from 'lucide-react';
+
+const faqs = [
+  {
+    q: "What is the minimum booking time?",
+    a: "Our standard minimum for hourly service is 3 hours. For certain high-demand vehicles or events, this may vary. Please check with our team."
+  },
+  {
+    q: "Can I go outside of NYC during my hourly booking?",
+    a: "Yes, hourly service covers the entire Tri-State area. However, the service must start or end within our primary service zones."
+  },
+  {
+    q: "Is gratuity included in the hourly rate?",
+    a: "Our quotes are all-inclusive, covering taxes, tolls, and gratuity, so you never have to worry about cash at the end of the ride."
+  }
+];
 
 export default function NycHourlyPage() {
   return (
@@ -40,15 +55,19 @@ export default function NycHourlyPage() {
                   <Map className="w-5 h-5 text-blue-600" />
                   Unlimited stops within NYC
                 </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <Car className="w-5 h-5 text-blue-600" />
+                  Driver waits at every location
+                </li>
               </ul>
             </motion.div>
             <div className="grid grid-cols-2 gap-4">
-               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
                  <ShoppingBag className="w-8 h-8 text-blue-600 mb-3" />
                  <h4 className="font-bold text-slate-900">Shopping</h4>
                  <p className="text-sm text-slate-600">Fifth Avenue, SoHo, or Hudson Yards. Leave your bags in the car.</p>
                </div>
-               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
                  <Music className="w-8 h-8 text-blue-600 mb-3" />
                  <h4 className="font-bold text-slate-900">Concerts</h4>
                  <p className="text-sm text-slate-600">MSG, Barclays, or Broadway. Door-to-door service.</p>
@@ -57,11 +76,11 @@ export default function NycHourlyPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">Popular Hourly Itineraries</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
             <div className="p-8 bg-white rounded-2xl border border-slate-200 hover:shadow-lg transition-all">
               <div className="text-4xl font-bold text-blue-100 mb-4">01</div>
               <h4 className="text-xl font-bold text-slate-900 mb-3">The Dinner & Show</h4>
-              <p className="text-slate-600">Pickup in Long Island → Dinner in Hell's Kitchen → Broadway Show → Return Home safely.</p>
+              <p className="text-slate-600">Pickup in Long Island → Dinner in Hell&apos;s Kitchen → Broadway Show → Return Home safely.</p>
             </div>
             <div className="p-8 bg-white rounded-2xl border border-slate-200 hover:shadow-lg transition-all">
               <div className="text-4xl font-bold text-blue-100 mb-4">02</div>
@@ -72,6 +91,22 @@ export default function NycHourlyPage() {
               <div className="text-4xl font-bold text-blue-100 mb-4">03</div>
               <h4 className="text-xl font-bold text-slate-900 mb-3">The Holiday Tour</h4>
               <p className="text-slate-600">Rockefeller Center Tree → Saks Light Show → Dyker Heights Lights → Hot Chocolate stop.</p>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Hourly Service FAQs</h3>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className="bg-white p-6 rounded-xl border border-slate-200">
+                  <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
+                    <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    {faq.q}
+                  </h5>
+                  <p className="text-slate-600 pl-8">{faq.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

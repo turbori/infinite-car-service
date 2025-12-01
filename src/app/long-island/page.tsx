@@ -5,28 +5,43 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import { motion } from 'framer-motion';
-import { MapPin, Shield, Wine, Navigation } from 'lucide-react';
+import { MapPin, Shield, Wine, Navigation, Clock, CheckCircle, HelpCircle } from 'lucide-react';
 
 const areas = [
   {
     title: 'Nassau County',
     description: 'From Great Neck to Garden City, we provide punctual airport transfers and corporate travel for Nassau residents.',
-    points: ['JFK & LGA Transfers', 'North Shore Gold Coast', 'Garden City Hub']
+    points: ['Garden City', 'Great Neck', 'Manhasset', 'Syosset', 'Massapequa', 'Jericho', 'Rockville Centre']
   },
   {
     title: 'Suffolk County',
     description: 'Reliable service for the vast expanse of Suffolk, from Huntington to Patchogue and beyond.',
-    points: ['ISP MacArthur Airport', 'Stony Brook', 'Port Jefferson']
+    points: ['Huntington', 'Stony Brook', 'Dix Hills', 'Commack', 'Port Jefferson', 'Islip', 'Smithtown']
   },
   {
-    title: 'The Hamptons',
+    title: 'The Hamptons & East End',
     description: 'Luxury summer travel to East Hampton, Southampton, and Montauk. Skip the train and arrive in comfort.',
-    points: ['Montauk Highway', 'Private Estates', 'Summer Events']
+    points: ['East Hampton', 'Southampton', 'Westhampton', 'Montauk', 'Sag Harbor', 'Bridgehampton']
   },
   {
     title: 'North Fork',
     description: 'Wine tours and leisure travel to Greenport and the vineyards. Perfect for weekend getaways.',
-    points: ['Vineyard Tours', 'Greenport Village', 'Orient Point Ferry']
+    points: ['Greenport', 'Mattituck', 'Southold', 'Orient Point Ferry', 'Vineyard Tours']
+  }
+];
+
+const faqs = [
+  {
+    q: "How far in advance should I book for a Hamptons trip?",
+    a: "For summer weekends (Memorial Day to Labor Day), we recommend booking at least 1 week in advance. For weekdays or off-peak times, 24 hours is usually sufficient."
+  },
+  {
+    q: "Do you serve ISP (MacArthur Airport)?",
+    a: "Yes, we provide daily service to and from Islip MacArthur Airport, as well as JFK, LGA, EWR, and private aviation hubs like Republic Airport (FRG)."
+  },
+  {
+    q: "Can I book a round-trip for a wine tour?",
+    a: "Absolutely. Our hourly service is perfect for wine tours. Your chauffeur stays with you for the entire day, taking you from vineyard to vineyard safely."
   }
 ];
 
@@ -36,7 +51,7 @@ export default function LongIslandPage() {
       <Navbar />
       <PageHero 
         title="Long Island Car Service" 
-        subtitle="Premier black car service covering Nassau, Suffolk, and the East End."
+        subtitle="Premier black car service covering Nassau, Suffolk, and the East End since 2005."
         image="/assets/images/hero-chauffeur-escalade.jpg"
       />
 
@@ -53,11 +68,11 @@ export default function LongIslandPage() {
             <p className="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">
               Whether you need a ride to JFK from Massapequa or a wine tour on the North Fork, 
               Infinite Car Service is your trusted local partner. We know the roads, the shortcuts, 
-              and the traffic patterns better than anyone.
+              and the traffic patterns of the LIE and Northern State better than anyone.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
             {areas.map((area, index) => (
               <motion.div
                 key={area.title}
@@ -65,23 +80,63 @@ export default function LongIslandPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group"
+                className="p-8 rounded-2xl bg-white border border-slate-200 hover:shadow-lg transition-all duration-300 group"
               >
                 <h4 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
                   <MapPin className="w-6 h-6 text-blue-600" />
                   {area.title}
                 </h4>
                 <p className="text-slate-600 mb-6">{area.description}</p>
-                <ul className="space-y-2">
+                <div className="flex flex-wrap gap-2">
                   {area.points.map((point, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-slate-500">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                    <span key={i} className="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-sm">
                       {point}
-                    </li>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Why Choose Us Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Always On Time</h4>
+              <p className="text-slate-600 text-sm">We track traffic on the LIE/Southern State to ensure punctual arrivals.</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Safety First</h4>
+              <p className="text-slate-600 text-sm">All drivers are background checked and drug tested. Fully licensed & insured.</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Flat Rate Pricing</h4>
+              <p className="text-slate-600 text-sm">No surge pricing during rush hour. Know your rate before you book.</p>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h3>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className="bg-white p-6 rounded-xl border border-slate-200">
+                  <h5 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
+                    <HelpCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    {faq.q}
+                  </h5>
+                  <p className="text-slate-600 pl-8">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -113,7 +168,6 @@ export default function LongIslandPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-               {/* We'll use the vineyard image we have */}
                <img 
                  src="/assets/images/woman wine tour suburban.png" 
                  alt="Long Island Wine Tour" 
