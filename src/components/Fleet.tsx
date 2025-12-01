@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const fleet = [
   {
@@ -73,6 +75,15 @@ export default function Fleet() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <Link 
+            href="/fleet"
+            className="inline-flex items-center gap-2 border border-white/20 bg-white/5 px-8 py-3 rounded-full text-white font-medium hover:bg-white/10 transition-colors"
+          >
+            View Full Fleet <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

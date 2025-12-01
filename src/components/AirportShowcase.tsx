@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Plane, Clock, UserCheck, AlertTriangle, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AirportShowcase() {
   return (
@@ -135,6 +136,16 @@ export default function AirportShowcase() {
             <h4 className="text-lg font-bold text-white mb-2">Meet & Greet Options</h4>
             <p className="text-gray-400 text-sm">Choose inside terminal service or quick curbside pickup.</p>
           </div>
+        </div>
+
+        <div className="text-center mt-16">
+          <p className="text-gray-400 mb-6">Need more details about meeting points and terminals?</p>
+          <Link 
+            href="/airport-transfers"
+            className="inline-flex items-center gap-2 border border-white/20 bg-white/5 px-8 py-3 rounded-full text-white font-medium hover:bg-white/10 transition-colors"
+          >
+            View Airport Guide <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

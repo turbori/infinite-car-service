@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
 import AirportShowcase from "@/components/AirportShowcase";
+import HourlyShowcase from "@/components/HourlyShowcase";
 import Fleet from "@/components/Fleet";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
@@ -16,6 +17,7 @@ export default function Home() {
       <Stats />
       <Services />
       <AirportShowcase />
+      <HourlyShowcase />
       <Fleet />
       <Testimonials />
       <CTA />
