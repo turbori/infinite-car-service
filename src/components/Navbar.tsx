@@ -36,10 +36,10 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          {['Services', 'Fleet', 'Business', 'About'].map((item) => (
+          {['Home', 'Services', 'Fleet', 'Business', 'About'].map((item) => (
             <Link
               key={item}
-              href={`/${item.toLowerCase()}`}
+              href={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
               className="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide uppercase"
             >
               {item}
@@ -79,10 +79,10 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 bg-black z-40 flex flex-col justify-center items-center gap-8 md:hidden"
           >
-            {['Services', 'Fleet', 'Business', 'About'].map((item) => (
+            {['Home', 'Services', 'Fleet', 'Business', 'About'].map((item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase()}`}
+                href={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
                 className="text-2xl font-light text-white tracking-widest uppercase"
                 onClick={() => setMobileMenuOpen(false)}
               >
