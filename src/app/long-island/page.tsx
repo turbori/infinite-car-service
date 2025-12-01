@@ -123,31 +123,6 @@ export default function LongIslandPage() {
             ))}
           </div>
 
-          {/* Why Choose Us Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6" />
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Always On Time</h4>
-              <p className="text-slate-600 text-sm">We track traffic on the LIE/Southern State to ensure punctual arrivals.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-6 h-6" />
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Safety First</h4>
-              <p className="text-slate-600 text-sm">All drivers are background checked and drug tested. Fully licensed & insured.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-6 h-6" />
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Flat Rate Pricing</h4>
-              <p className="text-slate-600 text-sm">No surge pricing during rush hour. Know your rate before you book.</p>
-            </div>
-          </div>
-
           {/* FAQ Section */}
           <div className="max-w-3xl mx-auto">
             <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h3>
