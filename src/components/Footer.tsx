@@ -50,6 +50,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/connecticut" className="text-gray-400 hover:text-white transition-colors">
+                  Connecticut Service
+                </Link>
+              </li>
+              <li>
                 <Link href="/airport-transfers" className="text-gray-400 hover:text-white transition-colors">
                   Airport Transfers
                 </Link>
