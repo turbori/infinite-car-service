@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Car Service for Business Meetings & Corporate Travel | Infinite Car Service</title>
+    <meta name="description" content="Professional executive car service for business meetings, corporate travel, and client transportation. Serving JFK, LGA airports and Manhattan since 2005.">
+    <meta name="keywords" content="executive car service, business travel, corporate transportation, professional chauffeur, JFK, LGA, Manhattan, Long Island">
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PM8WJ6W6');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Ads Global Site Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16458132086"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16458132086');
+    </script>
+    
+    <!-- Event snippet for Get Quote Button conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16458132086/GjzbCImHmbEbEPbU7Kc9',
+                'value': 340.0,
+                'currency': 'USD',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "sq97soo10r");
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --primary-blue-dark: #1E40AF;
+            --primary-blue-darker: #1D4ED8;
+            --accent-color: #64748B;
+            --slate-dark: #475569;
+            --slate-darker: #334155;
+            --background-color: #F9FAFB;
+            --background-medium: #F3F4F6;
+            --text-dark: #111827;
+            --text-medium: #374151;
+            --text-light: #6B7280;
+            --text-lighter: #94A3B8;
+            --footer-bg: #0F172A;
+            --blue-light: #EFF6FF;
+            --blue-dark: #1E3A8A;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--primary-blue-dark);
+            border-color: var(--primary-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('./assets/images/Corporate & Executive Travel.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* UNIVERSAL rounded corners for ALL images */
+        img {
+            border-radius: 16px !important;
+            overflow: hidden !important;
+        }
+
+        /* Floating Get Quote Button */
+        .floating-quote-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        
+        .floating-quote-btn.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .floating-quote-btn:hover {
+            background-color: var(--primary-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Trust Badges */
+        .trust-badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 900px;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .trust-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .trust-badge i {
+            font-size: 1.25rem;
+            color: #FCD34D;
+        }
+        
+        .trust-badge-text {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: white;
+            line-height: 1.3;
+        }
+        
+        /* Trust badges for light backgrounds */
+        .trust-badge-light {
+            background: rgba(37, 99, 235, 0.05);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+        }
+        
+        .trust-badge-light:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+        
+        .trust-badge-light i {
+            color: var(--primary-color);
+        }
+        
+        .trust-badge-light .trust-badge-text {
+            color: var(--text-dark);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            
+            .trust-badges-container {
+                gap: 0.75rem;
+                flex-direction: column;
+            }
+            
+            .trust-badge {
+                padding: 0.6rem 0.875rem;
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .trust-badge-text {
+                font-size: 0.8rem;
+            }
+            
+            .trust-badge i {
+                font-size: 1.1rem;
+            }
+            
+            .floating-quote-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen" style="background-color: var(--background-color);">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM8WJ6W6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="font-medium">Home</a></li>
+                    <li><a href="services.html" class="font-medium">Services</a></li>
+                    <li><a href="fleet.html" class="font-medium">Fleet</a></li>
+                    <li><a href="about.html" class="font-medium">About</a></li>
+                    <li><a href="airport-meeting-points.html" class="font-medium">Airport Meeting Points</a></li>
+                    <li><a href="top-places-nyc.html" class="font-medium">Top Places to Visit in NYC</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl font-bold" style="color: var(--primary-color);">
+                Infinite Car Service
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Home</a></li>
+                <li><a href="services.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Services</a></li>
+                <li><a href="fleet.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Fleet</a></li>
+                <li><a href="about.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">About</a></li>
+                <li><a href="airport-meeting-points.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Airport Meeting Points</a></li>
+                <li><a href="top-places-nyc.html" class="font-medium hover:text-blue-600" style="color: var(--text-dark);">Top Places to Visit in NYC</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end">
+            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom" onclick="return gtag_report_conversion(this.href);">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen hero-bg flex items-center justify-center" style="margin-top: 0;">
+        <div class="hero-content text-center text-white">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Executive Car Service for Business Travel
+                </h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    Professional chauffeurs and luxury SUVs for meetings, airports, and corporate events.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg px-8 mb-6 inline-block" onclick="return gtag_report_conversion(this.href);">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Get Quote
+                </a>
+
+                <!-- Trust Bar -->
+                <div class="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base opacity-90 mt-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-star mr-2"></i>
+                        <span>Trusted by 400+ clients</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="mx-2">|</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        <span>Family Operated Since 2005</span>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="mt-16 mb-8 animate-bounce">
+                    <button onclick="document.querySelector('.trust-location-strip').scrollIntoView({ behavior: 'smooth', block: 'start' });" class="text-white opacity-70 hover:opacity-100 transition-opacity">
+                        <i class="fas fa-chevron-down text-2xl"></i>
+                        <p class="text-sm mt-2">Scroll down to learn more</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Location Strip -->
+    <section class="py-4 px-4 trust-location-strip" style="background-color: var(--blue-light); border-bottom: 1px solid #E5E7EB;">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base">
+                <div class="flex items-center" style="color: var(--text-dark);">
+                    <i class="fas fa-map-marker-alt mr-2" style="color: var(--primary-color);"></i>
+                    <span class="font-medium">Serving Manhattan • Brooklyn • Queens • Long Island</span>
+                </div>
+                <div class="flex items-center" style="color: var(--text-dark);">
+                    <i class="fas fa-shield-alt mr-2" style="color: var(--primary-color);"></i>
+                    <span class="font-medium">Licensed & Insured • Family Operated Since 2005</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Value Props Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Why NYC Professionals Choose Infinite Car Service</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Guaranteed On-Time Arrival -->
+                <div class="card bg-white shadow-lg text-center">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Guaranteed On-Time Arrival</h3>
+                        <p style="color: var(--accent-color);">Our executive car service guarantees on-time arrival for all your business meetings and airport transfers to JFK and LGA.</p>
+                        <p class="text-sm mt-2 font-medium" style="color: var(--primary-color);">98% of rides arrive early.</p>
+                    </div>
+                </div>
+
+                <!-- Corporate-Trained Chauffeurs -->
+                <div class="card bg-white shadow-lg text-center">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Corporate-Trained Chauffeurs</h3>
+                        <p style="color: var(--accent-color);">Trained for corporate etiquette and discretion.</p>
+                        <p class="text-sm mt-2 font-medium" style="color: var(--primary-color);">Used by law and finance firms across NYC.</p>
+                    </div>
+                </div>
+
+                <!-- Easy Corporate Billing & Receipts -->
+                <div class="card bg-white shadow-lg text-center">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Easy Corporate Billing & Receipts</h3>
+                        <p style="color: var(--accent-color);">Emailed receipts, itemized invoices, easy corporate accounts.</p>
+                        <p class="text-sm mt-2 font-medium" style="color: var(--primary-color);">Used by law and finance firms across NYC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Fleet Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Executive Fleet</h2>
+                <p class="text-lg" style="color: var(--accent-color);">Premium vehicles designed for business professionals</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Executive Sedan -->
+                <div class="card bg-white shadow-lg">
+                    <figure class="px-6 pt-6">
+                        <img src="./assets/images/Luxury Sedan .png" alt="Executive Sedan" class="w-full h-48 object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Executive Sedan</h3>
+                        <p style="color: var(--accent-color);" class="mb-4">Ideal for business meetings and airport transfers to JFK and LGA. Professional and discreet.</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-users mr-2" style="color: var(--primary-color);"></i>
+                            <span class="text-sm" style="color: var(--accent-color);">Up to 2 passengers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxury Midsize SUV -->
+                <div class="card bg-white shadow-lg">
+                    <figure class="px-6 pt-6">
+                        <img src="./assets/images/Luxury Midsize SUV .png" alt="Luxury Midsize SUV" class="w-full h-48 object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Luxury Midsize SUV</h3>
+                        <p style="color: var(--accent-color);" class="mb-4">Perfect balance of comfort and space for executive travel. Premium interior with advanced features.</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-users mr-2" style="color: var(--primary-color);"></i>
+                            <span class="text-sm" style="color: var(--accent-color);">Up to 4 passengers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxury Large SUV -->
+                <div class="card bg-white shadow-lg">
+                    <figure class="px-6 pt-6">
+                        <img src="./assets/images/luxury-large-suv-escalade.jpg" alt="Luxury Large SUV" class="w-full h-48 object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="text-xl font-bold mb-3" style="color: var(--text-dark);">Luxury Large SUV</h3>
+                        <p style="color: var(--accent-color);" class="mb-4">Perfect for executive travel and client transportation. Spacious interior with premium amenities.</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-users mr-2" style="color: var(--primary-color);"></i>
+                            <span class="text-sm" style="color: var(--accent-color);">Up to 6 passengers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">About Infinite Car Service</h2>
+            <div class="prose prose-lg mx-auto" style="color: var(--accent-color);">
+                <p class="text-lg leading-relaxed mb-6">
+                    Family-owned and operated since 2005, we pride ourselves on providing a luxury experience tailored to every client. Every ride is smooth, punctual, and professional.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Our commitment to excellence has made us Long Island's most trusted luxury car service, serving executives, families, and travelers who demand the highest standards of comfort and reliability.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">18+</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">Years of Service</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">10K+</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">Happy Clients</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">400+</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">5-Star Google Reviews</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold" style="color: var(--primary-color);">24/7</div>
+                    <div class="text-lg font-semibold" style="color: var(--text-dark);">Available Service</div>
+                </div>
+            </div>
+            
+            <!-- About CTA Button -->
+            <div class="text-center mt-12">
+                <a href="about.html" class="btn btn-primary-custom btn-lg px-8">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Learn More About Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Executive Transportation Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8" style="color: var(--text-dark);">Complete Executive Transportation for NYC Business</h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto" style="color: var(--accent-color);">
+                    From JFK and LGA arrivals to corporate meetings throughout Manhattan—we provide seamless executive car service with one simple quote for your entire business trip.
+                </p>
+            </div>
+            
+            <!-- Two-Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Business Services -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--text-dark);">Executive Services</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: var(--blue-light);">
+                                <i class="fas fa-handshake text-sm" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1" style="color: var(--text-dark);">Client Meetings & Pickups</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">Professional service for impressing clients</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: var(--blue-light);">
+                                <i class="fas fa-building text-sm" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1" style="color: var(--text-dark);">Corporate Events</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">Reliable transportation for conferences and meetings</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: var(--blue-light);">
+                                <i class="fas fa-receipt text-sm" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1" style="color: var(--text-dark);">Corporate Billing</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">Itemized invoices and easy expense reporting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Airport + Business Bundling -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--text-dark);">Airport + Business Travel Bundle</h3>
+                    <div class="p-6 rounded-lg" style="background-color: var(--blue-light);">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-plane-departure text-2xl mr-3" style="color: var(--primary-color);"></i>
+                            <div>
+                                <h4 class="font-semibold" style="color: var(--text-dark);">JFK/LGA + Executive Service</h4>
+                                <p class="text-sm" style="color: var(--accent-color);">Complete business trip transportation</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-sm" style="color: var(--accent-color);">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-xs mr-2" style="color: var(--primary-color);"></i>
+                                Professional meet-and-greet at terminals
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-xs mr-2" style="color: var(--primary-color);"></i>
+                                Same chauffeur for meetings and return
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-xs mr-2" style="color: var(--primary-color);"></i>
+                                Corporate billing and detailed receipts
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="text-center mt-12">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg px-8" onclick="return gtag_report_conversion(this.href);">
+                    <i class="fas fa-briefcase mr-2"></i>
+                    Get Executive Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us for Business Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-dark);">Why NYC Executives Choose Infinite Car Service</h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto" style="color: var(--accent-color);">
+                    With over 400+ 5-star reviews and nearly two decades of experience serving NYC's business community, we handle every detail so you can focus on your business objectives.
+                </p>
+                
+                <!-- Executive Assistant Testimonial -->
+                <div class="mt-8 mb-8 max-w-3xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                        <p class="text-lg italic mb-3" style="color: var(--text-dark);">
+                            "I book all executive transportation for our C-suite. Infinite Car Service is our go-to for NYC trips — always professional, punctual, and makes my job easier with their seamless billing."
+                        </p>
+                        <p class="text-sm font-semibold" style="color: var(--primary-color);">
+                            — Sarah M., Executive Assistant, Fortune 500 Financial Firm
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-6 rounded-lg" style="background-color: white;">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--blue-light);">
+                        <i class="fas fa-user-tie text-2xl" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Professional Chauffeurs</h3>
+                    <p class="text-sm" style="color: var(--accent-color);">Trained in corporate etiquette and discretion for executive travel</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg" style="background-color: white;">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--blue-light);">
+                        <i class="fas fa-calculator text-2xl" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Corporate Billing</h3>
+                    <p class="text-sm" style="color: var(--accent-color);">Itemized invoices, transparent pricing, easy expense reporting</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg" style="background-color: white;">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--blue-light);">
+                        <i class="fas fa-plane-arrival text-2xl" style="color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Flight Tracking & Meet-and-Greet</h3>
+                    <p class="text-sm" style="color: var(--accent-color);">Professional airport service with personalized signage</p>
+                </div>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2" style="color: var(--primary-color);">400+</div>
+                    <p class="text-sm font-semibold" style="color: var(--text-dark);">5-Star Google Reviews</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2" style="color: var(--primary-color);">18+</div>
+                    <p class="text-sm font-semibold" style="color: var(--text-dark);">Years Serving NYC Business</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold mb-2" style="color: var(--primary-color);">24/7</div>
+                    <p class="text-sm font-semibold" style="color: var(--text-dark);">Executive Support</p>
+                </div>
+            </div>
+            
+            <!-- Final CTA -->
+            <div class="text-center">
+                <p class="text-lg mb-6" style="color: var(--accent-color);">
+                    <strong>Business travel to NYC?</strong> Skip the parking hassles and unreliable rideshares. Your dedicated chauffeur ensures punctual, professional service.
+                </p>
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-primary-custom btn-lg px-8" onclick="return gtag_report_conversion(this.href);">
+                    <i class="fas fa-briefcase mr-2"></i>
+                    Get Executive Quote Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Executive Assistants Love Working With Us Section -->
+    <section class="py-16 px-4" style="background-color: white;">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-dark);">Why Executive Assistants Love Working With Us</h2>
+                <p class="text-lg leading-relaxed max-w-4xl mx-auto" style="color: var(--accent-color);">
+                    We understand that executive assistants are ultimately responsible for ensuring their executives get to destinations safely, quickly, and reliably. Here's how we make your job easier:
+                </p>
+            </div>
+            
+            <!-- EA Benefits Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Lightning-Fast Response Times -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Lightning-Fast Response Times</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">We call within 60 seconds of a quote request. Average text response time: under 1 minute.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Precision & Zero Booking Errors -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Precision & Zero Booking Errors</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">Our integration with ChatGPT ensures your reservation details are always accurate — no missed flights, no wrong addresses.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proactive Status Updates -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Proactive Status Updates</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">We provide real-time driver tracking, ETAs, and instant trip confirmations — no need to chase us down.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Last-Minute Changes? No Problem -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Last-Minute Changes? No Problem</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">Flight delayed? Passenger added? Plans shifted? We adapt immediately without stress or excuses.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct Communication with Chauffeurs -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Direct Communication with Chauffeurs</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">Before each ride, we create a group chat with the chauffeur, you, and us — keeping everyone aligned.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consistent Chauffeurs for VIPs -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Consistent Chauffeurs for VIPs</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">Prefer a specific chauffeur for a high-level executive? We'll make it happen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discreet, Professional Drivers -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Discreet, Professional Drivers</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">Our chauffeurs are handpicked for executive-level etiquette, appearance, and confidentiality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Airport Logistics Experts -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">Airport Logistics Experts</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">We handle baggage meet & greets, curbside pickups, terminal confusion — so you don't have to.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Middlemen. No Miscommunication -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">No Middlemen. No Miscommunication.</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">You work directly with us — not with dispatchers or third parties. We own every step of the experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 24/7 Live Support -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4" style="border-left-color: var(--primary-color);">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-xl mr-3 mt-1">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--text-dark);">24/7 Live Support (Yes, Even at 3 AM)</h3>
+                            <p class="text-sm" style="color: var(--accent-color);">We're always a call or text away. No bots. No voicemails.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-16 px-4" style="background-color: var(--background-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-dark);">Trusted by NYC's Leading Businesses</h2>
+                <div class="flex items-center justify-center mt-4">
+                    <div class="flex text-yellow-400 text-2xl mr-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-lg font-semibold" style="color: var(--text-dark);">5.0 / 5.0 on Google</span>
+                </div>
+            </div>
+            
+            <!-- Google Reviews -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: var(--accent-color);" class="text-sm mb-3">"Used them for corporate events multiple times. Rafi in dispatch is incredibly organized and Alex our chauffeur was outstanding. Always reliable, professional, and the vehicles are spotless."</p>
+                        <div class="font-semibold" style="color: var(--text-dark);">Sarah M.</div>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: var(--accent-color);" class="text-sm mb-3">"Professional service for business travel. Always on time, comfortable vehicles, and courteous drivers. Worth every penny."</p>
+                        <div class="font-semibold" style="color: var(--text-dark);">Thomas B.</div>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-lg">
+                    <div class="card-body">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: var(--accent-color);" class="text-sm mb-3">"Corporate account with them for over 2 years. Rafi takes great care of our scheduling needs. Always reliable, professional, and competitively priced."</p>
+                        <div class="font-semibold" style="color: var(--text-dark);">Brian D.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Button -->
+            <div class="text-center mt-8">
+                <a href="https://www.google.com/maps/place/Infinite+Car+Service+LLC/@40.922326,-72.6374479,9z/data=!4m18!1m9!3m8!1s0x63f29046b509639f:0x5a435f89231cd365!2sInfinite+Car+Service+LLC!8m2!3d40.922326!4d-72.637448!9m1!1b1!16s%2Fg%2F11kswxqb4b!3m7!1s0x63f29046b509639f:0x5a435f89231cd365!8m2!3d40.922326!4d-72.637448!9m1!1b1!16s%2Fg%2F11kswxqb4b?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline btn-lg">
+                    <i class="fab fa-google mr-2"></i>
+                    View All Google Reviews
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary CTA Section -->
+    <section class="py-16 px-4" style="background-color: #2563EB;">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: white;">Corporate Accounts & Regular Travel</h2>
+            <p class="text-lg mb-4" style="color: rgba(255, 255, 255, 0.9);">Whether for client pickups, meetings, or airport transfers to JFK and LGA — our executive car service ensures you arrive in comfort and style with professional chauffeurs.</p>
+            <p class="text-lg mb-8 font-medium" style="color: white;">One trusted partner for all your NYC corporate travel — airport, hourly, and meetings.</p>
+            
+            <!-- Internal Links -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="airport-transfers.html" class="text-white hover:text-gray-200 underline">
+                    Looking for Airport Transfers? →
+                </a>
+                <a href="nyc-hourly.html" class="text-white hover:text-gray-200 underline">
+                    Need hourly car service? →
+                </a>
+            </div>
+            
+            <div class="text-center mb-8">
+                <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="btn btn-lg text-xl px-12 py-4" style="background-color: white; color: #2563EB; border: none;" onmouseover="this.style.backgroundColor='#F1F5F9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 25px rgba(255, 255, 255, 0.3)';" onmouseout="this.style.backgroundColor='white'; this.style.transform='translateY(0)'; this.style.boxShadow='none';" onclick="return gtag_report_conversion(this.href);">
+                    <i class="fas fa-calendar-check mr-3"></i>
+                    Get a Corporate Quote in 2 Minutes
+                </a>
+            </div>
+
+            <!-- Location Signal -->
+            <p class="text-sm opacity-75" style="color: rgba(255, 255, 255, 0.8);">Serving Manhattan, Brooklyn, Queens, and Long Island since 2005.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 text-white" style="background-color: var(--footer-bg);">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="fleet.html" class="text-gray-300 hover:text-white transition-colors">Fleet</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">More Info</h4>
+                    <ul class="space-y-3">
+                        <li><a href="airport-meeting-points.html" class="text-gray-300 hover:text-white transition-colors">Airport Meeting Points</a></li>
+                        <li><a href="top-places-nyc.html" class="text-gray-300 hover:text-white transition-colors">Top Places to Visit in NYC</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Specialized Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="airport-transfers.html" class="text-gray-300 hover:text-white transition-colors">Airport Transfers</a></li>
+                        <li><a href="business-travel.html" class="text-gray-300 hover:text-white transition-colors">Business Travel</a></li>
+                        <li><a href="nyc-hourly.html" class="text-gray-300 hover:text-white transition-colors">NYC Hourly Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Infinite Car Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Get Quote Button -->
+    <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" target="_blank" class="floating-quote-btn" id="floatingBtn" onclick="return gtag_report_conversion(this.href);">
+        <i class="fas fa-bolt"></i>
+        <span>Instant Quote</span>
+    </a>
+
+    <!-- Floating Button Script -->
+    <script>
+        // Show floating button after scrolling past hero
+        window.addEventListener('scroll', function() {
+            const floatingBtn = document.getElementById('floatingBtn');
+            const heroHeight = window.innerHeight * 0.8; // Show after 80% of viewport height
+            
+            if (window.scrollY > heroHeight) {
+                floatingBtn.classList.add('show');
+            } else {
+                floatingBtn.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
