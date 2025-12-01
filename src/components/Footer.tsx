@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Linkedin, Globe } from 'lucide-react';
+import { Mail, MapPin, Facebook, Linkedin, Globe } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -75,10 +75,6 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Contact Us</h4>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-5 h-5 text-blue-500" />
-                <a href="tel:+16318606700" className="hover:text-white transition-colors">(631) 860-6700</a>
-              </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Mail className="w-5 h-5 text-blue-500" />
                 <a href="mailto:info@infinitecarserviceli.com" className="hover:text-white transition-colors">info@infinitecarserviceli.com</a>

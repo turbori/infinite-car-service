@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -51,9 +51,6 @@ export default function Navbar() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+16318606700" className={`transition-colors ${isScrolled ? 'text-slate-900 hover:text-blue-600' : 'text-white hover:text-blue-400'}`}>
-            <Phone className="w-5 h-5" />
-          </a>
           <a
             href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info"
             target="_blank"
