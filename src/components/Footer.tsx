@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="text-2xl font-bold tracking-tighter text-white mb-6 block">
-              INFINITE <span className="text-blue-500">CAR</span>
+              INFINITE <span className="text-blue-500">CAR SERVICE</span>
             </Link>
             <p className="text-gray-400 max-w-md mb-8 leading-relaxed">
               Premier luxury car service serving NYC, Long Island, Westchester, and the Hamptons. 

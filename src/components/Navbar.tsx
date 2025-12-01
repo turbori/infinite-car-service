@@ -30,8 +30,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-tighter text-white z-50">
-          INFINITE <span className="text-blue-500">CAR</span>
+        <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter text-white z-50">
+          INFINITE <span className="text-blue-500">CAR SERVICE</span>
         </Link>
 
         {/* Desktop Links */}
