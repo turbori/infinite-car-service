@@ -136,7 +136,7 @@ export default function HolidaySpecial() {
             target="_blank"
             className="whitespace-nowrap bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-bold transition-colors shadow-md flex items-center gap-2"
           >
-            Book Holiday Ride <ArrowRight className="w-4 h-4" />
+            Get Holiday Quote <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>
