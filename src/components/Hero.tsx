@@ -12,11 +12,11 @@ export default function Hero() {
           src="/assets/images/hero-chauffeur-escalade.jpg"
           alt="Luxury Chauffeur Service"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-50"
           priority
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60" />
       </div>
 
       {/* Content */}
