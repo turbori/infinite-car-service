@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airport Meeting Points – JFK, LGA, EWR | Infinite Car Service</title>
-    <meta name="description" content="Find your chauffeur easily at JFK, LaGuardia, and Newark airports. Detailed meeting point instructions for seamless airport pickup service.">
-    <meta name="keywords" content="airport meeting points, JFK pickup, LaGuardia pickup, Newark pickup, airport transfers, NYC airports">
+    <title>Airport Meeting Points – JFK & LGA Pickup Locations | Infinite Car Service</title>
+    <meta name="description" content="Find your chauffeur easily at JFK and LaGuardia airports. Detailed terminal-by-terminal meeting point instructions for seamless airport pickup service in NYC.">
+    <meta name="keywords" content="JFK airport pickup location, LaGuardia meeting point, JFK Terminal 4 pickup, LGA Terminal B pickup, NYC airport car service pickup, where to meet chauffeur JFK">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.infinitecarserviceli.com/airport-meeting-points.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.infinitecarserviceli.com/airport-meeting-points.html">
+    <meta property="og:title" content="Airport Meeting Points – JFK & LGA Pickup Locations">
+    <meta property="og:description" content="Find your chauffeur easily at JFK and LaGuardia airports. Terminal-by-terminal meeting point instructions.">
+    <meta property="og:image" content="https://www.infinitecarserviceli.com/assets/images/airport-aircraft-tarmac.jpg">
+    <meta property="og:site_name" content="Infinite Car Service">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.infinitecarserviceli.com/airport-meeting-points.html">
+    <meta name="twitter:title" content="Airport Meeting Points – JFK & LGA Pickup Locations">
+    <meta name="twitter:description" content="Find your chauffeur easily at JFK and LaGuardia airports. Terminal-by-terminal meeting point instructions.">
+    <meta name="twitter:image" content="https://www.infinitecarserviceli.com/assets/images/airport-aircraft-tarmac.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Infinite Car Service">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York City">
+    
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     
     <!-- DaisyUI + Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -56,6 +87,54 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "sq97soo10r");
+    </script>
+    
+    <!-- Schema.org Structured Data - HowTo for Airport Pickups -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Find Your Chauffeur at NYC Airports",
+        "description": "Step-by-step guide to meeting your Infinite Car Service chauffeur at JFK and LaGuardia airports.",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Exit the Terminal",
+                "text": "After collecting your luggage, proceed to the arrivals area and exit the terminal."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Look for Your Chauffeur",
+                "text": "Your chauffeur will be waiting at the designated pickup area with a sign displaying your name."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Contact If Needed",
+                "text": "If you can't locate your chauffeur, call or text the number provided in your confirmation."
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.infinitecarserviceli.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Airport Meeting Points",
+                "item": "https://www.infinitecarserviceli.com/airport-meeting-points.html"
+            }
+        ]
+    }
     </script>
     
     <style>
@@ -140,13 +219,23 @@
             border-radius: 16px !important;
         }
 
+        /* Touch-friendly enhancements */
+        * {
+            -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        a, button {
+            touch-action: manipulation;
+        }
+        
         /* Mobile responsive */
         @media (max-width: 768px) {
             .floating-quote-btn {
                 bottom: 15px;
                 right: 15px;
-                padding: 12px 20px;
-                font-size: 14px;
+                padding: 14px 24px;
+                font-size: 15px;
+                min-height: 48px;
             }
             
             /* Fix image cropping on mobile - show full images */
@@ -172,6 +261,56 @@
                 max-height: 160px;
                 width: 100%;
                 border-radius: 16px !important;
+            }
+            
+            /* Larger touch targets for all buttons */
+            .btn, .btn-primary-custom, .btn-lg {
+                min-height: 48px;
+                padding: 12px 20px;
+            }
+            
+            /* Better section padding on mobile */
+            section {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Stack footer columns on mobile */
+            footer .grid.grid-cols-1.md\\:grid-cols-3 {
+                gap: 2rem;
+            }
+            
+            footer .grid.grid-cols-1.md\\:grid-cols-3 > div {
+                text-align: center;
+            }
+            
+            footer ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Navbar logo - shorter on mobile */
+            .navbar-start .btn-ghost {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            
+            /* Page header adjustments */
+            h1 {
+                font-size: 2rem !important;
+                padding: 0 0.5rem;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 375px) {
+            h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .navbar-start .btn-ghost {
+                font-size: 0.875rem;
             }
         }
     </style>

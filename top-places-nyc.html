@@ -7,6 +7,37 @@
     <meta name="description" content="Explore NYC's top attractions, restaurants, and hidden gems with hourly chauffeur service. Food tours, attraction hopping, and spontaneous discoveries with a dedicated driver.">
     <meta name="keywords" content="NYC hourly chauffeur, NYC food tours, hourly car service NYC, NYC attractions, luxury transportation NYC, Times Square, Central Park, Broadway, Manhattan tours, NYC destinations, chauffeur on standby">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.infinitecarserviceli.com/top-places-nyc.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.infinitecarserviceli.com/top-places-nyc.html">
+    <meta property="og:title" content="Top Places to Visit in NYC with Hourly Chauffeur Service">
+    <meta property="og:description" content="Explore NYC's top attractions, restaurants, and hidden gems with hourly chauffeur service.">
+    <meta property="og:image" content="https://www.infinitecarserviceli.com/assets/images/Top%20Places%20to%20Visit%20in%20NYC%20girl%20shopping.png">
+    <meta property="og:site_name" content="Infinite Car Service">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.infinitecarserviceli.com/top-places-nyc.html">
+    <meta name="twitter:title" content="Top Places to Visit in NYC with Hourly Chauffeur Service">
+    <meta name="twitter:description" content="Explore NYC's top attractions, restaurants, and hidden gems with hourly chauffeur service.">
+    <meta name="twitter:image" content="https://www.infinitecarserviceli.com/assets/images/Top%20Places%20to%20Visit%20in%20NYC%20girl%20shopping.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Infinite Car Service">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York City">
+    
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
     <!-- DaisyUI + Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,6 +87,69 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "sq97soo10r");
+    </script>
+    
+    <!-- Schema.org Structured Data - ItemList for NYC Places -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Top Places to Visit in NYC with Chauffeur Service",
+        "description": "Curated list of NYC's best attractions, restaurants, and experiences perfect for exploring with hourly chauffeur service.",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Times Square",
+                "description": "The iconic heart of NYC entertainment"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Central Park",
+                "description": "843 acres of urban oasis"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Broadway Theater District",
+                "description": "World-class theatrical performances"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Fifth Avenue Shopping",
+                "description": "Luxury retail and flagship stores"
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Rockefeller Center",
+                "description": "Historic landmark and observation deck"
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.infinitecarserviceli.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Top Places to Visit in NYC",
+                "item": "https://www.infinitecarserviceli.com/top-places-nyc.html"
+            }
+        ]
+    }
     </script>
     
     <style>
@@ -140,13 +234,23 @@
             border-radius: 16px !important;
         }
 
+        /* Touch-friendly enhancements */
+        * {
+            -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        a, button {
+            touch-action: manipulation;
+        }
+        
         /* Mobile responsive */
         @media (max-width: 768px) {
             .floating-quote-btn {
                 bottom: 15px;
                 right: 15px;
-                padding: 12px 20px;
-                font-size: 14px;
+                padding: 14px 24px;
+                font-size: 15px;
+                min-height: 48px;
             }
             
             /* Fix image cropping on mobile - show full images */
@@ -172,6 +276,56 @@
                 max-height: 160px;
                 width: 100%;
                 border-radius: 16px !important;
+            }
+            
+            /* Larger touch targets for all buttons */
+            .btn, .btn-primary-custom, .btn-lg {
+                min-height: 48px;
+                padding: 12px 20px;
+            }
+            
+            /* Better section padding on mobile */
+            section {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Stack footer columns on mobile */
+            footer .grid.grid-cols-1.md\\:grid-cols-3 {
+                gap: 2rem;
+            }
+            
+            footer .grid.grid-cols-1.md\\:grid-cols-3 > div {
+                text-align: center;
+            }
+            
+            footer ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Navbar logo - shorter on mobile */
+            .navbar-start .btn-ghost {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            
+            /* Page header adjustments */
+            h1 {
+                font-size: 2rem !important;
+                padding: 0 0.5rem;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 375px) {
+            h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .navbar-start .btn-ghost {
+                font-size: 0.875rem;
             }
         }
     </style>

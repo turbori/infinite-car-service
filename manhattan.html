@@ -80,6 +80,107 @@
         })(window, document, "clarity", "script", "sq97soo10r");
     </script>
     
+    <!-- Schema.org Structured Data - LocalBusiness Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Manhattan Luxury Car Service",
+        "serviceType": "Chauffeur Transportation",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Infinite Car Service",
+            "url": "https://www.infinitecarserviceli.com",
+            "telephone": "+1-631-860-6700",
+            "priceRange": "$$$",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Long Island",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "400",
+                "bestRating": "5"
+            }
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Manhattan, New York",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "40.7831",
+                "longitude": "-73.9712"
+            }
+        },
+        "description": "Premium black car service to and from Manhattan. Professional chauffeurs, luxury SUVs, and seamless transportation for business, events, dining, and theater in NYC."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How far in advance should I book for Manhattan trips?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We recommend booking at least 24 hours in advance for regular trips. For special events, Broadway shows, or holiday weekends, booking 48-72 hours ahead ensures availability."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where will my chauffeur pick me up in Manhattan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We provide door-to-door service. Your chauffeur will meet you at your exact address — whether it's a hotel, office building, restaurant, or residence."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if my Broadway show runs late?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No problem! Your chauffeur will be waiting nearby and will pull up to the theater entrance when you text that you're ready. We never charge extra for reasonable wait times."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you provide service late at night?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we operate 24/7. Whether you need a late-night pickup after dinner, a concert, or an early morning airport transfer, we're available around the clock."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.infinitecarserviceli.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Manhattan Service",
+                "item": "https://www.infinitecarserviceli.com/manhattan.html"
+            }
+        ]
+    }
+    </script>
+    
     <style>
         :root {
             --primary-color: #2563EB;
@@ -225,11 +326,26 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
+        /* Touch-friendly enhancements */
+        * {
+            -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        a, button {
+            touch-action: manipulation;
+        }
+        
         /* Mobile responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
                 line-height: 1.2;
+                padding: 0 1rem;
+            }
+            
+            .hero p {
+                font-size: 1rem !important;
+                padding: 0 0.5rem;
             }
             
             .trust-badges-container {
@@ -255,8 +371,84 @@
             .floating-quote-btn {
                 bottom: 15px;
                 right: 15px;
+                padding: 14px 24px;
+                font-size: 15px;
+                min-height: 48px;
+            }
+            
+            /* Larger touch targets for all buttons */
+            .btn, .btn-primary-custom, .btn-lg {
+                min-height: 48px;
                 padding: 12px 20px;
-                font-size: 14px;
+            }
+            
+            /* Better section padding on mobile */
+            section {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Stack footer columns on mobile */
+            footer .grid.grid-cols-1.md\\:grid-cols-3 {
+                gap: 2rem;
+            }
+            
+            footer .grid.grid-cols-1.md\\:grid-cols-3 > div {
+                text-align: center;
+            }
+            
+            footer ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Improve card readability on mobile */
+            .card-body {
+                padding: 1rem;
+            }
+            
+            /* Grid adjustments for mobile */
+            .grid.grid-cols-2 {
+                gap: 0.75rem;
+            }
+            
+            .grid.grid-cols-2 .p-4 {
+                padding: 0.75rem;
+            }
+            
+            /* Navbar logo - shorter on mobile */
+            .navbar-start .btn-ghost {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            
+            /* FAQ collapse better touch targets */
+            .collapse-title {
+                min-height: 56px;
+                padding: 1rem;
+            }
+            
+            /* Image optimization */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Fleet/service card images */
+            .h-64 {
+                height: 180px !important;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .navbar-start .btn-ghost {
+                font-size: 0.875rem;
             }
         }
     </style>

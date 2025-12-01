@@ -83,6 +83,96 @@
         })(window, document, "clarity", "script", "sq97soo10r");
     </script>
     
+    <!-- Schema.org Structured Data - Airport Transfer Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "NYC Airport Transfer Service",
+        "serviceType": "Airport Transportation",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Infinite Car Service",
+            "url": "https://www.infinitecarserviceli.com",
+            "telephone": "+1-631-860-6700",
+            "priceRange": "$$$",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Long Island",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "400",
+                "bestRating": "5"
+            }
+        },
+        "areaServed": [
+            {"@type": "Airport", "name": "John F. Kennedy International Airport", "iataCode": "JFK"},
+            {"@type": "Airport", "name": "LaGuardia Airport", "iataCode": "LGA"},
+            {"@type": "Airport", "name": "Newark Liberty International Airport", "iataCode": "EWR"},
+            {"@type": "Airport", "name": "Westchester County Airport", "iataCode": "HPN"}
+        ],
+        "description": "Premium airport transfer service to JFK, LaGuardia, Newark, and Westchester airports. Flight tracking, meet & greet, and professional chauffeurs."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do you track flights for airport pickups?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we monitor all flights in real-time and automatically adjust pickup times for delays. Your chauffeur will be waiting when you land."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is included in the meet & greet service?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our $50 meet & greet service includes a chauffeur meeting you inside the terminal at baggage claim with a personalized sign, full luggage assistance, and escort to your vehicle."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How early should I book airport transfers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We recommend booking at least 24 hours in advance. For holiday travel or early morning flights, 48-72 hours advance booking ensures availability."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.infinitecarserviceli.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Airport Transfers",
+                "item": "https://www.infinitecarserviceli.com/airport-transfers.html"
+            }
+        ]
+    }
+    </script>
+    
     <style>
         :root {
             --primary-color: #2563EB;
@@ -223,11 +313,26 @@
             color: var(--text-dark);
         }
 
+        /* Touch-friendly enhancements */
+        * {
+            -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        a, button {
+            touch-action: manipulation;
+        }
+        
         /* Mobile responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
                 line-height: 1.2;
+                padding: 0 1rem;
+            }
+            
+            .hero p {
+                font-size: 1rem !important;
+                padding: 0 0.5rem;
             }
             
             .trust-badges-container {
@@ -253,8 +358,84 @@
             .floating-quote-btn {
                 bottom: 15px;
                 right: 15px;
+                padding: 14px 24px;
+                font-size: 15px;
+                min-height: 48px;
+            }
+            
+            /* Larger touch targets for all buttons */
+            .btn, .btn-primary-custom, .btn-lg {
+                min-height: 48px;
                 padding: 12px 20px;
-                font-size: 14px;
+            }
+            
+            /* Better section padding on mobile */
+            section {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Stack footer columns on mobile */
+            footer .grid.grid-cols-1.md\\:grid-cols-3 {
+                gap: 2rem;
+            }
+            
+            footer .grid.grid-cols-1.md\\:grid-cols-3 > div {
+                text-align: center;
+            }
+            
+            footer ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Improve card readability on mobile */
+            .card-body {
+                padding: 1rem;
+            }
+            
+            /* Grid adjustments for mobile */
+            .grid.grid-cols-2 {
+                gap: 0.75rem;
+            }
+            
+            .grid.grid-cols-2 .p-4, .grid.grid-cols-2 .p-6 {
+                padding: 0.75rem;
+            }
+            
+            /* Navbar logo - shorter on mobile */
+            .navbar-start .btn-ghost {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            
+            /* FAQ collapse better touch targets */
+            .collapse-title {
+                min-height: 56px;
+                padding: 1rem;
+            }
+            
+            /* Image optimization */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Fleet/service card images */
+            .h-64 {
+                height: 180px !important;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .navbar-start .btn-ghost {
+                font-size: 0.875rem;
             }
         }
     </style>

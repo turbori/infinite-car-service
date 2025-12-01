@@ -2,61 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.infinitecarserviceli.com/</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.infinitecarserviceli.com/services.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.infinitecarserviceli.com/fleet.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.infinitecarserviceli.com/about.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Specialized Landing Pages (Google Ads) - High Priority -->
   <url>
     <loc>https://www.infinitecarserviceli.com/airport-transfers.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.infinitecarserviceli.com/business-travel.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.infinitecarserviceli.com/nyc-hourly.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.infinitecarserviceli.com/airport-meeting-points.html</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.infinitecarserviceli.com/top-places-nyc.html</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.infinitecarserviceli.com/long-island.html</loc>
-    <lastmod>2025-10-28</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -65,12 +54,6 @@
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://www.infinitecarserviceli.com/christmas-manhattan.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.infinitecarserviceli.com/manhattan.html</loc>
@@ -84,5 +67,17 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
+  <!-- Supporting Pages -->
+  <url>
+    <loc>https://www.infinitecarserviceli.com/airport-meeting-points.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.infinitecarserviceli.com/top-places-nyc.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
-

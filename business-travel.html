@@ -5,7 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Executive Black Car Service for Business Travel in NYC | Infinite Car Service</title>
     <meta name="description" content="The chauffeur service NYC's executive assistants rely on. Professional black car service for business meetings, corporate travel, and airport transfers to JFK & LGA. Trusted by 400+ clients since 2005.">
-    <meta name="keywords" content="executive car service, business travel, corporate transportation, professional chauffeur, JFK, LGA, Manhattan, Long Island">
+    <meta name="keywords" content="executive car service NYC, business travel chauffeur, corporate transportation Manhattan, professional driver NYC, executive airport transfers JFK LGA, corporate car service Long Island, business meeting transportation">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.infinitecarserviceli.com/business-travel.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.infinitecarserviceli.com/business-travel.html">
+    <meta property="og:title" content="Executive Black Car Service for Business Travel in NYC">
+    <meta property="og:description" content="The chauffeur service NYC's executive assistants rely on. Professional black car service for business meetings, corporate travel, and airport transfers.">
+    <meta property="og:image" content="https://www.infinitecarserviceli.com/assets/images/Corporate%20%26%20Executive%20Travel.png">
+    <meta property="og:site_name" content="Infinite Car Service">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.infinitecarserviceli.com/business-travel.html">
+    <meta name="twitter:title" content="Executive Black Car Service for Business Travel in NYC">
+    <meta name="twitter:description" content="Professional black car service for business meetings, corporate travel, and airport transfers. Trusted by 400+ clients since 2005.">
+    <meta name="twitter:image" content="https://www.infinitecarserviceli.com/assets/images/Corporate%20%26%20Executive%20Travel.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Infinite Car Service">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York City">
+    
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     
     <!-- DaisyUI + Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -56,6 +87,58 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "sq97soo10r");
+    </script>
+    
+    <!-- Schema.org Structured Data - Service Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Executive Business Travel Car Service",
+        "serviceType": "Corporate Transportation",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Infinite Car Service",
+            "url": "https://www.infinitecarserviceli.com",
+            "telephone": "+1-631-860-6700",
+            "priceRange": "$$$",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Long Island",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "400",
+                "bestRating": "5"
+            }
+        },
+        "areaServed": ["Manhattan", "Long Island", "JFK Airport", "LaGuardia Airport", "Newark Airport"],
+        "description": "Professional executive car service for business meetings, corporate travel, and airport transfers in NYC. Trusted by Fortune 500 companies since 2005."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.infinitecarserviceli.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Business Travel",
+                "item": "https://www.infinitecarserviceli.com/business-travel.html"
+            }
+        ]
+    }
     </script>
     
     <style>
@@ -198,11 +281,26 @@
             color: var(--text-dark);
         }
 
+        /* Touch-friendly enhancements */
+        * {
+            -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        a, button {
+            touch-action: manipulation;
+        }
+        
         /* Mobile responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
                 line-height: 1.2;
+                padding: 0 1rem;
+            }
+            
+            .hero p {
+                font-size: 1rem !important;
+                padding: 0 0.5rem;
             }
             
             .trust-badges-container {
@@ -228,8 +326,84 @@
             .floating-quote-btn {
                 bottom: 15px;
                 right: 15px;
+                padding: 14px 24px;
+                font-size: 15px;
+                min-height: 48px;
+            }
+            
+            /* Larger touch targets for all buttons */
+            .btn, .btn-primary-custom, .btn-lg {
+                min-height: 48px;
                 padding: 12px 20px;
-                font-size: 14px;
+            }
+            
+            /* Better section padding on mobile */
+            section {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Stack footer columns on mobile */
+            footer .grid.grid-cols-1.md\\:grid-cols-3 {
+                gap: 2rem;
+            }
+            
+            footer .grid.grid-cols-1.md\\:grid-cols-3 > div {
+                text-align: center;
+            }
+            
+            footer ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Improve card readability on mobile */
+            .card-body {
+                padding: 1rem;
+            }
+            
+            /* Grid adjustments for mobile */
+            .grid.grid-cols-2 {
+                gap: 0.75rem;
+            }
+            
+            .grid.grid-cols-2 .p-4 {
+                padding: 0.75rem;
+            }
+            
+            /* Navbar logo - shorter on mobile */
+            .navbar-start .btn-ghost {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            
+            /* FAQ collapse better touch targets */
+            .collapse-title {
+                min-height: 56px;
+                padding: 1rem;
+            }
+            
+            /* Image optimization */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Fleet/service card images */
+            .h-64 {
+                height: 180px !important;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .navbar-start .btn-ghost {
+                font-size: 0.875rem;
             }
         }
     </style>
