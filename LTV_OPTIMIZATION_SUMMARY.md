@@ -16,7 +16,7 @@ All 5 landing pages have been optimized to convert Google Ads visitors into long
 - **Changed from**: "24/7 Availability" & "100% On-Time"
 - **Changed to**: 
   - **"10,000+ Clients Served"** - Shows experience and scale
-  - **"85% Repeat Client Rate"** - Proves long-term satisfaction
+  - **"97% Repeat Client Rate"** - Proves long-term satisfaction
 - **Impact**: Highlights that most clients become regulars
 
 ### 3. **"Why Business Travelers Choose Us Again & Again"** Section
@@ -38,7 +38,7 @@ All 5 landing pages have been optimized to convert Google Ads visitors into long
 - **Premium gradient design** with crown icon
 - **3-step journey visualization**:
   1. First Ride → 2. Become Regular → 3. VIP Treatment
-- **Message**: "Join the 85% of our clients who make us their permanent transportation partner"
+- **Message**: "Join the 97% of our clients who make us their permanent transportation partner"
 - **Low-pressure**: "No commitment required • Cancel anytime"
 - **Impact**: Plants the seed for long-term relationship from day 1
 
@@ -49,7 +49,7 @@ All 5 landing pages have been optimized to convert Google Ads visitors into long
 ### For Google Ads Visitors:
 ✅ **Immediate Trust** - Social proof above the fold  
 ✅ **Proof of Longevity** - 10,000+ clients, 18+ years  
-✅ **Repeat Client Focus** - 85% come back (they must be good!)  
+✅ **Repeat Client Focus** - 97% come back (they must be good!)  
 ✅ **Clear Value Prop** - See why others stay  
 ✅ **No Pressure** - Easy to start, no commitment  
 
@@ -66,7 +66,7 @@ All 5 landing pages have been optimized to convert Google Ads visitors into long
 
 ### 1. **Social Proof Everywhere**
 - "1,000+ business travelers trust us monthly"
-- "85% repeat client rate"
+- "97% repeat client rate"
 - "10,000+ clients served"
 - Long-term testimonial (3+ years, 150 rides)
 
@@ -101,7 +101,7 @@ All 5 landing pages have been optimized to convert Google Ads visitors into long
 - Lower bounce rate (compelling value propositions)
 
 ### Medium-Term (3-6 Months):
-- **Higher repeat booking rate** (85% messaging sets expectation)
+- **Higher repeat booking rate** (97% messaging sets expectation)
 - More clients request "same driver"
 - More direct phone bookings (relationship building)
 
