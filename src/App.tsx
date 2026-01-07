@@ -92,7 +92,7 @@ const Hero = () => {
           alt="Luxury Chauffeur Service Long Island" 
           className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-luxury-navy via-luxury-navy/70 md:via-luxury-navy/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-luxury-navy via-luxury-navy/90 md:via-luxury-navy/60 to-luxury-navy/40 md:to-transparent"></div>
       </div>
 
       <div className="relative z-10 w-full px-6 pt-20">
@@ -101,7 +101,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-2xl"
+            className="max-w-2xl md:max-w-2xl"
           >
             <span className="inline-block bg-luxury-gold/20 text-luxury-gold text-[10px] md:text-xs font-sans tracking-[0.3em] uppercase py-2 px-4 mb-6 backdrop-blur-sm border border-luxury-gold/30">
               Est. 2005 | Family-Operated
@@ -123,26 +123,29 @@ const Hero = () => {
                 <Phone className="w-4 h-4 mr-3 text-luxury-gold" /> (631) 516-0006
               </a>
             </div>
+          </motion.div>
 
+          {/* Stats Section - No fade on mobile for better visibility */}
+          <div className="max-w-2xl">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8 mt-12 md:mt-16 pt-12 md:pt-16 border-t border-white/10">
               <div className="flex flex-col">
-                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">10k+</span>
-                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">Clients Served</span>
+                <span className="text-luxury-gold font-serif text-2xl md:text-2xl font-bold">10k+</span>
+                <span className="text-white/70 md:text-white/50 text-[10px] md:text-[10px] uppercase tracking-widest mt-1">Clients Served</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">97%</span>
-                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">Repeat Rate</span>
+                <span className="text-luxury-gold font-serif text-2xl md:text-2xl font-bold">97%</span>
+                <span className="text-white/70 md:text-white/50 text-[10px] md:text-[10px] uppercase tracking-widest mt-1">Repeat Rate</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">450+</span>
-                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">5-Star Google Reviews</span>
+                <span className="text-luxury-gold font-serif text-2xl md:text-2xl font-bold">450+</span>
+                <span className="text-white/70 md:text-white/50 text-[10px] md:text-[10px] uppercase tracking-widest mt-1">5-Star Google Reviews</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">20+</span>
-                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">Years Excellence</span>
+                <span className="text-luxury-gold font-serif text-2xl md:text-2xl font-bold">20+</span>
+                <span className="text-white/70 md:text-white/50 text-[10px] md:text-[10px] uppercase tracking-widest mt-1">Years Excellence</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
       
