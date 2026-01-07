@@ -788,22 +788,14 @@ const App = () => {
       <Footer />
 
 
-      {/* Sticky Call Button for Mobile */}
+      {/* Sticky Get Quote Button for Mobile */}
       <div className="md:hidden fixed bottom-0 left-0 w-full z-[60] p-4 bg-gradient-to-t from-luxury-navy to-transparent">
-        <div className="grid grid-cols-2 gap-3">
-          <a 
-            href="tel:+16315160006" 
-            className="flex items-center justify-center bg-luxury-gold text-luxury-navy py-4 px-2 font-bold uppercase tracking-widest text-xs shadow-lg active:scale-95 transition-transform"
-          >
-            <Phone className="w-4 h-4 mr-2" /> Call Now
-          </a>
-          <a 
-            href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
-            className="flex items-center justify-center bg-white text-luxury-navy py-4 px-2 font-bold uppercase tracking-widest text-xs shadow-lg active:scale-95 transition-transform"
-          >
-            <MessageSquare className="w-4 h-4 mr-2" /> Get Quote
-          </a>
-        </div>
+        <a 
+          href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
+          className="flex items-center justify-center bg-luxury-gold text-luxury-navy py-4 px-6 font-bold uppercase tracking-widest text-sm shadow-lg active:scale-95 transition-transform w-full"
+        >
+          <MessageSquare className="w-4 h-4 mr-2" /> Get Quote
+        </a>
       </div>
     </div>
   );
