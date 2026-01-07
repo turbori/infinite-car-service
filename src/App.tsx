@@ -108,12 +108,6 @@ const Hero = () => {
             <p className="text-white/70 text-base md:text-xl mb-8 md:mb-10 max-w-lg font-sans leading-relaxed">
               Premium transportation for Long Island's business executives and families. Serving Nassau & Suffolk with a 97% repeat rate.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-              <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury text-center py-4 md:py-5 px-10">
-                Get A Quote
-              </a>
-            </div>
           </motion.div>
 
           {/* Stats Section - No fade on mobile for better visibility */}
