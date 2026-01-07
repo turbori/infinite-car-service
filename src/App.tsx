@@ -14,30 +14,46 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const navHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-luxury-navy/95 backdrop-blur-md py-4 border-b border-white/10' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div className="flex flex-col">
+        <a href="/" className="flex flex-col">
           <span className="text-2xl font-serif font-bold text-white tracking-tighter">INFINITE</span>
           <span className="text-[10px] tracking-[0.3em] text-luxury-gold uppercase -mt-1 font-sans">Car Service</span>
-        </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-10 text-sm font-sans uppercase tracking-widest text-white/80">
-          <a href="#services" className="hover:text-luxury-gold transition-colors">Services</a>
-          <a href="#fleet" className="hover:text-luxury-gold transition-colors">Fleet</a>
-          <a href="#routes" className="hover:text-luxury-gold transition-colors">Routes</a>
-          <a href="#about" className="hover:text-luxury-gold transition-colors">Why Us</a>
+          <a href="#services" onClick={(e) => scrollToSection(e, 'services')} className="hover:text-luxury-gold transition-colors">Services</a>
+          <a href="#fleet" onClick={(e) => scrollToSection(e, 'fleet')} className="hover:text-luxury-gold transition-colors">Fleet</a>
+          <a href="#routes" onClick={(e) => scrollToSection(e, 'routes')} className="hover:text-luxury-gold transition-colors">Routes</a>
+          <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-luxury-gold transition-colors">Why Us</a>
           <a href="tel:+16315160006" className="flex items-center text-luxury-gold font-bold">
             <Phone className="w-4 h-4 mr-2" /> (631) 516-0006
           </a>
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury !py-3 !px-6 text-xs">
-            Book Now
+            Get Quote
           </a>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button className="md:hidden text-white" aria-label="Toggle Menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
@@ -49,15 +65,15 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           className="absolute top-full left-0 w-full bg-luxury-navy border-t border-white/10 p-6 flex flex-col space-y-6 text-sm uppercase tracking-widest text-white/80"
         >
-          <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-          <a href="#fleet" onClick={() => setIsMobileMenuOpen(false)}>Fleet</a>
-          <a href="#routes" onClick={() => setIsMobileMenuOpen(false)}>Routes</a>
-          <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>Why Us</a>
+          <a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a>
+          <a href="#fleet" onClick={(e) => scrollToSection(e, 'fleet')}>Fleet</a>
+          <a href="#routes" onClick={(e) => scrollToSection(e, 'routes')}>Routes</a>
+          <a href="#about" onClick={(e) => scrollToSection(e, 'about')}>Why Us</a>
           <a href="tel:+16315160006" className="text-luxury-gold font-bold flex items-center">
             <Phone className="w-4 h-4 mr-2" /> (631) 516-0006
           </a>
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury text-center">
-            Book Now
+            Get Quote
           </a>
         </motion.div>
       )}
@@ -67,79 +83,92 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative h-[90vh] md:h-screen w-full flex items-center overflow-hidden">
       {/* Background Image with Parallax effect if possible, but keeping it simple for now */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 w-full h-full">
         <img 
           src="assets/images/hero-chauffeur-escalade.jpg" 
           alt="Luxury Chauffeur Service Long Island" 
           className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-luxury-navy via-luxury-navy/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-luxury-navy via-luxury-navy/70 md:via-luxury-navy/60 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl"
-        >
-          <span className="inline-block bg-luxury-gold/20 text-luxury-gold text-xs font-sans tracking-[0.3em] uppercase py-2 px-4 mb-6 backdrop-blur-sm border border-luxury-gold/30">
-            Est. 2005 | Family-Operated
-          </span>
-          <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-8 leading-[1.1]">
-            Long Island's <br />
-            <span className="text-luxury-gold">Premier</span> Luxury <br />
-            Car Service
-          </h1>
-          <p className="text-white/70 text-lg md:text-xl mb-10 max-w-lg font-sans leading-relaxed">
-            Premium transportation for Long Island's business executives and families. Serving Nassau & Suffolk with a 97% repeat rate.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6">
-            <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury text-center">
-              Reserve Your Car
-            </a>
-            <a href="tel:+16315160006" className="flex items-center justify-center text-white font-sans tracking-widest uppercase text-sm border border-white/30 px-8 py-4 hover:bg-white/10 transition-all">
-              <Phone className="w-4 h-4 mr-3 text-luxury-gold" /> (631) 516-0006
-            </a>
-          </div>
+      <div className="relative z-10 w-full px-6 pt-20">
+        <div className="max-w-7xl mx-auto w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-2xl"
+          >
+            <span className="inline-block bg-luxury-gold/20 text-luxury-gold text-[10px] md:text-xs font-sans tracking-[0.3em] uppercase py-2 px-4 mb-6 backdrop-blur-sm border border-luxury-gold/30">
+              Est. 2005 | Family-Operated
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-serif font-bold text-white mb-6 md:mb-8 leading-[1.1]">
+              Long Island's <br />
+              <span className="text-luxury-gold">Premier</span> Luxury <br />
+              Car Service
+            </h1>
+            <p className="text-white/70 text-base md:text-xl mb-8 md:mb-10 max-w-lg font-sans leading-relaxed">
+              Premium transportation for Long Island's business executives and families. Serving Nassau & Suffolk with a 97% repeat rate.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+              <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury text-center py-4 md:py-5 px-10">
+                Get A Quote
+              </a>
+              <a href="tel:+16315160006" className="flex items-center justify-center text-white font-sans tracking-widest uppercase text-sm border border-white/30 px-8 py-4 hover:bg-white/10 transition-all">
+                <Phone className="w-4 h-4 mr-3 text-luxury-gold" /> (631) 516-0006
+              </a>
+            </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/10">
-            <div className="flex flex-col">
-              <span className="text-luxury-gold font-serif text-2xl font-bold">10k+</span>
-              <span className="text-white/50 text-[10px] uppercase tracking-widest mt-1">Clients Served</span>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8 mt-12 md:mt-16 pt-12 md:pt-16 border-t border-white/10">
+              <div className="flex flex-col">
+                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">10k+</span>
+                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">Clients Served</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">97%</span>
+                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">Repeat Rate</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">450+</span>
+                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">5-Star Google Reviews</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-luxury-gold font-serif text-xl md:text-2xl font-bold">20+</span>
+                <span className="text-white/50 text-[9px] md:text-[10px] uppercase tracking-widest mt-1">Years Excellence</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-luxury-gold font-serif text-2xl font-bold">97%</span>
-              <span className="text-white/50 text-[10px] uppercase tracking-widest mt-1">Repeat Rate</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-luxury-gold font-serif text-2xl font-bold">24/7</span>
-              <span className="text-white/50 text-[10px] uppercase tracking-widest mt-1">Availability</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-luxury-gold font-serif text-2xl font-bold">50+</span>
-              <span className="text-white/50 text-[10px] uppercase tracking-widest mt-1">Years Combined</span>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
       
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-luxury-navy to-transparent z-10"></div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 mb-4">Explore Our World</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-luxury-gold to-transparent"></div>
+      </motion.div>
     </section>
   );
 };
 
 const Routes = () => {
   const routes = [
-    { from: "Dix Hills", to: "JFK", price: "$120-140", time: "45-60 min" },
-    { from: "Huntington", to: "Manhattan", price: "$150-180", time: "75-90 min" },
-    { from: "Hamptons", to: "NYC", price: "$280-320", time: "120-150 min" },
-    { from: "Manhasset", to: "LGA", price: "$100-120", time: "30-45 min" },
-    { from: "Syosset", to: "Newark", price: "$160-180", time: "90-120 min" },
+    { from: "Manhasset", to: "LGA / JFK", price: "$140", time: "30-45 min" },
+    { from: "Syosset", to: "LGA / JFK", price: "$160", time: "45-60 min" },
+    { from: "Dix Hills", to: "LGA / JFK", price: "$170", time: "50-65 min" },
+    { from: "Stony Brook", to: "LGA / JFK", price: "$220", time: "70-90 min" },
+    { from: "Hamptons", to: "LGA / JFK", price: "$400", time: "120-150 min" },
   ];
 
   return (
@@ -149,27 +178,28 @@ const Routes = () => {
           <div>
             <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-sans">Popular Transfers</span>
             <h2 className="text-4xl md:text-5xl font-serif text-white mt-4">Long Island Routes</h2>
+            <p className="text-luxury-gold/60 text-xs uppercase tracking-widest mt-4 font-sans">Standard Luxury Sedan Pricing</p>
           </div>
           <p className="text-white/50 max-w-md mt-6 md:mt-0 font-sans">
-            Transparent pricing for our most popular Long Island connections. Custom quotes available for all Nassau and Suffolk locations.
+            Transparent flat rates for our most popular airport connections. Prices are for one-way transfers in our Luxury Sedan.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {routes.map((route, i) => (
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="glass-card p-8 border-white/5 hover:border-luxury-gold/30 transition-all duration-500"
+              className="glass-card p-6 border-white/5 hover:border-luxury-gold/30 transition-all duration-500"
             >
-              <Plane className="w-8 h-8 text-luxury-gold mb-6" />
-              <h3 className="text-white font-serif text-xl mb-1">{route.from}</h3>
-              <p className="text-white/40 text-xs uppercase tracking-widest mb-6 flex items-center">
+              <Plane className="w-6 h-6 text-luxury-gold mb-6" />
+              <h3 className="text-white font-serif text-lg mb-1">{route.from}</h3>
+              <p className="text-white/40 text-[10px] uppercase tracking-widest mb-6 flex items-center">
                 <ChevronRight className="w-3 h-3 mr-1" /> {route.to}
               </p>
-              <div className="pt-6 border-t border-white/5">
+              <div className="pt-4 border-t border-white/5">
                 <span className="text-luxury-gold text-2xl font-serif block">{route.price}</span>
-                <span className="text-white/30 text-[10px] uppercase tracking-widest mt-2 block">{route.time} est.</span>
+                <span className="text-white/30 text-[9px] uppercase tracking-widest mt-2 block">{route.time} est.</span>
               </div>
             </motion.div>
           ))}
@@ -182,7 +212,7 @@ const Routes = () => {
 const Fleet = () => {
   const vehicles = [
     {
-      name: "Luxury SUV - Escalade",
+      name: "Luxury Large SUV",
       desc: "The gold standard for Long Island executives and families. Spacious, powerful, and impeccably maintained.",
       image: "assets/images/luxury-large-suv-escalade.jpg",
       capacity: "6 Passengers",
@@ -190,15 +220,15 @@ const Fleet = () => {
       features: ["Wifi", "Water", "Climate Control", "Phone Chargers"]
     },
     {
-      name: "Corporate Sedan",
+      name: "Luxury Sedan",
       desc: "Perfect for solo business travelers or couples. Discreet, comfortable, and efficient.",
       image: "assets/images/Luxury Sedan .png",
       capacity: "3 Passengers",
       luggage: "3 Bags",
-      features: ["Leather Seats", "Quiet Cabin", "Daily Newspaper", "Bottle Water"]
+      features: ["Leather Seats", "Quiet Cabin", "Phone Chargers", "Bottle Water"]
     },
     {
-      name: "Premium Midsize SUV",
+      name: "Luxury Medium SUV",
       desc: "Versatile luxury for small groups or families with moderate luggage requirements.",
       image: "assets/images/Luxury Midsize SUV .png",
       capacity: "4 Passengers",
@@ -276,12 +306,6 @@ const Services = () => {
       image: "assets/images/Events & Celebrations.png",
       icon: <Star className="w-6 h-6" />,
       desc: "Arrive in style for Broadway, gala events, or a night in Manhattan."
-    },
-    {
-      title: "Private Tours",
-      image: "assets/images/Night Out & Entertainment.png",
-      icon: <Car className="w-6 h-6" />,
-      desc: "Customized itineraries for North Shore estates or East End wineries."
     }
   ];
 
@@ -293,12 +317,9 @@ const Services = () => {
             <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-sans">What We Offer</span>
             <h2 className="text-4xl md:text-5xl font-serif text-white mt-4">Professional Services</h2>
           </div>
-          <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="text-luxury-gold text-sm uppercase tracking-widest flex items-center mt-6 md:mt-0 group transition-all">
-            See All Services <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((s, i) => (
             <motion.div 
               key={i}
@@ -455,7 +476,7 @@ const SocialProof = () => {
   const testimonials = [
     {
       name: "Michael R.",
-      location: "Huntington, NY",
+      location: "Melville, NY",
       type: "Business Travel",
       text: "Infinite has been my go-to for airport transfers for 5 years. Always punctual, immaculate cars, and total professional chauffeurs."
     },
@@ -479,6 +500,7 @@ const SocialProof = () => {
         <div className="text-center mb-20">
           <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-sans">Client Experiences</span>
           <h2 className="text-4xl md:text-5xl font-serif text-white mt-4">What Our Travelers Say</h2>
+          <p className="text-luxury-gold/60 text-xs uppercase tracking-widest mt-4 font-sans">More than 450+ Five-Star Google Reviews</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -499,6 +521,115 @@ const SocialProof = () => {
             </motion.div>
           ))}
         </div>
+
+        <div className="mt-20 text-center">
+          <a 
+            href="https://www.google.com/search?q=infinite+car+service&sourceid=chrome&ie=UTF-8&sei=Qd9eaaOvJZfk5NoP1t2B-A8#lrd=0x63f29046b509639f:0x5a435f89231cd365,1,,,," 
+            target="_blank" 
+            className="inline-flex items-center text-luxury-gold hover:text-white transition-colors uppercase tracking-[0.2em] text-sm font-sans border border-luxury-gold/30 px-10 py-4 hover:bg-luxury-gold/10"
+          >
+            <Star className="w-4 h-4 mr-3" />
+            View All 450+ Google Reviews
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const AirportGuide = () => {
+  return (
+    <section className="py-24 bg-luxury-navy relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-sans">Airport Intelligence</span>
+          <h2 className="text-4xl md:text-5xl font-serif text-white mt-4">JFK & LGA Travel Guide</h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* JFK Section */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="glass-card p-10 border-luxury-gold/10 relative overflow-hidden"
+          >
+            <div className="flex items-center mb-8">
+              <div className="bg-luxury-gold/10 p-4 mr-6">
+                <Plane className="w-8 h-8 text-luxury-gold" />
+              </div>
+              <h3 className="text-3xl font-serif text-white">JFK International</h3>
+            </div>
+            
+            <div className="mb-8 p-6 bg-amber-900/20 border border-amber-500/20 rounded-sm">
+              <h4 className="text-amber-500 text-xs uppercase tracking-widest font-bold mb-3 flex items-center">
+                <Clock className="w-4 h-4 mr-2" /> Construction Alert
+              </h4>
+              <p className="text-white/70 text-sm leading-relaxed">
+                JFK's $19 billion redevelopment has moved most pickups to remote lots. Standard pickups now require a complex AirTrain journey and multiple transfers with heavy luggage.
+              </p>
+            </div>
+
+            <div className="space-y-6 mb-10">
+              <div className="flex items-start">
+                <Check className="w-5 h-5 text-luxury-gold mr-4 mt-1" />
+                <p className="text-white/60 text-sm leading-relaxed">
+                  <strong className="text-white">The VIP Solution:</strong> Our inside-terminal Meet & Greet service allows you to skip the AirTrain entirely and meet your chauffeur at baggage claim.
+                </p>
+              </div>
+              <div className="flex items-start">
+                <Check className="w-5 h-5 text-luxury-gold mr-4 mt-1" />
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Real-time monitoring of all international and domestic arrivals to ensure precision timing.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* LGA Section */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="glass-card p-10 border-luxury-gold/10 relative overflow-hidden"
+          >
+            <div className="flex items-center mb-8">
+              <div className="bg-luxury-gold/10 p-4 mr-6">
+                <Plane className="w-8 h-8 text-luxury-gold" />
+              </div>
+              <h3 className="text-3xl font-serif text-white">LaGuardia (LGA)</h3>
+            </div>
+
+            <p className="text-white/70 text-sm leading-relaxed mb-8">
+              LGA is the preferred choice for Long Island business travelers, offering the shortest transit times from Nassau and Suffolk County.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+              <div className="p-6 bg-white/5 border border-white/5">
+                <h4 className="text-luxury-gold text-xs uppercase tracking-widest font-bold mb-2">Efficiency</h4>
+                <p className="text-white/50 text-[11px] leading-relaxed">10-20 min from Nassau<br />30-45 min from Suffolk</p>
+              </div>
+              <div className="p-6 bg-white/5 border border-white/5">
+                <h4 className="text-luxury-gold text-xs uppercase tracking-widest font-bold mb-2">Meet & Greet</h4>
+                <p className="text-white/50 text-[11px] leading-relaxed">Available at Terminals B & C<br />Inside baggage claim pickup</p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <Check className="w-5 h-5 text-luxury-gold mr-4 mt-1" />
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Precision terminal knowledge for the fastest possible pickup and drop-off routes.
+                </p>
+              </div>
+              <div className="flex items-start">
+                <Check className="w-5 h-5 text-luxury-gold mr-4 mt-1" />
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Direct communication with your chauffeur upon landing for seamless coordination.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -508,7 +639,7 @@ const Communities = () => {
   const areas = [
     {
       region: "North Shore",
-      towns: ["Great Neck", "Manhasset", "Roslyn", "Glen Cove", "Huntington", "Northport"]
+      towns: ["Great Neck", "Manhasset", "Roslyn", "Glen Cove", "Cold Spring Harbor", "Northport"]
     },
     {
       region: "Central LI",
@@ -565,7 +696,7 @@ const CTA = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury w-full sm:w-auto">
-            Book Your Journey
+            Get A Quote
           </a>
           <div className="flex flex-col text-left">
             <span className="text-white/40 text-[10px] uppercase tracking-widest mb-1">Direct Line</span>
@@ -597,13 +728,13 @@ const Footer = () => {
               <li><a href="#services" className="hover:text-luxury-gold">Services</a></li>
               <li><a href="#fleet" className="hover:text-luxury-gold">Fleet</a></li>
               <li><a href="#routes" className="hover:text-luxury-gold">Popular Routes</a></li>
-              <li><a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="hover:text-luxury-gold">Reservations</a></li>
+              <li><a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="hover:text-luxury-gold">Get A Quote</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-serif text-lg mb-8">Areas Served</h4>
             <ul className="space-y-4 text-sm text-white/40">
-              <li>Dix Hills & Huntington</li>
+              <li>Dix Hills & Melville</li>
               <li>Nassau & Suffolk County</li>
               <li>Hamptons & East End</li>
               <li>JFK, LGA, EWR & ISP</li>
@@ -635,15 +766,16 @@ const Footer = () => {
 
 const App = () => {
   return (
-    <div className="bg-luxury-navy min-h-screen text-white font-sans selection:bg-luxury-gold selection:text-luxury-navy">
+    <div className="bg-luxury-navy min-h-screen w-full text-white font-sans selection:bg-luxury-gold selection:text-luxury-navy overflow-x-hidden">
       <Navbar />
-      <main>
+      <main className="w-full">
         <Hero />
         <PainPoints />
         <WhyChooseUs />
         <Services />
         <Routes />
         <Fleet />
+        <AirportGuide />
         <SocialProof />
         <Communities />
         <CTA />
@@ -653,13 +785,21 @@ const App = () => {
 
 
       {/* Sticky Call Button for Mobile */}
-      <div className="md:hidden fixed bottom-6 right-6 z-[60]">
-        <a 
-          href="tel:+16315160006" 
-          className="flex items-center justify-center w-16 h-16 bg-luxury-gold text-luxury-navy rounded-full shadow-[0_0_30px_rgba(197,160,89,0.5)] animate-bounce"
-        >
-          <Phone className="w-6 h-6" />
-        </a>
+      <div className="md:hidden fixed bottom-0 left-0 w-full z-[60] p-4 bg-gradient-to-t from-luxury-navy to-transparent">
+        <div className="grid grid-cols-2 gap-3">
+          <a 
+            href="tel:+16315160006" 
+            className="flex items-center justify-center bg-luxury-gold text-luxury-navy py-4 px-2 font-bold uppercase tracking-widest text-xs shadow-lg active:scale-95 transition-transform"
+          >
+            <Phone className="w-4 h-4 mr-2" /> Call Now
+          </a>
+          <a 
+            href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
+            className="flex items-center justify-center bg-white text-luxury-navy py-4 px-2 font-bold uppercase tracking-widest text-xs shadow-lg active:scale-95 transition-transform"
+          >
+            <MessageSquare className="w-4 h-4 mr-2" /> Get Quote
+          </a>
+        </div>
       </div>
     </div>
   );
