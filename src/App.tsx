@@ -307,8 +307,8 @@ const Services = () => {
   return (
     <section id="services" className="py-24 bg-luxury-navy">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-          <div className="max-w-xl">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16">
+          <div className="w-full md:max-w-xl">
             <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-sans">What We Offer</span>
             <h2 className="text-4xl md:text-5xl font-serif text-white mt-4">Professional Services</h2>
           </div>
