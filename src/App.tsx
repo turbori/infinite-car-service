@@ -45,9 +45,6 @@ const Navbar = () => {
           <a href="#fleet" onClick={(e) => scrollToSection(e, 'fleet')} className="hover:text-luxury-gold transition-colors">Fleet</a>
           <a href="#routes" onClick={(e) => scrollToSection(e, 'routes')} className="hover:text-luxury-gold transition-colors">Routes</a>
           <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-luxury-gold transition-colors">Why Us</a>
-          <a href="tel:+16315160006" className="flex items-center text-luxury-gold font-bold">
-            <Phone className="w-4 h-4 mr-2" /> (631) 516-0006
-          </a>
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury !py-3 !px-6 text-xs">
             Get Quote
           </a>
@@ -70,9 +67,6 @@ const Navbar = () => {
           <a href="#fleet" onClick={(e) => scrollToSection(e, 'fleet')}>Fleet</a>
           <a href="#routes" onClick={(e) => scrollToSection(e, 'routes')}>Routes</a>
           <a href="#about" onClick={(e) => scrollToSection(e, 'about')}>Why Us</a>
-          <a href="tel:+16315160006" className="text-luxury-gold font-bold flex items-center">
-            <Phone className="w-4 h-4 mr-2" /> (631) 516-0006
-          </a>
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury text-center">
             Get Quote
           </a>
@@ -118,9 +112,6 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
               <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury text-center py-4 md:py-5 px-10">
                 Get A Quote
-              </a>
-              <a href="tel:+16315160006" className="flex items-center justify-center text-white font-sans tracking-widest uppercase text-sm border border-white/30 px-8 py-4 hover:bg-white/10 transition-all">
-                <Phone className="w-4 h-4 mr-3 text-luxury-gold" /> (631) 516-0006
               </a>
             </div>
           </motion.div>
@@ -702,10 +693,6 @@ const CTA = () => {
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury w-full sm:w-auto">
             Get A Quote
           </a>
-          <div className="flex flex-col text-left">
-            <span className="text-white/40 text-[10px] uppercase tracking-widest mb-1">Direct Line</span>
-            <a href="tel:+16315160006" className="text-luxury-gold text-2xl font-serif">(631) 516-0006</a>
-          </div>
         </div>
       </div>
     </section>
