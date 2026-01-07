@@ -88,7 +88,7 @@ const Hero = () => {
       {/* Background Image with Parallax effect if possible, but keeping it simple for now */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <img 
-          src="assets/images/hero-chauffeur-escalade.jpg" 
+          src="/assets/images/hero-chauffeur-escalade.jpg" 
           alt="Luxury Chauffeur Service Long Island" 
           className="w-full h-full object-cover scale-105"
         />
@@ -215,7 +215,7 @@ const Fleet = () => {
     {
       name: "Luxury Large SUV",
       desc: "The gold standard for Long Island executives and families. Spacious, powerful, and impeccably maintained.",
-      image: "assets/images/luxury-large-suv-escalade.jpg",
+      image: "/assets/images/luxury-large-suv-escalade.jpg",
       capacity: "6 Passengers",
       luggage: "6-8 Bags",
       features: ["Wifi", "Water", "Climate Control", "Phone Chargers"]
@@ -223,7 +223,7 @@ const Fleet = () => {
     {
       name: "Luxury Sedan",
       desc: "Perfect for solo business travelers or couples. Discreet, comfortable, and efficient.",
-      image: "assets/images/Luxury Sedan .png",
+      image: "/assets/images/Luxury Sedan .png",
       capacity: "3 Passengers",
       luggage: "3 Bags",
       features: ["Leather Seats", "Quiet Cabin", "Phone Chargers", "Bottle Water"]
@@ -231,7 +231,7 @@ const Fleet = () => {
     {
       name: "Luxury Medium SUV",
       desc: "Versatile luxury for small groups or families with moderate luggage requirements.",
-      image: "assets/images/Luxury Midsize SUV .png",
+      image: "/assets/images/Luxury Midsize SUV .png",
       capacity: "4 Passengers",
       luggage: "4 Bags",
       features: ["Extra Legroom", "Smooth Ride", "Safety Rated", "Premium Sound"]
@@ -292,19 +292,19 @@ const Services = () => {
   const services = [
     {
       title: "Airport Transfers",
-      image: "assets/images/airport-aircraft-tarmac.jpg",
+      image: "/assets/images/airport-aircraft-tarmac.jpg",
       icon: <Plane className="w-6 h-6" />,
       desc: "Door-to-door service to JFK, LGA, EWR, and Islip. Flight tracking included."
     },
     {
       title: "Corporate Travel",
-      image: "assets/images/Corporate & Executive Travel.png",
+      image: "/assets/images/Corporate & Executive Travel.png",
       icon: <Briefcase className="w-6 h-6" />,
       desc: "Reliable, professional service for Long Island's business community."
     },
     {
       title: "NYC Events",
-      image: "assets/images/Events & Celebrations.png",
+      image: "/assets/images/Events & Celebrations.png",
       icon: <Star className="w-6 h-6" />,
       desc: "Arrive in style for Broadway, gala events, or a night in Manhattan."
     }
@@ -399,7 +399,7 @@ const WhyChooseUs = () => {
           <div className="relative">
             <div className="absolute -inset-4 border border-luxury-gold/20 z-0"></div>
             <img 
-              src="assets/images/woman exiting suburban to go to airport.png" 
+              src="/assets/images/woman exiting suburban to go to airport.png" 
               alt="Luxury Car Service Client" 
               className="relative z-10 w-full grayscale-[30%]"
             />
@@ -687,7 +687,7 @@ const CTA = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src="assets/images/fleet driving on the highway.png" alt="Infinite Fleet" className="w-full h-full object-cover" />
+        <img src="/assets/images/fleet driving on the highway.png" alt="Infinite Fleet" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-luxury-navy/80"></div>
       </div>
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
