@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Check, Plane, Briefcase, Users, Star, Clock, Shiel
 import { useState, useEffect } from 'react';
 
 // --- Components ---
+// Infinite Car Service - Premium Long Island Transportation
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
