@@ -750,6 +750,22 @@ const Footer = () => {
 };
 
 const App = () => {
+  const [showMobileCTA, setShowMobileCTA] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      // Show button after 60% scroll
+      setShowMobileCTA(scrollPercent >= 60);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="bg-luxury-navy min-h-screen w-full text-white font-sans selection:bg-luxury-gold selection:text-luxury-navy overflow-x-hidden">
       <Navbar />
@@ -769,15 +785,22 @@ const App = () => {
       <Footer />
 
 
-      {/* Sticky Get Quote Button for Mobile */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full z-[60] p-4 bg-gradient-to-t from-luxury-navy to-transparent">
-        <a 
-          href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
-          className="flex items-center justify-center bg-luxury-gold text-luxury-navy py-4 px-6 font-bold uppercase tracking-widest text-sm shadow-lg active:scale-95 transition-transform w-full"
+      {/* Sticky Get Quote Button for Mobile - Shows after 60% scroll */}
+      {showMobileCTA && (
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden fixed bottom-0 left-0 w-full z-[60] p-4 bg-gradient-to-t from-luxury-navy to-transparent"
         >
-          <MessageSquare className="w-4 h-4 mr-2" /> Get Quote
-        </a>
-      </div>
+          <a 
+            href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" 
+            className="flex items-center justify-center bg-luxury-gold text-luxury-navy py-4 px-6 font-bold uppercase tracking-widest text-sm shadow-lg active:scale-95 transition-transform w-full"
+          >
+            <MessageSquare className="w-4 h-4 mr-2" /> Get Quote
+          </a>
+        </motion.div>
+      )}
     </div>
   );
 };
