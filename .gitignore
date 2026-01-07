@@ -46,6 +46,7 @@ temp/
 
 # Cache
 .cache/
+.vite/
 
 # System and Personal Files (exclude everything in user directory except website files)
 .CFUserTextEncoding
