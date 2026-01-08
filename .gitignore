@@ -39,6 +39,7 @@ coverage/
 # Build outputs
 dist/
 build/
+.next/
 
 # Temporary folders
 tmp/
