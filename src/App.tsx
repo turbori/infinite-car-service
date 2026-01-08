@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Check, Plane, Briefcase, Users, Star, Clock, Shield, Menu, X, ChevronRight, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Check, Plane, Briefcase, Users, Star, Clock, Shield, Menu, X, MessageSquare } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 // --- Components ---
