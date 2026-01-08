@@ -191,8 +191,8 @@ const Fleet = () => {
       name: "Luxury Medium SUV",
       desc: "Versatile luxury for small groups or families with moderate luggage requirements.",
       image: "/assets/images/Luxury Midsize SUV .png",
-      capacity: "4 Passengers",
-      luggage: "4 Bags",
+      capacity: "5 Passengers",
+      luggage: "5 Bags",
       features: ["Extra Legroom", "Smooth Ride", "Safety Rated", "Premium Sound"]
     }
   ];
