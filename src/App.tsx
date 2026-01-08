@@ -137,7 +137,7 @@ const Hero = () => {
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-luxury-navy to-transparent z-10"></div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Desktop */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -146,6 +146,26 @@ const Hero = () => {
       >
         <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 mb-4">Explore Our World</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-luxury-gold to-transparent"></div>
+      </motion.div>
+
+      {/* Scroll Indicator - Mobile */}
+      <motion.div 
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ 
+          delay: 1.5, 
+          duration: 1,
+          y: {
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }
+        }}
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex md:hidden flex-col items-center"
+      >
+        <span className="text-[9px] uppercase tracking-[0.3em] text-white/40 mb-3">Scroll to Learn More</span>
+        <div className="w-[1px] h-8 bg-gradient-to-b from-luxury-gold to-transparent"></div>
       </motion.div>
     </section>
   );
