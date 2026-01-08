@@ -43,7 +43,6 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-10 text-sm font-sans uppercase tracking-widest text-white/80">
           <a href="#services" onClick={(e) => scrollToSection(e, 'services')} className="hover:text-luxury-gold transition-colors">Services</a>
           <a href="#fleet" onClick={(e) => scrollToSection(e, 'fleet')} className="hover:text-luxury-gold transition-colors">Fleet</a>
-          <a href="#routes" onClick={(e) => scrollToSection(e, 'routes')} className="hover:text-luxury-gold transition-colors">Routes</a>
           <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-luxury-gold transition-colors">Why Us</a>
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury !py-3 !px-6 text-xs">
             Get Quote
@@ -65,7 +64,6 @@ const Navbar = () => {
         >
           <a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a>
           <a href="#fleet" onClick={(e) => scrollToSection(e, 'fleet')}>Fleet</a>
-          <a href="#routes" onClick={(e) => scrollToSection(e, 'routes')}>Routes</a>
           <a href="#about" onClick={(e) => scrollToSection(e, 'about')}>Why Us</a>
           <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury text-center">
             Get Quote
@@ -167,53 +165,6 @@ const Hero = () => {
         <span className="text-[9px] uppercase tracking-[0.3em] text-white/40 mb-3">Scroll to Learn More</span>
         <div className="w-[1px] h-8 bg-gradient-to-b from-luxury-gold to-transparent"></div>
       </motion.div>
-    </section>
-  );
-};
-
-const Routes = () => {
-  const routes = [
-    { from: "Manhasset", to: "LGA / JFK", price: "$140", time: "30-45 min" },
-    { from: "Syosset", to: "LGA / JFK", price: "$150", time: "45-60 min" },
-    { from: "Dix Hills", to: "LGA / JFK", price: "$170", time: "50-65 min" },
-    { from: "Stony Brook", to: "LGA / JFK", price: "$220", time: "70-90 min" },
-    { from: "Hamptons", to: "LGA / JFK", price: "$400", time: "120-150 min" },
-  ];
-
-  return (
-    <section id="routes" className="py-24 bg-luxury-navy relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
-          <div>
-            <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-sans">Popular Transfers</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-white mt-4">Long Island Routes</h2>
-            <p className="text-luxury-gold/60 text-xs uppercase tracking-widest mt-4 font-sans">Standard Luxury Sedan Pricing</p>
-          </div>
-          <p className="text-white/50 max-w-md mt-6 md:mt-0 font-sans">
-            Transparent flat rates for our most popular airport connections. Prices are for one-way transfers in our Luxury Sedan.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          {routes.map((route, i) => (
-            <motion.div 
-              key={i}
-              whileHover={{ y: -10 }}
-              className="glass-card p-6 border-white/5 hover:border-luxury-gold/30 transition-all duration-500"
-            >
-              <Plane className="w-6 h-6 text-luxury-gold mb-6" />
-              <h3 className="text-white font-serif text-lg mb-1">{route.from}</h3>
-              <p className="text-white/40 text-[10px] uppercase tracking-widest mb-6 flex items-center">
-                <ChevronRight className="w-3 h-3 mr-1" /> {route.to}
-              </p>
-              <div className="pt-4 border-t border-white/5">
-                <span className="text-luxury-gold text-2xl font-serif block">{route.price}</span>
-                <span className="text-white/30 text-[9px] uppercase tracking-widest mt-2 block">{route.time} est.</span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };
@@ -732,7 +683,6 @@ const Footer = () => {
             <ul className="space-y-4 text-sm text-white/40">
               <li><a href="#services" className="hover:text-luxury-gold">Services</a></li>
               <li><a href="#fleet" className="hover:text-luxury-gold">Fleet</a></li>
-              <li><a href="#routes" className="hover:text-luxury-gold">Popular Routes</a></li>
               <li><a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="hover:text-luxury-gold">Get A Quote</a></li>
             </ul>
           </div>
@@ -794,7 +744,6 @@ const App = () => {
         <PainPoints />
         <WhyChooseUs />
         <Services />
-        <Routes />
         <Fleet />
         <AirportGuide />
         <SocialProof />
