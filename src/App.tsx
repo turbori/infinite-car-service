@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Check, Plane, Briefcase, Users, Star, Clock, Shield, Menu, X, MessageSquare, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 // --- Components ---
 // Infinite Car Service - Premium Long Island Transportation
@@ -807,6 +808,15 @@ const AboutPage = () => {
 
   return (
     <div className="bg-luxury-navy">
+      <Helmet>
+        <title>About Infinite Car Service | Family-Operated Since 2005 | Dix Hills, NY</title>
+        <meta name="description" content="Family-owned luxury car service serving Long Island since 2005. 450+ 5-star reviews. Professional chauffeurs, premium fleet, 97% repeat rate. Based in Dix Hills. Trusted by executives and families." />
+        <meta name="keywords" content="about infinite car service, family operated car service, dix hills transportation, long island chauffeur company, professional car service, luxury transportation long island, car service since 2005" />
+        <link rel="canonical" href="https://www.infinitecarserviceli.com/about" />
+        <meta property="og:title" content="About Infinite Car Service | Family-Operated Since 2005" />
+        <meta property="og:description" content="Family-owned luxury transportation. 450+ 5-star reviews. Serving Long Island since 2005." />
+        <meta property="og:url" content="https://www.infinitecarserviceli.com/about" />
+      </Helmet>
       <PageHero 
         badge="Our Legacy"
         title={<>About <br /><span className="text-luxury-gold">Infinite Car Service</span></>}
@@ -939,6 +949,15 @@ const AboutPage = () => {
 const AirportTransfersPage = () => {
   return (
     <div className="bg-luxury-navy">
+      <Helmet>
+        <title>JFK & LGA Airport Car Service Long Island | Meet & Greet | Infinite</title>
+        <meta name="description" content="Premium Long Island airport car service to JFK, LGA, EWR. Inside-terminal meet & greet. Real-time flight tracking. 450+ 5-star reviews. Based in Dix Hills. Corporate accounts available." />
+        <meta name="keywords" content="jfk car service long island, lga airport car service, newark airport long island, jfk meet and greet, airport transfers nassau county, airport limo suffolk county, dix hills airport service, corporate airport car" />
+        <link rel="canonical" href="https://www.infinitecarserviceli.com/airport-transfers" />
+        <meta property="og:title" content="JFK & LGA Airport Car Service Long Island | Infinite Car Service" />
+        <meta property="og:description" content="Premium airport transfers with meet & greet service. JFK, LGA, EWR. 450+ 5-star reviews." />
+        <meta property="og:url" content="https://www.infinitecarserviceli.com/airport-transfers" />
+      </Helmet>
       <PageHero 
         badge="First-Class Arrivals"
         title={<>Airport <br /><span className="text-luxury-gold">Transfers</span></>}
@@ -1001,7 +1020,7 @@ const AirportTransfersPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { airport: "JFK International", terminal: "Terminal 4 & 5", location: "Arrivals Level, right outside Baggage Claim Exit." },
+              { airport: "JFK International", terminal: "Terminal 4, 5 & 8", location: "Arrivals Level, right outside Baggage Claim Exit." },
               { airport: "LaGuardia (LGA)", terminal: "Terminal B & C", location: "Baggage Claim Area, near the Welcome Center / Information Desk." },
               { airport: "Newark (EWR)", terminal: "Terminal A & C", location: "Baggage Claim level or designated Limo Pickup area." }
             ].map((loc, i) => (
@@ -1068,6 +1087,15 @@ const AirportTransfersPage = () => {
 const CorporateTravelPage = () => {
   return (
     <div className="bg-luxury-navy">
+      <Helmet>
+        <title>Corporate Car Service Long Island | Executive Transportation | Infinite</title>
+        <meta name="description" content="Professional corporate car service for Long Island executives. Dedicated account management, centralized billing, WiFi-equipped SUVs. Trusted by Fortune 500 companies. Nassau & Suffolk County." />
+        <meta name="keywords" content="corporate car service long island, executive transportation nassau county, business car service, corporate accounts, monthly billing, ea support, professional chauffeur service, executive suv long island" />
+        <link rel="canonical" href="https://www.infinitecarserviceli.com/corporate-travel" />
+        <meta property="og:title" content="Corporate Car Service Long Island | Executive Transportation" />
+        <meta property="og:description" content="Premium executive transportation with dedicated account management and priority scheduling." />
+        <meta property="og:url" content="https://www.infinitecarserviceli.com/corporate-travel" />
+      </Helmet>
       <PageHero 
         badge="Executive Excellence"
         title={<>Corporate <br /><span className="text-luxury-gold">Travel Solutions</span></>}
@@ -1182,6 +1210,15 @@ const CorporateTravelPage = () => {
 const HourlyServicePage = () => {
   return (
     <div className="bg-luxury-navy">
+      <Helmet>
+        <title>Hourly Chauffeur Service Long Island & NYC | On-Standby Luxury SUV</title>
+        <meta name="description" content="Flexible hourly chauffeur service for business meetings, shopping, and multi-stop trips. Suited driver on-standby. 3-hour minimum. Serving Long Island and NYC. Ideal for executives and families." />
+        <meta name="keywords" content="hourly car service long island, nyc chauffeur by the hour, multi-stop transportation, business meetings car service, shopping car service, on standby driver, hourly suv rental with driver" />
+        <link rel="canonical" href="https://www.infinitecarserviceli.com/hourly-service" />
+        <meta property="og:title" content="Hourly Chauffeur Service Long Island & NYC" />
+        <meta property="og:description" content="Flexible hourly service with professional chauffeur on-standby for multi-stop trips." />
+        <meta property="og:url" content="https://www.infinitecarserviceli.com/hourly-service" />
+      </Helmet>
       <PageHero 
         badge="Maximum Flexibility"
         title={<>Hourly <br /><span className="text-luxury-gold">Chauffeur Service</span></>}
@@ -1280,6 +1317,15 @@ const HourlyServicePage = () => {
 const NYCEventsPage = () => {
   return (
     <div className="bg-luxury-navy">
+      <Helmet>
+        <title>NYC Event Transportation | Broadway, Concerts, Weddings | Infinite Car Service</title>
+        <meta name="description" content="Luxury transportation for NYC events: Broadway shows, MSG, UBS Arena, weddings, galas. VIP drop-off and wait & return service. Group coordination available. Serving Long Island and Manhattan." />
+        <meta name="keywords" content="nyc event transportation, broadway car service, concert limo service, madison square garden car service, ubs arena transportation, wedding car service long island, gala transportation, event chauffeur" />
+        <link rel="canonical" href="https://www.infinitecarserviceli.com/nyc-events" />
+        <meta property="og:title" content="NYC Event Transportation | Broadway, Concerts, Weddings" />
+        <meta property="og:description" content="VIP event transportation with wait & return service for concerts, Broadway, and special occasions." />
+        <meta property="og:url" content="https://www.infinitecarserviceli.com/nyc-events" />
+      </Helmet>
       <PageHero 
         badge="Elevate the Occasion"
         title={<>NYC Events <br /><span className="text-luxury-gold">& Occasions</span></>}
