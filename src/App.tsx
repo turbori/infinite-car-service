@@ -174,7 +174,7 @@ const Hero = () => {
 const Routes = () => {
   const routes = [
     { from: "Manhasset", to: "LGA / JFK", price: "$140", time: "30-45 min" },
-    { from: "Syosset", to: "LGA / JFK", price: "$160", time: "45-60 min" },
+    { from: "Syosset", to: "LGA / JFK", price: "$150", time: "45-60 min" },
     { from: "Dix Hills", to: "LGA / JFK", price: "$170", time: "50-65 min" },
     { from: "Stony Brook", to: "LGA / JFK", price: "$220", time: "70-90 min" },
     { from: "Hamptons", to: "LGA / JFK", price: "$400", time: "120-150 min" },
