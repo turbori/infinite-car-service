@@ -1,182 +1,195 @@
 # Infinite Car Service - Luxury Transportation Website
 
-## Overview
-Professional luxury car service website for Infinite Car Service, serving NYC, Long Island, and the Hamptons since 2005. Premium transportation for executives, travelers, and families who expect more.
+[![Live Site](https://img.shields.io/badge/live-infinitecarserviceli.com-gold)](https://www.infinitecarserviceli.com/)
+[![React](https://img.shields.io/badge/React-18.3.1-61dafb)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178c6)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/license-Proprietary-red)](LICENSE)
 
-## 🚗 Features
+> Long Island's premier family-operated luxury car service since 2005. Professional transportation with a 97% repeat rate.
 
-### Core Services
-- **Airport Transfers** - JFK, LGA, EWR with AI-powered flight tracking
-- **Corporate & Executive Travel** - Professional business transportation
-- **Events & Celebrations** - Weddings, proms, special occasions
-- **NYC Tours** - Top destinations with local expertise
-- **Cruise Port Transfers** - Seamless terminal transportation
+## 🌟 Overview
 
-### Technical Features
-- **Responsive Design** - Mobile-first with TailwindCSS and DaisyUI
-- **Flight Tracking Integration** - AI-powered real-time monitoring
-- **Animated Statistics** - Smooth counting animations on scroll
-- **Interactive Fleet Gallery** - Professional vehicle showcase
-- **Airport Meeting Points** - Detailed terminal-specific instructions
-- **Dual Contact System** - Separate numbers for new/existing clients
+A modern, mobile-first single-page React application built for Infinite Car Service - serving Nassau & Suffolk County, the Hamptons, and NYC airports with premium black car transportation.
 
-### Fleet
-- Luxury Sedan (2 passengers)
-- Luxury Midsize SUV (4 passengers) 
-- Luxury Large SUV (6 passengers)
+### Key Features
+- 📱 **Mobile-Optimized** - 90% of traffic on mobile, fully responsive design
+- ⚡ **Lightning Fast** - Vite + React with optimized assets
+- 🎯 **Conversion-Focused** - Strategic CTAs with 60% scroll trigger
+- 🎨 **Luxury Design** - Premium gold/navy color scheme with smooth animations
+- 📊 **Analytics Ready** - PostHog, Google Analytics, Reb2b integrated
 
-## 📱 Contact Information
-- **New Clients:** (631) 860-6700
-- **Existing Clients:** (631) 516-0006
-- **Email:** info@infinitecarserviceli.com
-- **Facebook:** [@infinitecarserviceli](https://www.facebook.com/profile.php?id=61556980469676)
+## 🚀 Tech Stack
 
-## 🛠 Tech Stack
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Framework:** TailwindCSS + DaisyUI
-- **Icons:** Font Awesome 6
-- **Animations:** CSS Transitions + JavaScript Intersection Observer
-- **Images:** Optimized PNG/JPG assets
+### Frontend
+- **Framework:** React 18.3.1 + TypeScript 5.5.3
+- **Build Tool:** Vite 5.3.1
+- **Styling:** Tailwind CSS 3.4.4
+- **Animations:** Framer Motion 11.3.2
+- **Icons:** Lucide React 0.408.0
 
-## 🌐 Live Pages
-- `index.html` - Homepage with hero, fleet, services overview
-- `services.html` - Detailed service offerings and pricing
-- `fleet.html` - Complete vehicle showcase with specifications
-- `about.html` - Company history, team, and statistics
-- `airport-meeting-points.html` - Terminal-specific pickup instructions
-- `top-places-nyc.html` - NYC destinations and tour guide
+### Deployment
+- **Hosting:** GitHub Pages
+- **CI/CD:** GitHub Actions (automatic deployment on push to `main`)
+- **Domain:** infinitecarserviceli.com
 
-## 🚀 Deployment Strategy
-
-### Branch Structure
-```
-main/           # Production-ready code (deployed to live site)
-├── staging/    # Pre-production testing environment
-└── develop/    # Development integration branch
-```
-
-### Workflow
-1. **Development:** Create feature branches from `develop`
-2. **Integration:** Merge features into `develop` branch
-3. **Testing:** Deploy `develop` to staging environment for QA
-4. **Release:** Merge `staging` to `main` for production deployment
-5. **Hotfixes:** Create directly from `main` if urgent production fixes needed
-
-### Deployment Commands
-```bash
-# Deploy to staging
-git checkout staging
-git merge develop
-git push origin staging
-
-# Deploy to production  
-git checkout main
-git merge staging
-git push origin main
-```
+### Analytics & Tracking
+- PostHog (product analytics)
+- Google Analytics (GA4)
+- Reb2b (B2B visitor identification)
+- Google Ads conversion tracking
 
 ## 📁 Project Structure
+
 ```
-ics-new-site/
-├── assets/
-│   └── images/          # Vehicle photos, hero images, service icons
-├── index.html           # Homepage
-├── services.html        # Service details & pricing
-├── fleet.html          # Vehicle showcase
-├── about.html          # Company information
-├── airport-meeting-points.html  # Airport pickup instructions
-├── top-places-nyc.html  # NYC tour destinations
-├── .gitignore          # Git ignore rules
-└── README.md           # This documentation
+infinite-car-service/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Automated deployment
+├── public/
+│   └── assets/
+│       ├── images/             # Optimized vehicle & service images
+│       └── js/                 # Analytics scripts
+├── src/
+│   ├── App.tsx                 # Main single-page application
+│   ├── main.tsx                # React entry point
+│   └── index.css               # Global styles + Tailwind
+├── docs/                       # SEO & optimization guides
+├── index.html                  # HTML entry point
+├── vite.config.ts              # Vite configuration
+├── tailwind.config.js          # Tailwind theme (luxury colors)
+├── tsconfig.json               # TypeScript configuration
+└── package.json                # Dependencies
 ```
 
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary Blue:** #2563EB (Blue-600)
-- **Primary Dark:** #1E40AF (Blue-800) 
-- **Primary Darker:** #1D4ED8 (Blue-700)
-- **Slate Accent:** #64748B (Slate-500)
-- **Background Light:** #F9FAFB (Gray-50)
-- **Text Dark:** #111827 (Gray-900)
-- **Footer Background:** #0F172A (Slate-900)
+```css
+--luxury-navy: #0F172A      /* Primary background */
+--luxury-gold: #C5A059      /* Accent & CTAs */
+--luxury-charcoal: #1A202C  /* Secondary background */
+```
 
 ### Typography
-- **Headers:** Bold, professional hierarchy
-- **Body:** Clean, readable with proper line spacing
-- **CTAs:** Prominent buttons with hover effects
+- **Sans:** Inter (body text)
+- **Serif:** Playfair Display (headings)
 
-## 🔧 Development Setup
+## 🛠 Local Development
 
 ### Prerequisites
-- Modern web browser
-- Text editor (VS Code recommended)
-- Git for version control
+- Node.js 20+ (recommended)
+- npm or yarn
 
-### Local Development
-1. Clone the repository
+### Setup
+
+1. **Clone the repository**
 ```bash
 git clone https://github.com/turbori/infinite-car-service.git
 cd infinite-car-service
 ```
 
-2. Open `index.html` in your browser or use a local server
+2. **Install dependencies**
 ```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js (if you have it)
-npx serve .
+npm install
 ```
 
-3. Navigate to `http://localhost:8000`
-
-### Making Changes
-1. Create a feature branch from `develop`
+3. **Start development server**
 ```bash
-git checkout develop
-git pull origin develop
-git checkout -b feature/your-feature-name
+npm run dev
 ```
 
-2. Make your changes and test locally
-
-3. Commit and push
-```bash
-git add .
-git commit -m "Description of changes"
-git push origin feature/your-feature-name
+4. **Open browser**
+```
+http://localhost:5173
 ```
 
-4. Create pull request to merge into `develop`
+### Available Scripts
 
-## 📊 Performance Features
-- **Optimized Images** - Compressed for fast loading
-- **Minimal JavaScript** - Vanilla JS for animations
-- **CSS Optimization** - TailwindCSS utilities
-- **Mobile Performance** - Responsive images and layouts
+```bash
+npm run dev      # Start dev server
+npm run build    # Build for production
+npm run preview  # Preview production build
+```
 
-## 🔒 Security Considerations
-- No sensitive data in client-side code
-- Form validation on both client and server side
-- HTTPS enforced for production deployment
-- Sanitized contact form inputs
+## 📦 Deployment
 
-## 📈 Analytics & SEO
-- Meta tags optimized for each page
-- Structured data for local business
-- Performance-optimized loading
-- Mobile-friendly responsive design
-- Local SEO keywords for NYC/Long Island market
+Deployment is **fully automated** via GitHub Actions:
 
-## 📝 License
-Proprietary - Infinite Car Service © 2025
+1. Push to `main` branch
+2. GitHub Actions builds the React app
+3. Deploys to GitHub Pages
+4. Live at infinitecarserviceli.com
+
+### Manual Deployment (if needed)
+```bash
+npm run build          # Creates optimized production build in dist/
+# GitHub Actions handles the rest
+```
+
+## 🎯 Key Business Features
+
+### Conversion Optimization
+- ✅ **No Hero CTA** - Encourages scrolling to learn about company first
+- ✅ **60% Scroll Trigger** - "Get Quote" button appears after engagement
+- ✅ **Phone Hidden** - Only in footer to drive online quote submissions
+- ✅ **Mobile Scroll Indicator** - Bouncing animation guides users
+
+### Content Highlights
+- 450+ Five-Star Google Reviews
+- 97% Repeat Client Rate
+- 20+ Years of Excellence
+- Family-Operated in Dix Hills since 2005
+
+## 📊 Analytics & Tracking
+
+All analytics are integrated and tracking:
+- Page views
+- Scroll depth (60% milestone for CTA trigger)
+- Quote button clicks
+- Session recordings (PostHog)
+
+## 🔒 Security
+
+- ✅ HTTPS enforced
+- ✅ No sensitive data in client-side code
+- ✅ Environment variables for API keys (not committed)
+- ✅ Dependency vulnerability scanning via GitHub
+
+## 📱 Contact Information
+
+- **Phone:** (631) 516-0006
+- **Email:** info@infinitecarserviceli.com
+- **Location:** Dix Hills, NY 11746
+- **Facebook:** [@infinitecarserviceli](https://www.facebook.com/infinitecarserviceli)
+
+## 📈 Performance
+
+- ✅ Mobile-first responsive design
+- ✅ Optimized images (WebP format recommended)
+- ✅ Lazy loading for images
+- ✅ Code splitting via Vite
+- ✅ CSS purging via Tailwind
+
+## 📝 Documentation
+
+Additional documentation available in `/docs`:
+- SEO optimization guides
+- Google Ads strategy
+- Analytics event tracking
+- LTV optimization
 
 ## 🤝 Contributing
-This is a private repository for Infinite Car Service. For feature requests or bug reports, please contact the development team.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📄 License
+
+Proprietary - © 2025 Infinite Car Service. All rights reserved.
+
+See [LICENSE](LICENSE) for more information.
 
 ---
 
+**Version:** 2.0.0 (React Redesign)  
 **Last Updated:** January 2025  
-**Version:** 1.0.0  
-**Repository:** https://github.com/turbori/infinite-car-service
+**Maintained by:** Development Team
