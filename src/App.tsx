@@ -863,7 +863,7 @@ const AboutPage = () => {
       <section className="py-24 bg-luxury-navy">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}>
               <SectionHeading badge="The Infinite Protocol" title="The Chauffeur Standard" center={false} />
               <div className="space-y-6 text-white/70 text-lg font-sans leading-relaxed">
                 <p>
@@ -909,6 +909,28 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Community Impact Section */}
+      <section className="py-24 bg-luxury-charcoal/30 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }}>
+              <img src="/assets/images/fleet driving on the highway.png" alt="Long Island Local" className="rounded-sm shadow-2xl grayscale-[20%]" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}>
+              <SectionHeading badge="Dix Hills Local" title="Community Expertise" center={false} />
+              <p className="text-white/70 text-lg font-sans leading-relaxed mb-8">
+                Based in Dix Hills, we aren't just navigating by GPS—we're navigating by experience. We know the LIE, Northern State, and Southern State Parkway patterns better than any GPS.
+              </p>
+              <div className="glass-card p-8 border-luxury-gold/10">
+                <p className="text-white/50 italic font-serif">
+                  "Being locally based means we anticipate the bottlenecks before they happen, ensuring our clients are never caught off guard by Long Island traffic."
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <CTA />
     </div>
   );
@@ -947,14 +969,53 @@ const AirportTransfersPage = () => {
                     </li>
                   ))}
                 </ul>
-                <p>
-                  Airport transportation is our core service — and we treat every airport transfer like a first-class experience.
-                </p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}>
-              <img src="/assets/images/airport-aircraft-tarmac.jpg" alt="Airport Transfer" className="rounded-sm shadow-2xl grayscale-[20%]" />
+              <div className="glass-card p-10 border-luxury-gold/20">
+                <h3 className="text-2xl font-serif text-white mb-6 flex items-center">
+                  <Clock className="w-6 h-6 text-luxury-gold mr-4" /> The 24/7 Precision System
+                </h3>
+                <p className="text-white/60 text-base leading-relaxed mb-6">
+                  We don't just "watch" the clocks. Our precision system integrates with global flight data to adjust your pickup time automatically.
+                </p>
+                <div className="space-y-4 text-sm text-white/40">
+                  <p>• If your flight arrives <strong className="text-luxury-gold">45 minutes early</strong>, your chauffeur is already there.</p>
+                  <p>• If you're delayed <strong className="text-luxury-gold">3 hours</strong>, your booking is automatically rescheduled.</p>
+                  <p>• Zero action required from you—just land and turn on your phone.</p>
+                </div>
+              </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet & Greet Detail Section */}
+      <section className="py-24 bg-luxury-charcoal/30 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <SectionHeading badge="The Arrival Protocol" title="Meet & Greet Locations" />
+            <p className="text-white/50 max-w-2xl mx-auto -mt-8 mb-12">
+              Skip the confusion of remote pickup lots. Your chauffeur will be waiting inside the terminal at these specific locations:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { airport: "JFK International", terminal: "Terminal 4 & 5", location: "Arrivals Level, right outside Baggage Claim Exit." },
+              { airport: "LaGuardia (LGA)", terminal: "Terminal B & C", location: "Baggage Claim Area, near the Welcome Center / Information Desk." },
+              { airport: "Newark (EWR)", terminal: "Terminal A & C", location: "Baggage Claim level or designated Limo Pickup area." }
+            ].map((loc, i) => (
+              <div key={i} className="glass-card p-10 border-luxury-gold/10 hover:border-luxury-gold/30 transition-all">
+                <h4 className="text-2xl font-serif text-white mb-4">{loc.airport}</h4>
+                <div className="bg-luxury-gold/10 inline-block px-3 py-1 mb-6">
+                  <span className="text-luxury-gold text-[10px] uppercase tracking-widest font-bold">{loc.terminal}</span>
+                </div>
+                <div className="flex items-start">
+                  <MapPin className="w-5 h-5 text-luxury-gold mr-4 mt-1 flex-shrink-0" />
+                  <p className="text-white/60 text-sm leading-relaxed">{loc.location}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1048,6 +1109,26 @@ const CorporateTravelPage = () => {
         </div>
       </section>
 
+      {/* Business Cabin Section */}
+      <section className="py-24 bg-luxury-navy">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <SectionHeading badge="The In-Transit Workspace" title="The Business Cabin" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: "Complimentary WiFi", desc: "High-speed mobile hotspot in every executive vehicle.", icon: <Shield className="w-8 h-8 mx-auto text-luxury-gold mb-6" /> },
+              { title: "Universal Charging", desc: "USB and AC outlets for all major devices.", icon: <Star className="w-8 h-8 mx-auto text-luxury-gold mb-6" /> },
+              { title: "Quiet Environment", desc: "Acoustically treated cabins for private conference calls.", icon: <Clock className="w-8 h-8 mx-auto text-luxury-gold mb-6" /> }
+            ].map((feature, i) => (
+              <motion.div key={i} className="glass-card p-10 border-luxury-gold/10">
+                {feature.icon}
+                <h3 className="text-xl font-serif text-white mb-4">{feature.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{feature.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* EA Support Section */}
       <section className="py-24 bg-luxury-charcoal/30 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6">
@@ -1062,7 +1143,7 @@ const CorporateTravelPage = () => {
                   {[
                     "Direct line to a dedicated account manager",
                     "Real-time GPS tracking for every active trip",
-                    "Instant digital receipts and consolidated billing",
+                    "Instant digital receipts and consolidated monthly billing",
                     "Profile management for multiple executives",
                     "2-minute response time for all requests"
                   ].map((benefit, i) => (
@@ -1081,12 +1162,12 @@ const CorporateTravelPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               className="glass-card p-12 border-luxury-gold/20"
             >
-              <h3 className="text-2xl font-serif text-white mb-6">Corporate Billing</h3>
+              <h3 className="text-2xl font-serif text-white mb-6">Centralized Invoicing</h3>
               <p className="text-white/50 text-base leading-relaxed mb-8">
-                Setup a direct corporate account to benefit from centralized billing and priority scheduling. We provide detailed monthly statements with trip-by-trip breakdowns for easy expense management.
+                Setup a direct corporate account to benefit from consolidated billing. We provide detailed monthly statements with trip-by-trip breakdowns for easy expense management and accounting.
               </p>
               <a href="https://customer.moovs.app/httpswwwinfinitecarservicelicom/new/info" className="btn-luxury w-full text-center">
-                Inquire About Account Setup
+                Setup Corporate Billing
               </a>
             </motion.div>
           </div>
@@ -1119,9 +1200,9 @@ const HourlyServicePage = () => {
                 </p>
                 <ul className="space-y-6">
                   {[
-                    { title: "A Dedicated Chauffeur", desc: "The same professional driver for your entire booking." },
+                    { title: "A Dedicated Chauffeur", desc: "The same professional, suited driver for your entire booking." },
+                    { title: "On-Standby Status", desc: "Your chauffeur never leaves the curb—always ready the moment you exit." },
                     { title: "Unlimited Stops", desc: "Change your plans or add destinations on the fly." },
-                    { title: "Premium Comfort", desc: "Luxury SUVs and sedans for a refined experience." },
                     { title: "Zero Wait Time", desc: "Your vehicle is always outside and ready when you are." }
                   ].map((item, i) => (
                     <li key={i} className="flex items-start">
@@ -1135,6 +1216,12 @@ const HourlyServicePage = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-10 p-6 bg-luxury-gold/5 border border-luxury-gold/20">
+                  <p className="text-luxury-gold text-xs uppercase tracking-widest font-bold mb-2">Service Requirement</p>
+                  <p className="text-white/70 text-sm italic">
+                    * Minimum 3-hour reservation required for all hourly bookings.
+                  </p>
+                </div>
                 <p>
                   This service is perfect for executives, families, and visitors who want control, comfort, and a seamless transportation experience throughout the day or evening.
                 </p>
@@ -1238,21 +1325,21 @@ const NYCEventsPage = () => {
       <section className="py-24 bg-luxury-charcoal/30 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading badge="The Event Protocol" title="Where Luxury Meets Logistics" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="glass-card p-12 border-luxury-gold/10">
               <h3 className="text-2xl font-serif text-white mb-6 flex items-center">
                 <MapPin className="w-6 h-6 text-luxury-gold mr-4" /> Venue Expertise
               </h3>
               <p className="text-white/60 text-base leading-relaxed mb-8">
-                Our chauffeurs are experts in NYC venue logistics. We know exactly where to drop off and pick up at:
+                Our chauffeurs know exactly where to drop off and pick up at:
               </p>
-              <div className="grid grid-cols-2 gap-4 text-xs font-bold uppercase tracking-widest text-luxury-gold">
-                <span>• Madison Square Garden</span>
-                <span>• UBS Arena</span>
-                <span>• Barclays Center</span>
-                <span>• Broadway Theaters</span>
-                <span>• Yankee Stadium</span>
-                <span>• Lincoln Center</span>
+              <div className="space-y-2 text-xs font-bold uppercase tracking-widest text-luxury-gold">
+                <p>• Madison Square Garden</p>
+                <p>• UBS Arena</p>
+                <p>• Barclays Center</p>
+                <p>• Broadway Theaters</p>
+                <p>• Yankee Stadium</p>
+                <p>• Lincoln Center</p>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="glass-card p-12 border-luxury-gold/10">
@@ -1260,11 +1347,23 @@ const NYCEventsPage = () => {
                 <Clock className="w-6 h-6 text-luxury-gold mr-4" /> Wait & Return
               </h3>
               <p className="text-white/60 text-base leading-relaxed mb-8">
-                Skip the post-event taxi chaos. Your vehicle will be waiting exactly where you were dropped off (or at a pre-arranged nearby VIP pickup point) the moment you exit.
+                Skip the post-event taxi chaos. Your vehicle will be waiting exactly where you were dropped off the moment you exit.
               </p>
               <div className="flex items-center text-white/40 text-sm italic">
                 <Check className="w-4 h-4 text-luxury-gold mr-3" />
-                "Your night isn't over until you're safely home."
+                "Safe, prompt returns."
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="glass-card p-12 border-luxury-gold/10">
+              <h3 className="text-2xl font-serif text-white mb-6 flex items-center">
+                <Users className="w-6 h-6 text-luxury-gold mr-4" /> Group Coordination
+              </h3>
+              <p className="text-white/60 text-base leading-relaxed mb-8">
+                Need to move a large group? We specialize in multi-SUV staging for weddings, corporate outings, or Hamptons winery tours.
+              </p>
+              <div className="flex items-center text-white/40 text-sm italic">
+                <Check className="w-4 h-4 text-luxury-gold mr-3" />
+                "Flawless group staging."
               </div>
             </motion.div>
           </div>
